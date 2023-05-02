@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+    *{
+ margin: 0px;
+ padding: 0px;
+ box-sizing: border-box;
+ background-color: black;
+ 
+    }
+    .dropdown{
+    display:flex;
+    justify-content: right;
+    list-style: none;
+    margin-top: -70px;
+    }
+    a{
+        display:block;
+        width: 200px;
+        background-color: black;
+        padding: 10px 0;
+        font-size: 1.2rem;
+        text-decoration: none;
+        text-align: center;
+        color: white;
+    } 
+   a:hover{
+    background-color: skyblue;
+   }
+  .product{
+    list-style: none;
+    display: none;
+  }
+  .type{
+    list-style: none;
+    
+    transform: translateX(200px) translateY(-50px);
+    position: absolute;
+    display: none;
+  }
+  .dropdown li:nth-child(2):hover .product {
+    display: block;
+  }
+  .product li:nth-child(2):hover .type {
+    display: block;
+  }
+  .vid{
+    position: relative;
+    left:500px;
+    margin-top: 100px;
+  }
+ 
+    </style>
+<body>
+    <div  class="mov">
+      <img src="templogo.png" width="100">
+        <ul class="dropdown">
+        
+            <li><span><a href="./index.html">home</a></span></li>
+
+            <li><a href="# ">product</a>
+                <ul class="product" >
+                    <li> <a href="#"> Headphones</a></li>
+                    <li> <a href="#"> Laptops</a>
+                    <ul class="type">
+                        <li><a href="#">acer</a></li>
+                        <li><a href="#">dell</a></li>
+                    </li>
+                </ul>
+                    <li> <a href="#"> Computer accesories</a></li>
+                    <li> <a href="#"> Headphones</a></li>
+                    <li> <a href="#"> LED Telivison </a></li>
+
+
+                </ul>
+            
+            </li>
+            <li><a href="#">service</a>
+            <ul class="product">
+                <li> <a href="#"> Headphones</a></li>
+                <li> <a href="#"> Laptops</a></li>
+                <li> <a href="#"> Computer accesories</a></li>
+                <li> <a href="#"> Headphones</a></li>
+                <li> <a href="#"> LED Telivison </a></li>
+
+
+            </ul>
+            </li>
+        
+            <li><a href="#">contact</a></li>
+            
+            
+        </ul>
+    </div>
+     <video width="500" controls autoplay class="vid">
+        <source src="proj new.mp4" type="video/mp4">
+     </video>
+    
+</body>
+</html>

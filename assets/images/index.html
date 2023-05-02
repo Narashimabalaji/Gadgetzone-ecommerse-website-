@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gadget zone</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<style>
+     
+    body
+    {
+        margin: 0px; 
+ padding: 0px;
+
+    }
+
+    
+    a{
+        text-decoration: none;
+        list-style: none;
+        margin: 30px;
+        color: white;
+        padding: 10px 0;  
+    
+    }
+a:hover{
+    background-color: skyblue;
+    border-radius: 24px;
+    padding: 10px;
+
+}
+.dropdown{
+    list-style: none;
+    position:relative;
+    display: flex;
+    left:800px;
+    margin-top: -100px;
+    font-size: x-large;
+}
+.product{
+    position:absolute;
+    list-style: none;
+    display: block;
+    display:none;
+    
+
+}
+
+
+#blck{
+    color: white;
+    text-transform: capitalize;
+    font-size: medium;
+    text-decoration: none;
+
+}
+#blck:hover{
+color:black
+}
+
+.dropdown li:nth-child(2):hover .product{
+    display:block;
+}
+
+body{
+     min-height: 100vh;
+    
+     background-color:#000;
+     
+    background-image: url(https://i.pinimg.com/originals/79/a3/84/79a384c3c449ad01b0e57e790807b2c0.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    color:white;
+    padding:0 8%;
+width:600px;    
+}
+
+
+</style>
+
+
+<body>
+  
+    <div class="open">
+            <img src="./templogo.png"  class="logo">
+
+
+                <ul class="dropdown">
+                    <li><a href="./index.html" id="blck">Home</a></li>
+
+                    <li ><a href="#" id="blck" >Product</a>
+
+                    <ul class="product">
+<br>
+                        <li><a href="#" >Headphones</a></li>
+                        <br>
+                        <li> <a href="#">LED Televion</a></li>
+                        <br>
+                        <li><a href="#"> Laptops</a></li>
+                        <br>
+                        <li><a href="#">Personal Computer</a></li>
+                        <br>
+                        <li><a href="#">Computer accesories</a></li>
+    
+                        </li>
+                    </ul>
+
+                    <li><a href="#" id="blck">about</a></li>
+                    <li><a href="#"id="blck">contact</a></li>
+                    <li><a href="#" id="blck">help</a></li>
+                    
+
+                </ul>
+        <h1>The Gadget <br>zone</h1>
+    
+        <button  id="mov"><a href="./login.html"  id="but"><span>Explore the life</span></a></button>
+        </div>
+
+
+</body>
+</html>

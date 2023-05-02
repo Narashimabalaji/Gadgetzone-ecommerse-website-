@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"> 
+
+    <style>
+
+ .box{
+    width: 300px;
+    padding: 50px;
+    position: absolute;
+    left: 40%;
+    top:30%;
+    align-items: center;
+   background-color:black;
+    border-radius: 40px; 
+    text-align: center;   
+}
+.box input[type = "text"],.box input[type = "password"]
+{
+border: 5px solid blue;
+text-align: center;
+padding: 10px 14px;
+width: 228px;
+border-radius: 24px;
+position: relative;
+right: 11px;
+}
+
+
+        
+        h1{
+            color: white;
+            font-weight: 400;
+        }
+        a{
+            text-decoration: none;
+            color:black;
+        
+        }
+        a
+        {
+            align-items: center;
+        }
+        #temp{
+            min-height: 0.5;
+     width:10%;
+        }
+       
+        
+       
+        #shape{
+            color: black;
+            border: 2px solid blue;
+            border-radius: 20px;
+            padding:5px 20px;
+            
+        }
+        
+        #shape:hover{
+            background-color: aqua;
+            
+        }
+    
+     
+           #sig,#par{
+            color: white;
+           }
+       
+        
+       
+
+
+#ok{ 
+
+ color:rgb(19, 255, 19) ; 
+
+} 
+
+
+#submit-error{ 
+
+color: red;
+} 
+#er{
+    color:red;
+    
+}
+#pwderror,#nameerror{
+    color:red;
+    border-color: red;
+}
+
+#Xbtn{
+
+    color:white;
+    position:absolute;
+    top:15px;
+     cursor: pointer;   
+    width:25px;
+    right:20px;
+
+  
+}
+#Xbtn:hover{
+    background-color: red;
+}
+    </style>
+       
+
+    <div id="closebtn">
+    <form class="box" method="post"  >
+        
+       
+        <h1>Login</h1>
+       
+        <br>
+        <span  onclick="document.getElementById('closebtn').style.display='none'"  id="Xbtn">X</span>
+    
+        <input type="text"  name="username" placeholder="username"  id="uname"  class="pass" onkeyup="validatename()"   >
+        <span id="nameerror"></span>
+        
+        <br>
+        <br>
+      
+        <input type="password"  name="pass" placeholder="password" id="pwd" onkeyup="validatepassword()">
+        <span id="pwderror"></span>
+        <br>
+       <p > <a href="#"  style="color:white;" onmouseover="style.color='aqua'" onmouseout="style.color='white'"> Forgot Password?</a></p>
+    
+        <button type="button" onclick="return check()" id="shape"> <a href="./gridnew.html">  Login </a> </button>
+        <p id="par">To create an account? <a href="./signup.n.html" id="sig" onmouseover="style.color='aqua'"  onmouseout="style.color='white'">Signup</a></p>
+        <span id="submiterror"></span>
+    </div>
+    </form>
+    <script>
+           const nameerror=document.getElementById('nameerror');
+           const pwderror=document.getElementById('pwderror');
+         
+   
+ 
+
+
+           function validatename(){
+            const name=document.getElementById('uname').value;
+            if(name==''){
+                nameerror.innerHTML='username is required <i id="er" class="fa-solid fa-circle-exclamation"></i>';
+                document.getElementById('uname').style.borderColor="red";   
+                return false;
+
+            }
+           
+
+            else{
+                nameerror.innerHTML='<i id="ok"class="fa-sharp fa-solid fa-circle-check"></i>';
+                document.getElementById('uname').style.borderColor="green";
+                return true;
+            }
+        }
+            function validatepassword()
+            {
+                pwd=document.getElementById('pwd').value;
+                if(pwd=='')
+                {
+                    pwderror.innerHTML='password is required <i id="er"class="fa-solid fa-circle-exclamation"></i>'; 
+                    document.getElementById('pwd').style.borderColor="red";
+                    return false;
+                }
+                if(pwd.length<8){ 
+             pwderror.innerHTML='password should be atleast 8 character <i id="er"class="fa-solid fa-circle-exclamation"></i>';
+             document.getElementById('pwd').style.borderColor="red";   
+                    return false;
+            }
+             else{
+                pwderror.innerHTML='<i id="ok"class="fa-sharp fa-solid fa-circle-check"></i>'; 
+                document.getElementById('pwd').style.borderColor="green";
+
+                   return true; 
+             }
+           }
+           function check(){ 
+
+ if(!validatename() || !validatepassword())
+ { 
+
+alert('Fill your details '); 
+ return false ;
+
+ } 
+           }
+ 
+
+
+
+
+    </script>
+    
+</body>
+</html>
