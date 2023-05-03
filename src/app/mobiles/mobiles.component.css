@@ -1,0 +1,64 @@
+
+.card-table{
+   
+    padding-left: 300px;
+}
+
+.table{
+    display: flex;
+   
+   }
+tbody img{
+    width:200px;
+ 
+    
+}
+
+.description-space{
+    width:600px;
+    font-family:sans-serif;
+    cursor: pointer;
+    
+}
+
+
+
+.categoryfilter{
+    width:220px;
+  
+    background-color:white;
+    border:1px solid black;
+    border-left: none;
+    border-top: none;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 10px;
+    top:-1390px;
+    position: relative;
+   
+    
+    
+   
+
+    
+  }
+  
+  .categoryfilter li{
+  color:#1E2328;
+  font-style: inherit;
+  font-weight: lighter;
+  word-spacing: 2px;
+  line-height: 30px;
+  list-style: none;
+  }
+  .categoryfilter li:hover{
+    color:orange;
+    cursor: pointer;
+  }
+  .brands{
+    display:flex;
+    margin-top:3%;
+    left:200px;
+    position:relative;
+  
+  }
+  

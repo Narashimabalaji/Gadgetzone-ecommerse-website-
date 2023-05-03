@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slide show</title>
+</head>
+<body>
+    <div class="slider">
+
+        <div class="slides" >
+    
+            <!--radio bt start-->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio"name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <!--rd end-->
+        <div class="slide1">
+          <img src="/slide image.1.jpg" alt="slide image 1">
+        </div>
+        <div class="slide">
+            <img src="/slideimage.2.jpg" alt="slide image 2">
+        </div>
+        <div class="slide">
+            <img src="/slideimage3.jpg" alt="slide image3">
+        </div>
+        <div class="slide">
+            <img src="/slideimage4.jpg" alt="slide image4">
+        </div>
+        </div>
+            <!--slide end-->
+    
+            <!--automatic navigation strt-->
+            <div class="navigationauto">
+                <div class="auto-bt1"></div>
+                <div class="auto-bt2"></div>
+                <div class="auto-bt3"></div>
+                <div class="auto-bt4"></div>
+    
+            </div>
+        </div>
+            <!--autosld end-->
+        <div class="navigation-manual" >
+            <label  for="radio1"class="manual-btn "></label>
+            <label for="radio2"class="manual-btn "></label>
+            <label for="radio3"class="manual-btn "></label>
+            <label for="radio4"class="manual-btn "></label>
+        </div>
+    </div>
+    
+    
+       <!--- <div id="container">
+    
+        <div class="headphone" style= >
+            <img src="./iPhonePNG-Photo.png"width="100px">
+        </div>
+        <div  style=>
+        <img src="./digitalwtchimg.jpg" width="100px;"></div>
+        <div  style="background-color: aqua;">5</div>
+        <div style="background-color: red;" >6</div>
+    
+       </div>-->
+    
+            
+        </div>
+    </div>
+    <p>
+        Before we dive into paragraph structure, let’s start with paragraph meaning. A paragraph is an individual segment of writing that discusses a central idea, typically with more than one sentence. It even has its own paragraph symbol in copyediting, called the pilcrow (¶), not to be confused with the section symbol called the silcrow (§) that’s common in legal code. 
+
+Here we focus mainly on paragraph structure, but feel free to read our ultimate guide to paragraphs for more of the basics. 
+
+Parts of a paragraph
+Like other forms of writing, paragraphs follow a standard three-part structure with a beginning, middle, and end. These parts are the topic sentence, development and support, and conclusion. 
+
+Topic sentences, also known as “paragraph leaders,” introduce the main idea that the paragraph is about. They shouldn’t reveal too much on their own, but rather prepare the reader for the rest of the paragraph by stating clearly what topic will be discussed. 
+
+The development and support sentences act as the body of the paragraph. Development sentences elaborate and explain the idea with details too specific for the topic sentence, while support sentences provide evidence, opinions, or other statements that back up or confirm the paragraph’s main idea. 
+
+Last, the conclusion wraps up the idea, sometimes summarizing what’s been presented or transitioning to the next paragraph. The content of the conclusion depends on the type of paragraph, and it’s often acceptable to end a paragraph with a final piece of support that concludes the thought instead of a summary. 
+
+How many sentences are in a paragraph?
+Most paragraphs contain between three and five sentences, but there are plenty of exceptions. Different types of paragraphs have different numbers of sentences, like those in narrative writing, in particular, where single-sentence paragraphs are common.</p>
+    </p>
+    </body>
+
+    <script>
+        var count=1;
+        setInterval (function(){
+            document.getElementById('radio' +count).checked=true;
+            count++;
+            if(count>4){
+                count=1;
+            }},5000);
+    </script>
+    <style>
+       .slider{
+        width:1350px;
+        height:600px;
+        border-radius: 10px;
+        overflow: hidden;
+       }
+       .slides{
+        display:flex;
+        width:500%;
+        height:500%;
+       }
+       .slides input{
+        display:none;
+       }
+       .slide{
+        width:1350px;
+        height:600px;
+       }
+       .slide img{
+        width:1350px;
+        height:600px;
+       }
+       .navigation-manual{
+        position:relative;
+        width:1350px;
+        margin-top:-2395;
+        display:flex;
+        justify-content: center;
+       }
+       .manual-btn{
+           border:2px solid black;
+           padding:2px;
+           border-radius: 15px; 
+           margin-left:150px;
+           cursor:pointer;
+           transition: 1s;
+          
+    }
+   .manual-btn:not(:last-child){
+    margin-right:40px;
+   }
+    .manual-btn:hover{
+        background:blue;
+        transition: 0.5s;
+
+    }
+       #radio1:checked~ .slide1{
+        margin-left:0;
+       }
+       #radio2:checked~ .slide1{
+        margin-left:-23%;
+       }
+       #radio3:checked~ .slide1{
+        margin-left:-43%;
+       }
+       #radio4:checked~ .slide1{
+        margin-left:-63%;
+       }
+
+
+       #radio1:checked~ .navigationauto .auto-bt1{
+        background-color: aqua;
+
+       }
+       #radio1:checked~ .navigationauto .auto-bt2{
+        background-color: aqua;
+
+       }
+
+    </style>
+    
+<script>
+
+
+</script>
+</html>

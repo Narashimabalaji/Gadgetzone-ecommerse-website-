@@ -1,0 +1,81 @@
+<div class="body">
+  <div class="container">
+    <div class="forms">
+
+      <span class="title">Registration</span>
+      <form [formGroup]="ResisterForm" (submit)="submitform()">
+
+       <!-- <div class="error-container">
+        <div *ngIf="ResisterForm.controls.invalid" class="error" > Please Enter the all required field</div>
+        </div> -->
+
+        <div class="form-group">
+          <input type="text" name="username" formControlName="username"  placeholder="Enter your Name">
+          <i class="fa fa-user"></i>
+        </div>
+        <div class="error-container">
+        <div *ngIf="ResisterForm.controls['username'].invalid && (ResisterForm.controls['username'].touched || ResisterForm.controls['username'].dirty)" class="error">
+          <div *ngIf="ResisterForm.controls['username'].errors?.['required']" class="error"> First Name is required </div>
+          <div *ngIf="ResisterForm.controls['username'].errors?.['minlength']" class="error">First Name Minimum Length is 4</div>
+        </div>
+      </div>
+
+        <div class="form-group">
+          <input type="email" name="emailid" formControlName="emailid" placeholder="Enter your email">
+          <i class="fa fa-envelope icon"></i>
+        </div>
+        <div class="error-container">
+          <div *ngIf="ResisterForm.controls['emailid'].invalid && (ResisterForm.controls['emailid'].touched || ResisterForm.controls['emailid'].dirty)" class="error">
+            <div *ngIf="ResisterForm.controls['emailid'].errors?.['required']" class="error"> Emailid is required </div>
+            <div *ngIf="ResisterForm.controls['emailid'].errors?.['email']" class="error">Enter a correct emailid</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input type="password" name="password" formControlName="password" placeholder="Enter your password" [type]="showPassword ? 'text' : 'password'">
+          <i class="fa fa-lock icon" ></i>
+          <i class="fa fa-eye-slash showhidepw" (click)="togglePasswordVisibility()"> </i>
+        </div>
+        <div class="error-container">
+          <div *ngIf="ResisterForm.controls['password'].invalid && (ResisterForm.controls['password'].touched || ResisterForm.controls['password'].dirty)" class="error">
+            <div *ngIf="ResisterForm.controls['password'].errors?.['required']" class="error"> password is required </div>
+            <div *ngIf="ResisterForm.controls['password'].errors?.['minlength']" class="error"> Enter a password atleast 8 to 15 characters </div>
+            <div *ngIf="ResisterForm.controls['password'].errors?.['pattern']" class="error">password should contains one special,caps,small & numbers characters</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input type="password" name="cpassword" formControlName="cpassword" placeholder="Enter your confirm password" [type]="showConfirmPassword ? 'text' : 'password'">
+          <i class="fa fa-unlock-alt"></i>
+          <i class="fa fa-eye-slash showhidepw" (click)="toggleConfirmPasswordVisibility()"></i>
+        </div>
+
+
+        <div class="error-container">
+          <div *ngIf="ResisterForm.controls['cpassword'].invalid && (ResisterForm.controls['cpassword'].touched || ResisterForm.controls['cpassword'].dirty)" class="error">
+            <div *ngIf="ResisterForm.controls['cpassword'].errors?.['required']" class="error">Confirm password is required </div>
+            <div *ngIf="ResisterForm.controls['cpassword'].errors?.['minlength']" class="error"> Enter a Confirm password atleast 8 to 15 characters </div>
+            <div *ngIf="ResisterForm.controls['cpassword'].errors?.['pattern']" class="error">password and confirm password does not match</div>
+          </div>
+        </div>
+
+        <div class="privacy-policy">
+         <p> By continuing, you agree to
+          <a routerLink=""> Terms & Conditions </a> and <a routerLink=""> Privacy Policy</a></p>
+        </div>
+
+        <div class="form-group-button button">
+          <input type="submit" value="Register Now" >
+
+        </div>
+      </form>
+      <div class="login-signup">
+        <span class="text">
+          Existing user?
+          <a routerLink="/login" class="text signup-text">Login Now</a>
+        </span>
+
+      </div>
+    </div>
+  </div>
+  </div>

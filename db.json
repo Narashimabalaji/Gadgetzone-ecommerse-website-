@@ -1,0 +1,358 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "username": "narashima.coe",
+      "emailid": "balaji@gmail.com",
+      "password": "111111111",
+      "cpassword": "111111111",
+      "id": "1",
+      "order": []
+    },
+    {
+      "username": "Aarthi",
+      "emailid": "aarthi@gmail.com",
+      "password": "11111111",
+      "cpassword": "11111111",
+      "id": 2
+    },
+    {
+      "username": "Balaji",
+      "emailid": "2k19eee056@kiot.ac.in",
+      "password": "11111111",
+      "cpassword": "11111111",
+      "id": 3,
+      "order": [
+        {
+          "id": "2",
+          "model": "Asus OLED",
+          "description": "Asus 256 SSD, 8GB RAM,built with AMD RAdan ",
+          "image": "assets/images/asusprodsle2.jpg",
+          "price": "40000",
+          "quantity": "1"
+        },
+        {
+          "id:": "5",
+          "model": "Samsung M15U",
+          "image": "assets/images/mblesl1.png",
+          "description": "6GB ram 128ROM Amoled display,120HZ ref,",
+          "price": "17000",
+          "quantity": "1"
+        }
+      ]
+    }
+  ],
+  "cart": [
+    {
+      "id:": "5",
+      "model": "Samsung M15U",
+      "image": "assets/images/mblesl1.png",
+      "description": "6GB ram 128ROM Amoled display,120HZ ref,",
+      "price": "17000",
+      "quantity": "1",
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 4
+    },
+    {
+      "id:": "5",
+      "model": "Samsung M15U",
+      "image": "assets/images/mblesl1.png",
+      "description": "6GB ram 128ROM Amoled display,120HZ ref,",
+      "price": "17000",
+      "quantity": "1",
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 5
+    },
+    {
+      "model": "Oneplus 10r",
+      "image": "assets/images/oneplussale.jpg",
+      "description": "8GB ram 128ROM Amoled display,120HZ ref,",
+      "price": "55000",
+      "quantity": "1",
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 6
+    },
+    {
+      "id:": "4",
+      "model": "Oneplus 11r",
+      "description": "8GB ram 128ROM Amoled display,120HZ ref,",
+      "image": "assets/images/oneplus11rblue.jpg",
+      "price": "45000",
+      "quantity": "1",
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 7
+    },
+    {
+      "model": "Onplus CE2",
+      "image": "assets/images/oneplusCE.jpg",
+      "description": "8GB ram 128ROM Amoled display,130HZ ref,",
+      "price": "19000",
+      "quantity": 1,
+      "email": "balaji@gmail.com",
+      "emailid": 11
+    },
+    {
+      "id:": "5",
+      "model": "Samsung M15U",
+      "image": "assets/images/mblesl1.png",
+      "description": "6GB ram 128ROM Amoled display,120HZ ref,",
+      "price": "17000",
+      "quantity": 1,
+      "email": "balaji@gmail.com",
+      "emailid": 12
+    }
+  ],
+  "carttotal": [],
+  "products": [
+    {
+      "id:": "1",
+      "model": "Asus M1A5U",
+      "description": "Asus 256 SSD, 8GB RAM,built with AMD RAdam ",
+      "image": "assets/images/asus 2 sl.jpg",
+      "price": "50,000",
+      "quantity": "1"
+    },
+    {
+      "id:": "2",
+      "model": "Asus OLED",
+      "description": "Asus 256 SSD, 8GB RAM,built with AMD RAdan ",
+      "image": "assets/images/asusprodsle2.jpg",
+      "price": "40000",
+      "quantity": "1"
+    },
+    {
+      "id:": "3",
+      "model": "Asus OLED",
+      "description": "Asus 256 SSD, 8GB RAM,built with AMD RAdan ",
+      "image": "assets/images/asusprodsle2.jpg",
+      "price": "40000",
+      "quantity": "1"
+    },
+    {
+      "id:": "4",
+      "model": "Oneplus 11r",
+      "description": "8GB ram 128ROM Amoled display,120HZ ref,",
+      "image": "assets/images/oneplus11rblue.jpg",
+      "price": "45000",
+      "quantity": "1"
+    },
+    {
+      "id:": "5",
+      "model": "Samsung M15U",
+      "image": "assets/images/mblesl1.png",
+      "description": "6GB ram 128ROM Amoled display,120HZ ref,",
+      "price": "17000",
+      "quantity": "1"
+    },
+    {
+      "id:": "6",
+      "model": "Onplus Nord",
+      "image": "assets/images/mblesl2.png",
+      "description": "8GB ram 128ROM Amoled display,120HZ ref,",
+      "price": "30000",
+      "quantity": "1"
+    },
+    {
+      "id:": "7",
+      "model": "Redmi 11",
+      "image": "assets/images/redmisl1.png",
+      "description": "8GB ram 128ROM Amoled display,120HZ ref,",
+      "price": "15000",
+      "quantity": "1"
+    },
+    {
+      "id": "8",
+      "model": "Onplus CE2",
+      "image": "assets/images/oneplusCE.jpg",
+      "description": "8GB ram 128ROM Amoled display,130HZ ref,",
+      "price": "19000",
+      "quantity": "1"
+    },
+    {
+      "id": "9",
+      "model": "Oneplus 10r",
+      "image": "assets/images/oneplussale.jpg",
+      "description": "8GB ram 128ROM Amoled display,120HZ ref,",
+      "price": "55000",
+      "quantity": "1"
+    }
+  ],
+  "mobiles": [
+    {
+      "id:": "1",
+      "model": "Oneplus 11r",
+      "image": "assets/images/oneplus11rblue.jpg",
+      "description1": "16 GB RAM | 568 GB ROM | Expandable Upto 1 TB",
+      "description2": "16.51 cm (6.5 inch) AMOLED Display",
+      "description3": "5000 mAh Battery",
+      "price": "49000",
+      "discount": "55000",
+      "delivery": "Free delivery",
+      "quantity": "1"
+    },
+    {
+      "id": "2",
+      "model": "Onplus CE2",
+      "image": "assets/images/oneplusCE.jpg",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "5000 mAh Battery",
+      "price": "19000",
+      "discount": "35000",
+      "delivery": "Free delivery",
+      "quantity": "1"
+    },
+    {
+      "id": "3",
+      "model": "Samsung M32U",
+      "image": "assets/images/mblesl1.png",
+      "description1": "6 GB RAM | 128 GB ROM | Expandable Upto 500 GB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "4500 mAh Battery",
+      "price": "19000",
+      "discount": "25000",
+      "delivery": "Free delivery",
+      "quantity": "1"
+    },
+    {
+      "id": "4",
+      "model": "Onplus CE2",
+      "image": "assets/images/mblesl2.png",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "5000 mAh Battery",
+      "price": "49000",
+      "discount": "55000",
+      "delivery": "Free delivery",
+      "quantity": "1"
+    },
+    {
+      "id": "5",
+      "model": "Onplus 10r",
+      "image": "assets/images/oneplussale.jpg",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "5000 mAh Battery",
+      "price": "49000",
+      "discount": "55000",
+      "delivery": "Free delivery",
+      "quantity": "1"
+    },
+    {
+      "id": "6",
+      "model": "Onplus CE2",
+      "image": "assets/images/realmesl1.png",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "5000 mAh Battery",
+      "price": "49000",
+      "discount": "55000",
+      "delivery": "Free delivery",
+      "quantity": "1"
+    }
+  ],
+  "laptops": [
+    {
+      "id": "1",
+      "model": "Onplus CE2",
+      "image": "assets/images/asus 2 sl.jpg",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "5000 mAh Battery",
+      "price": "49000",
+      "discount": "55000",
+      "delivery": "Free delivery",
+      "quantity": "1"
+    },
+    {
+      "id": "1",
+      "model": "Onplus CE2",
+      "image": "assets/images/asusprodsle2.jpg",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "5000 mAh Battery",
+      "price": "49000",
+      "discount": "55000",
+      "delivery": "Free delivery",
+      "quantity": "1"
+    },
+    {
+      "id": "1",
+      "model": "Onplus CE2",
+      "image": "assets/images/acerlpsl.png",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "5000 mAh Battery",
+      "price": "49000",
+      "discount": "55000",
+      "delivery": "Free delivery",
+      "quantity": "1"
+    }
+  ],
+  "telivision": [
+    {
+      "id": "1",
+      "model": "Onplus CE2",
+      "image": "assets/images/tv1.jpg",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "5000 mAh Battery",
+      "price": "49000",
+      "discount": "55000",
+      "delivery": "Free delivery",
+      "quantity": "1"
+    },
+    {
+      "id": "1",
+      "model": "Onplus CE2",
+      "image": "assets/images/tv2.jpg",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "5000 mAh Battery",
+      "price": "49000",
+      "discount": "55000",
+      "delivery": "Free delivery",
+      "quantity": "1"
+    },
+    {
+      "id": "1",
+      "model": "Onplus CE2",
+      "image": "assets/images/tv3.jpg",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "5000 mAh Battery",
+      "price": "49000",
+      "discount": "55000",
+      "delivery": "Free delivery",
+      "quantity": "1"
+    },
+    {
+      "id": "1",
+      "model": "Onplus CE2",
+      "image": "assets/images/tv4.jpg",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "5000 mAh Battery",
+      "price": "49000",
+      "discount": "55000",
+      "delivery": "Free delivery",
+      "quantity": "1"
+    }
+  ]
+}

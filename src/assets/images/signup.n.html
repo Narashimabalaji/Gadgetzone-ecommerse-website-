@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+    <title>  gadgetszone </title>
+    
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"> 
+  
+    <body  >
+      <div id="closebtn">
+      <div class="container">
+
+      <div class="alg">
+
+        <div class="box1">
+
+        
+        <form  method ="post" action="./purchase.html">
+           
+            <table  id="fm" cellpadding="15px">
+           <th> <h3 style="margin-top:50px;">Signup</h3></th>
+        
+           <span  onclick="document.getElementById('closebtn').style.display='none'"  id="Xbtn">X</span>
+
+            <tr><td><label > <i class="fa fa-user fa-2x" ></i>  </label></td>
+
+                <td>
+           <input type = "text" name="name" placeholder="First name " id="name"  class="sty"  onkeyup="validatefname()"> 
+          <br>
+           <span id="fnameerror"></span>  
+          </td>
+            <td><input type ="text" name="name" placeholder="last name"id="lname" class="sty" onkeyup="validatelastname()">
+            <br>
+            <span id="lnameerror"></span>
+          
+            </td>
+
+            </tr>
+        
+
+           
+<tr>
+    <td><label> <i class="fa fa-envelope fa-2x" ></i></label></td>
+
+    <td><input type="text" placeholder="EmailID" id="email" class="sty" onkeyup="validateemail()"> 
+      <br>
+    <span id="emailerror"></span>
+    </td>
+</tr>
+
+ <tr> 
+
+  <td><label> <i class="fa fa-mobile fa-2x" ></i></label></td>
+
+          <td>  <input type ="number" name="number" placeholder="Mobile number"  id="mbl" class="sty" onkeyup="validatemobile()">
+      
+  <br>
+   <span id="mnumbererror"></span>
+ </td>
+ </tr>
+
+
+            <tr> <td><label> <i class="fa fa-lock fa-2x" ></i></label></td>
+
+                <td> <input type="password"  name="pass" placeholder="password"  id="pwd" class="sty" onkeyup="validatepwd()">
+                <span id="pwderror" ></span>
+                </td>
+                </tr>
+
+                <tr> 
+                    <td><label> <i class="fa fa-key fa-2x" ></i></label>  </td>
+              
+                    <td><input type="password"  name="pass" placeholder="confirm password"  id="cpwd" class="sty" onkeyup="validatecpwd()">
+                      <br>
+    
+                    <span id="cpwderror" ></span>
+                    </td>
+                    </tr>
+
+                    <tr> <td><label> <i class="fa fa-map-marker fa-2x" ></i></label></td>
+
+                        <td><input type ="text" name="number" placeholder="city" id="cty" class="sty">
+
+                        <span id="cityerror"></span>
+                        <br>
+                    
+                        <td colspan="2">already  <a href="./login.html">    Signup  </a></td>
+                        </td>
+                        </tr>
+
+                        <tr>
+                          <td colspan="3" align="center"> <input type="checkbox" name="check" value="check"  >
+                           <label id="chk"> I agree the terms and conditions  </label></td>
+                          
+                         </tr>
+                         <tr >
+                        <td colspan="4" align="center"> <a href="./login.html"> <button type="button" onclick="return checkdetails()" id="reg">   Signup  </button> </a></td>
+                       
+                         </tr>
+           
+            
+            </table>
+
+        </form>
+
+        </div>
+      </div>
+       <!-- <div class="box2">
+          <img src="./signimg.webp" id="pic">
+        </div>
+      </div>-->
+      
+
+ 
+<style>
+ 
+
+ #Xbtn{
+
+color:black;
+position:relative;
+top:-20px;
+ cursor: pointer;   
+width:25px;
+left:750px;
+
+
+}
+#Xbtn:hover{
+background-color: red;
+}
+#error{
+  left:0px;
+}
+  .alg{
+    position:relative;
+    display:grid;
+    grid-template-columns: auto auto auto;
+ 
+  
+  }
+
+h3{
+  top:300px;
+}
+  .container{
+    margin-top: 130px;
+  }
+/*table*/
+#fm{
+  margin-left:136px;
+  margin-top: -90px;
+}
+span{
+  position:absolute;
+margin-right:390px;
+ }
+ 
+
+  .box1{
+    position:relative;
+    grid-column: span1;
+    background-color: whitesmoke;
+    width:800px;
+    height:595px;
+    margin-top: -50px;
+    
+  
+  
+  }
+ /* .box2{
+    position :relative;
+     grid-column: span2;
+     right:700px;
+     margin-top: -1000px;
+   
+     
+
+
+  }*/
+
+  input{
+    background:none;  
+    border-width: 3px;
+  }
+
+h3{
+   font-size: 2rem;
+   font-family: 'Times New Roman', Times, serif;
+   margin-top: -20px;
+}
+
+/*#pic{
+  width:350px;
+  height:400px;
+  position:relative;
+  left:360px;
+  margin-top: 600px;
+  border-top-left-radius:50px;
+  border-bottom-left-radius: 50px;
+  border:2px;
+  border: 2px solid black;
+  
+
+}*/
+#reg{
+ background-color:rgb(0, 110, 255);
+ border:1px solid white;
+ padding:10px 40px;
+ box-shadow: 0 5px rgba(0, 0, 0, 0.186);
+ position:relative;
+text-decoration: none;
+cursor: pointer;
+color:white;
+}
+#reg:hover{
+  background-color: black;
+  transform: translateX(1);
+}
+#reg:active{
+  transform:translateY(4px);
+}
+
+
+#clr{
+  color: white;
+  text-decoration: none;
+  position: relative;
+  left:20px; 
+}
+#clr:hover{
+  color:black;
+}
+
+#clr:active{
+  background-color: aqua;
+  transform: translateY(4px);
+}
+
+/*align form*/
+.sty{
+ width:180px;
+  height:30px;
+  position:relative;
+  right:60px;
+  border-top-style:none ;
+  border-right-style:none ;
+  border-left-style:none ;
+  border-bottom-style:groove ;
+  outline:none;
+
+ 
+}
+
+
+
+#er,#fnameerror,#lnameerror{
+  color:red;
+
+}
+
+#ok{
+  color:green;
+  position:absolute;
+  left:350px;
+}
+#lastnameok{
+  color:green;
+  position:absolute;
+  left:580px;
+}
+
+</style>
+
+<script type="text/javascript">
+
+ 
+
+     name= document.getElementById ("name").value;
+    lname= document.getElementById ("lname").value;
+     email= document.getElementById ("email").value;
+     mbl= document.getElementById ("mbl").value;
+     pwd= document.getElementById ("pwd").value;
+     cpwd= document.getElementById ("cpwd").value;
+     cty= document.getElementById ("cty").value;
+     chk= document.getElementById ("chk").value;
+    
+     
+   
+function validatefname(){
+    name=document.getElementById ("name").value;
+    if (name=='')
+    {
+      
+      fnameerror.innerHTML = 'Enter first name  <i id="er" class="fa-solid fa-circle-exclamation"></i>';
+      document.getElementById('name').style.borderColor="red";
+      return false;
+    }
+    if(!isNaN(name))
+    {
+      fnameerror.innerHTML = 'firstname should be in character <i id="er" class="fa-solid fa-circle-exclamation"></i>';
+      document.getElementById('name').style.borderColor=" red";
+      return false;
+    }
+    else{
+      fnameerror.innerHTML = '<i id="ok"class="fa-sharp fa-solid fa-circle-check"></i>';
+      document.getElementById('name').style.borderColor="green";
+      return true;
+    }
+  }
+
+  function validatelastname(){
+    lname=document.getElementById ("lname").value;
+    if (lname=='')
+    {
+   
+    lanameerror.innerHTML ='enter lastname <i id="er" class="fa-solid fa-circle-exclamation"></i>';
+    document.getElementById('lname').style.borderColor="red";
+      return false;
+    }
+    if(!isNaN(lname))
+    {
+      lnameerror.innerHTML = 'should not be a character  <i id="er" class="fa-solid fa-circle-exclamation"></i>';
+      document.getElementById('lname').style.borderColor="red";
+      return false;
+    }
+    else{
+      lnameerror.innerHTML ='<i id="lastnameok"class="fa-sharp fa-solid fa-circle-check"></i>';
+      document.getElementById('lname').style.borderColor="green";
+      return true;
+    }
+   
+  }
+
+  function validateemail(){
+    email=document.getElementById ("email").value;
+    const at=email.indexOf("@"); 
+
+const dot=email.lastIndexOf("."); 
+   
+if(email=='')
+
+{
+  emailerror.innerHTML ='enter Email  <i id="er" class="fa-solid fa-circle-exclamation"></i>'; 
+  document.getElementById('email').style.borderColor="red";
+  return false;
+}
+    
+
+if(at<1||dot<at+2||dot+2>=email.length) 
+{ 
+emailerror.innerHTML='enter valid email <i id="er" class="fa-solid fa-circle-exclamation"></i>';
+document.getElementById('email').style.borderColor="red";
+return false; 
+
+} 
+
+/*if(input.value.match(validmail)){
+  emailerror.innerHTML ='<i id="ok"class="fa-sharp fa-solid fa-circle-check"></i>';
+      document.getElementById('email').style.borderColor="green";
+      return true;
+}*/
+else{
+  emailerror.innerHTML ='<i id="ok"class="fa-sharp fa-solid fa-circle-check"></i>';
+      document.getElementById('email').style.borderColor="green";
+      return true;
+}
+  }
+
+  function validatemobile(){
+    mbl=document.getElementById ("mbl").value;
+    if (mbl =='')
+    {
+      mnumbererror.innerHTML='enter  mobilenumber   <i id="er" class="fa-solid fa-circle-exclamation"></i>';
+    document.getElementById('mbl').style.borderColor="red";
+      return false;
+   
+     
+    }
+    if(mbl.length!=10)
+    {
+    mnumbererror.innerHTML='enter valid mobilenumber <i id="er" class="fa-solid fa-circle-exclamation"></i>';
+    document.getElementById('mbl').style.borderColor="red";
+      return false;
+    }
+
+    else{
+      mnumbererror.innerHTML ='<i id="ok"class="fa-sharp fa-solid fa-circle-check"></i>';
+      document.getElementById('mbl').style.borderColor="green";
+      return true;
+    }
+
+  }
+
+  function validatepwd(){
+    pwd=document.getElementById ("pwd").value;
+    if (pwd =='')
+
+    {
+      pwderror.innerHTML='enter password <i id="er" class="fa-solid fa-circle-exclamation"></i>';
+      document.getElementById('pwd').style.borderColor="red";
+      return false;
+    }
+    if(pwd.length<8 ||pwd.length>8)
+    {
+      pwderror.innerHTML='password should be in 8 charcter <i id="er" class="fa-solid fa-circle-exclamation"></i>';
+      document.getElementById('pwd').style.borderColor="red";
+      
+      return false;
+    }
+
+    else{
+      pwderror.innerHTML ='<i id="ok"class="fa-sharp fa-solid fa-circle-check"></i>';
+      document.getElementById('pwd').style.borderColor="green";
+      return true;
+    }
+  }
+
+  function validatecpwd(){
+    cpwd=document.getElementById ("cpwd").value;
+    if (cpwd ==" ")
+    {
+      cpwderror.innerHTML='enter password <i id="er" class="fa-solid fa-circle-exclamation"></i>';
+      document.getElementById('cpwd').style.borderColor="red";
+      return false;
+    }
+    if(cpwd.length<8 ||cpwd.length>8)
+    {
+      cpwderror.innerHTML='enter password <i id="er" class="fa-solid fa-circle-exclamation"></i>';
+      document.getElementById('cpwd').style.borderColor="red";
+      return false; 
+    }
+
+    else{
+      cpwderror.innerHTML ='<i id="ok"class="fa-sharp fa-solid fa-circle-check"></i>';
+      document.getElementById('cpwd').style.borderColor="green";
+      return true;
+    }
+  }
+   /* if (cty == "")
+    {
+      
+      alert("Enter your city");
+      return false;
+    }
+    if (chk == "")
+    {
+      
+      alert("Agree terms and condition");
+      return false;
+    }*/
+function checkdetails()
+{
+  if(!validatefname()||!validatelastname()|| !validateemail()||!validatemobile||!validatepwd()||!validatecpwd())
+  {
+    alert("fill the details");
+       return false;
+  }
+}
+
+  
+
+
+
+
+</script>
+
+
+</body>
+</html>

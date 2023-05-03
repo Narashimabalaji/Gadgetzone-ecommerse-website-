@@ -1,0 +1,51 @@
+<div class="body">
+  <div class="container">
+    <div class="forms">
+      <span class="title">Login</span>
+      <form [formGroup]="LoginForm" (submit)="login()">
+        <div class="form-group">
+          <input type="text" name="emailid" formControlName="emailid" placeholder="Enter your email">
+          <i class="fa fa-envelope icon"></i>
+        </div>
+        <div class="error-container">
+          <div *ngIf="LoginForm.controls['emailid'].invalid && (LoginForm.controls['emailid'].touched || LoginForm.controls['emailid'].dirty)" class="error">
+            <div *ngIf="LoginForm.controls['emailid'].errors?.['required']" class="error"> Emailid is required </div>
+            <div *ngIf="LoginForm.controls['emailid'].errors?.['email']" class="error">Enter a correct emailid</div>
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <input type="password" name="password" formControlName="password" placeholder="Enter your password" [type]="showPassword ? 'text' : 'password'">
+          <i class="fa fa-lock icon"></i>
+          <i class="fa fa-eye-slash showhidepw" (click)="togglePasswordVisibility()"></i>
+        </div>
+  
+        <div class="error-container">
+          <div *ngIf="LoginForm.controls['password'].invalid && (LoginForm.controls['password'].touched || LoginForm.controls['password'].dirty)" class="error">
+            <div *ngIf="LoginForm.controls['password'].errors?.['required']" class="error"> password is required </div>
+            <div *ngIf="LoginForm.controls['password'].errors?.['minlength']" class="error"> Enter valid password </div>
+          </div>
+        </div>
+  
+        <div class="checkbox-text">
+          <div class="checkbox-content">
+            <input type="checkbox" id="logcheck">
+            <label for="logcheck" class="text">Remember me</label>
+          </div>
+          <a routerLink="" class="text">Forgot password?</a>
+        </div>
+  
+        <div class="form-group-button button">
+          <input type="submit" value="Login Now" >
+  
+        </div>
+      </form>
+      <div class="login-signup">
+        <span class="text">Not Yet a member?
+          <a routerLink="/register" class="text signup-text">Signup Now</a>
+        </span>
+  
+      </div>
+    </div>
+  </div>
+  </div>

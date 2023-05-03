@@ -1,0 +1,81 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<ng-container *ngIf="product.length!=0">
+
+
+  <div class="card-table">
+
+    <div class="cart-products">
+
+      <table class="table table-responsive">
+         
+        <thead>
+          <tr>
+            <th>SN.O</th>
+            <th>Product Name</th>
+            <th>productImage</th>
+            <th>Description</th>
+            <th>price</th>
+            <th>quantity</th>
+            <th>Total</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of product;let i =index">
+         <td>{{i+1}}</td>
+         <td>{{item.model}}</td>
+         <td style="width:200px;"><img src="{{item.image}}" alt=""></td>
+         <td>{{item.description}}</td>
+         <td>₹{{item.price}}</td>
+
+         <td><button (click)="incrementquantity(item)">+</button>
+          <input type="text" value="{{item.quantity}}" >
+        <button (click)="decrementquantity(item)">-</button>
+        
+        
+        </td>
+
+         <td>{{item.quantity * item.price}}</td>
+
+         <td>
+          <button  (click)="removeitem(item.emailid,item.index)"  class="btn btn-danger"><i class="fa fa-trash-o" ></i></button>
+         </td>
+        </tr>
+
+<tr>
+
+  <td colspan="4"></td>
+  <td><button (click)="emptycart()" class=" btn btn-danger">Empty cart</button></td>
+  <td><button routerLink="/home" class=" btn btn-primary">shopmore</button></td>
+  <td><button class="btn btn-success" routerLink="/checkout">Checkout</button></td>
+   <td><strong>grand total:{{getCartTotal()}} </strong></td>
+
+</tr>
+
+        </tbody>
+
+      </table>
+  
+
+    </div>
+  </div>
+
+</ng-container>
+
+
+<ng-container *ngIf="product.length ==0">
+
+  <div class="container">
+
+    <div class="card">
+
+      <img src="assets/images/emtycart.jpg" alt="">
+
+    </div>
+
+  </div>
+
+
+</ng-container>

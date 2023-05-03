@@ -1,0 +1,68 @@
+<nav class="navbar">
+  <ul class="nav">
+    <li class="nav-item active">
+      <a class="nav-link" >
+        <div class="circle">1</div>
+        Shipment
+      </a>
+ 
+    </li>
+<hr>
+    <li class="nav-item">
+      <a class="nav-link" href='payment'>
+        <div class="circle">2</div>
+        Payment
+      </a>
+    </li>
+
+    <hr>
+    <li class="nav-item">
+      <a class="nav-link" href="#">
+        <div class="circle">3</div>
+        Order Placed
+      </a>
+    </li>
+  </ul>
+</nav>
+
+
+
+<div class="checkout-page">
+  <div class="row">
+    <div class="col-md-5">
+      <form>
+        <h2>Billing Information</h2>
+        <div class="form-group">
+          <label for="name">Full Name*</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email*</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone*</label>
+          <input type="text" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+          <label for="address">Address*</label>
+          <input type="text" id="address" name="address" required>
+        </div>
+        <div class="form-group">
+          <label for="city">City*</label>
+          <input type="text" id="city" name="city" required>
+        </div>
+        <div class="form-group">
+          <label for="state">State*</label>
+          <input type="text" id="state" name="state" required>
+        </div>
+        <div class="form-group">
+          <label for="zip">Pin Code*</label>
+          <input type="text" id="zip" name="zip" required>
+        </div>
+      </form>
+      </div>
+    </div>
+    
+      
+<router-outlet></router-outlet>

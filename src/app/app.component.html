@@ -1,0 +1,120 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+  <!-- {{pro|json}} -->
+  <div class="header">
+    <a routerLink="home">
+  <div class="logo">
+<h3>GadgetZone</h3>
+</div></a>
+<nav class="items">
+ 
+</nav>
+<div class="search-box">
+  <span><input type="search" placeholder="search"></span>
+  <i class="fa fa-search search"></i>
+</div>
+
+<div class="login" >
+  
+
+
+  <a routerLink="cart">
+    <div class="shopping-cart">
+    <div class="cart-icon" >
+      <i class="fa fa-cart-arrow-down"></i><div class="badge btn-danger" style="top:-20px;right:-0px;position: relative;">{{totalitem}}</div>
+  </div>
+  </div></a>
+  <div>
+    <i class="fa fa-user-o" >&nbsp;&nbsp;{{loggedInUser}}</i>
+  </div>
+  <div *ngIf="loggedInUser==null">
+  <a routerLink="login">LOGIN</a> 
+
+</div>
+
+<div *ngIf="loggedInUser!==null" style="cursor:pointer;">
+  <a (click)="logout()">Logout</a>
+</div>
+    <div class="shopping-cart">
+    <div class="cart-icon" >
+      <i class="fa fa-heart"></i>
+  </div>
+  </div>
+
+
+</div>
+
+
+
+
+</div>
+<div class="services">
+  <ul>
+    <li routerLink="mobiles">Mobiles</li>
+    <li routerLink="laptops">Laptops</li>
+    <li routerLink="telivision">Telivision</li>
+    <li>Computer Accessories</li>
+    <li>Smart Watches</li>
+    <li>Headphones</li>
+  </ul>
+
+</div>
+
+
+
+
+
+
+<router-outlet></router-outlet>
+
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-row">
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a routerLink="">about us</a></li>
+          <li><a routerLink="">our services</a></li>
+          <li><a routerLink="">privacy policy</a></li>
+          <li><a routerLink="">feedback</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>get help</h4>
+        <ul>
+          <li><a routerLink="">FAQ</a></li>
+          <li><a routerLink="">shipping</a></li>
+          <li><a routerLink="">returns</a></li>
+          <li><a routerLink="">order status</a></li>
+          <li><a routerLink="">payment options</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>online shop</h4>
+        <ul>
+          <li><a routerLink="">best offers</a></li>
+          <li><a routerLink="">deals of the day</a></li>
+          <li><a routerLink="">Mobiles</a></li>
+          <li><a routerLink="">Electronic Gadgets</a></li>
+          <li><a routerLink="">Telivisions</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>follow us</h4>
+        <div class="social-col">
+          <a routerLink=""><i class="fa fa-facebook"></i></a>
+          <a routerLink=""><i class="fa fa-twitter"></i></a>
+          <a routerLink=""><i class="fa fa-instagram"></i></a>
+          <a routerLink=""><i class="fa fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </footer>

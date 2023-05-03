@@ -1,0 +1,120 @@
+<div class="card-table">
+  <div class="card-products">
+    <table class="table ">
+
+
+
+<tbody>
+
+  <tr *ngFor="let item of product;let i =index">
+
+
+ <td  ><img src="{{item.image}}"></td>
+
+ <td class="description-space">
+
+ <strong><tr>{{item.model}}</tr> </strong>
+  <tr ><ul>
+ <li>{{item.description1}}</li>
+ <li>{{item.description2}}</li>   
+ <li>{{item.description3}}</li>  
+  </ul>
+</tr>
+
+</td>
+ <td> <strong>{{item.price |currency : 'INR'}}</strong>
+  <tr ><ul>
+    <li style="list-style: none;color: green;"><s>{{item.discount |currency:'INR'}}</s></li>
+    <li style="list-style: none;">{{item.delivery}}</li>
+ 
+     </ul>
+   </tr>
+
+
+
+</td>
+ 
+    </table>
+
+  </div>
+
+ </div>
+
+
+
+
+
+<div class="categoryfilter">
+
+  <ul>
+     <li style="font-weight:bolder;margin-left:-35px;">Category</li>
+     <li style="margin-left:-35px;">Electronics</li>
+ 
+  <ul style="margin-left:-40px;">
+ 
+     <li>Mobile Accesories</li>
+ 
+     <li>Mobile Boardband Devices</li>
+     <li> SIM card</li>
+     <li>Smartphones and basic</li>
+      </ul>
+  </ul>
+  <hr>
+  <ul>
+     <li style="font-weight:bolder;margin-left:-35px;">Offers</li>
+     
+ 
+  <ul style="margin-left:-40px;">
+ 
+     <li>Club Smartphone</li>
+ 
+     <li>SmartPhone Mania </li>
+      </ul>
+  </ul>
+ <hr>
+ 
+ <ul>
+     <li style="font-weight:bolder;margin-left:-35px;">Price</li>
+     
+ 
+  <ul style="margin-left:-40px;">
+ 
+     <li><input type="checkbox"> Rs.5000-Rs.10000</li>
+ <li><input type="checkbox"> Rs.10000-Rs.20000</li>
+ <li><input type="checkbox"> Above-Rs.10000</li>
+     
+      </ul>
+  </ul>
+ <hr>
+ 
+ <ul>
+     <li style="font-weight:bolder;margin-left:-35px;">Pay on Delivery</li>
+     
+ 
+  <ul style="margin-left:-40px;">
+ 
+     <li><input type="checkbox">Eligible for Pay On Delivery</li>
+      </ul>
+  </ul>
+ <hr>
+ 
+ <ul>
+     <li style="font-weight:bolder;margin-left:-35px;">Brands</li>
+  
+ 
+  <ul style="margin-left:-40px;">
+   <li><input type="checkbox"> Samsung</li>
+     <li><input type="checkbox"> Oneplus</li>
+       <li><input type="checkbox"> MI</li>
+         <li><input type="checkbox"> Apple</li>
+           <li><input type="checkbox"> Realme</li>
+             <li><input type="checkbox"> Oppo</li>
+               <li><input type="checkbox"> IQOO</li>
+     
+      </ul>
+  </ul>
+  <hr>
+ </div>
+
+
+ 

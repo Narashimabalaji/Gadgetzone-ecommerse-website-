@@ -1,0 +1,22 @@
+
+.card-table{
+   
+    padding-left: 300px;
+}
+
+.table{
+    display: flex;
+   
+   }
+tbody img{
+    width:200px;
+ 
+    
+}
+
+.description-space{
+    width:600px;
+    font-family:sans-serif;
+    cursor: pointer;
+    
+}

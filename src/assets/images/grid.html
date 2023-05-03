@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+</head>
+<body>
+    <div class="cont">
+        <div class="box1">1</div>
+        <div class="box1">2</div>
+        <div class="box1">3</div>
+        <div class="box1">4</div>
+        <div class="box1">5</div>
+        <div class="box1">6</div>
+        <div class="box1">7</div>
+        <div class="box1">8</div>
+        <div class="box1">9</div>
+        <div class="box1">10</div>
+        <div class="box1">11</div>
+        <div class="box1">12</div>
+    </div>
+    <style>
+        body{
+            background-color: black;
+        }
+        .cont{
+            position:relative;
+            top:130px;
+            display:grid;
+            grid-template-columns: auto auto auto;
+            color:black;
+            background-color: #34495e;
+            gap:40px;
+        }
+        .num{
+            border:2px solid red;
+            padding:20px;
+            text-align: center;
+            background-color: aqua;
+        }
+        .box1{
+            border:2px solid red;
+            padding:20px;
+            text-align: center;
+            background-color: aqua;
+            grid-row: span 2;
+            position:relative;
+        }
+        .box2{
+            border:2px solid red;
+            padding:20px;
+            text-align: center;
+            background-color: aqua;
+        }
+        .box3{
+            border:2px solid red;
+            padding:20px;
+            text-align: center;
+            background-color: aqua; 
+        }
+        </style>
+        
+
+    
+</body>
+</html>

@@ -1,0 +1,146 @@
+.body{
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background:linear-gradient(45deg,#f06499, #a309b7); */
+  }
+  .container{
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 1.0);
+  }
+  
+  .container .forms{
+  padding: 30px;
+  }
+  .container .forms .title{
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+  }
+  .container .forms .form-group{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 15px;
+  }
+  .container .forms .form-group input{
+    position: absolute;
+    height: 100%;
+    width:80%;
+    padding: 0 35px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #ccc;
+    transition: all 0.2s ease;
+  
+  }
+  .container .forms .form-group input:focus{
+    border-bottom-color: violet ;
+    }
+  .container .forms .form-group i{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 23px;
+  }
+  .container .forms .form-group input:focus ~ i{
+  color: violet;
+  }
+  .container .forms .form-group i.icon{
+    left: 0;
+    }
+  .container .forms .form-group i.showhidepw{
+  right: 0px;
+  cursor: pointer;
+  padding: 10px;
+  }
+  /* .container .forms .checkbox-text{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  }
+  .container .forms .checkbox-text .checkbox-content{
+    display: flex;
+    align-items: center;
+  }
+  .container .forms .checkbox-text .checkbox-content input{
+    margin: 0 8px 0 4px;
+  } */
+  .container .forms .privacy-policy{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 12px;
+  }
+  
+  .container .forms .text{
+  color: #333;
+  font-size: 14px;
+  }
+  .container .forms a.text, .container .forms .privacy-policy a{
+    text-decoration: none;
+    color: #4070f4;
+  }
+  .container .forms a:hover, .container .forms .privacy-policy a:hover{
+    text-decoration: underline;
+  }
+  .container .forms .form-group-button{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+  }
+  .container .forms .form-group-button input{
+    position: absolute;
+    height: 100%;
+    width:100%;
+    padding: 0 35px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #ccc;
+    transition: all 0.2s ease;
+  
+  }
+  
+  .container .forms .button{
+    margin-top: 20px;
+  }
+  .container .forms .button input{
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500px;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background:linear-gradient(45deg,#4899df, #c430d7);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .container .forms .button input:hover{
+    background:linear-gradient(45deg,#a93461, #a729b8);
+  }
+  .container .forms .login-signup{
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  /*-------------- error mes---------*/
+  
+  .error{
+  
+    background-color: rgb(228, 172, 172);
+    border-radius: 2px;
+    color: red;
+    padding: 0px 0px 0px 5px;
+  }
+  .error-container{
+    margin-top: 5px;
+  }
