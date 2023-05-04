@@ -102,17 +102,18 @@
       "model": "Onplus CE2",
       "image": "assets/images/oneplusCE.jpg",
       "description": "8GB ram 128ROM Amoled display,130HZ ref,",
-      "price": "19000",
+      "price": 19000,
       "quantity": 1,
       "email": "balaji@gmail.com",
-      "emailid": 11
+      "emailid": 11,
+      "total": 19000
     },
     {
       "id:": "5",
       "model": "Samsung M15U",
       "image": "assets/images/mblesl1.png",
       "description": "6GB ram 128ROM Amoled display,120HZ ref,",
-      "price": "17000",
+      "price": 15000,
       "quantity": 1,
       "email": "balaji@gmail.com",
       "emailid": 12

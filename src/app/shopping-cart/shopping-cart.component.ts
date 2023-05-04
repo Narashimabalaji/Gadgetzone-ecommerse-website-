@@ -38,6 +38,23 @@ data:any;
            
       this.product =user;
       console.log("User data:", user);
+        
+         const g =o.filter((d:any)=>{
+
+          if(d.email === loggedemailid){
+              
+            let h=0;
+
+            for(let item of d.items){
+                
+              h += item.quantity*item.price;
+                
+          }
+                this.http.post("http://localhost:3000/carttotal/",h).subscribe((r)=>{
+                                       console.log("Cart total",h);
+                });
+        }
+         })
     });
   }
 
@@ -73,10 +90,14 @@ data:any;
     item.quantity++;
    console.log(item.emailid);
 
-   this.http.patch<any>("http://localhost:3000/cart/"+item.emailid,{quantity:item.quantity}).subscribe((o)=>{
+   const t =item.quantity *item.price;
+   
+
+   this.http.patch<any>("http://localhost:3000/cart/"+item.emailid,{quantity:item.quantity,total:t}).subscribe((o)=>{
     console.log(o);
    })
-    
+  
+  
   }
   decrementquantity(item:any){
     if(item.quantity>1){
@@ -84,29 +105,26 @@ data:any;
     }
     console.log(item.emailid);
 
-    this.http.patch<any>("http://localhost:3000/cart/"+item.emailid,{quantity:item.quantity}).subscribe((o)=>{
+    const t=item.quantity * item.price;
+
+    this.http.patch<any>("http://localhost:3000/cart/"+item.emailid,{quantity:item.quantity,total:t}).subscribe((o)=>{
      console.log(o);
     })
   }
+
+
   getCartTotal() {
     let total = 0;
 
     for (const item of this.product) {
       total += item.price * item.quantity;
+    
     }
 
-    const grant =total;
-    console.log("grand total",grant);
     return  total;
   };
 
  
-storedprice(){
-  var data =this.getCartTotal();
-  console.log("grand t",data);
-
- 
 
 
-}
 }
