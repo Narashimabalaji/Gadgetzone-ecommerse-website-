@@ -20,6 +20,7 @@ public email2:any;
  public cart:any=[];
   loggedemailid: any | string;
   mail: any;
+ 
 
 
 constructor(private http:HttpClient,private dbservice:DbseviceService) { 
@@ -46,9 +47,8 @@ getProducts(){
 store:any="";
 orderarray:any;
 order:any={};
-cartcount(){
-  
-}
+f:number=0;
+gt:number=0;
 
 addtocart(a:any,email:any) {
 
@@ -56,6 +56,8 @@ addtocart(a:any,email:any) {
          
     console.log(data);
   })
+
+
 
 
 
@@ -133,9 +135,7 @@ this.http.patch<any>('http://localhost:3000/users/order/'+item.id,{quantity:item
 }
 
 
-postgrandtotal(price:any){
-  return this.http.post<any>("http://localhost:3000/carttotal/",price);
-}
+
 
 // removecartitem(product:any){
 //   // this.cartitems.map((a:any, index:any)=>{

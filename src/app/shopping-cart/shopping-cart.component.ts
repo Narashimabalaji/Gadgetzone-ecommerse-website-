@@ -16,8 +16,11 @@ export class ShoppingCartComponent implements OnInit {
   granttotal: any|number;
   loggedemailid: any|string;
   cart: any=[];
-  
+  email:any;
+  f:any=[];
 data:any;
+
+gt:number=0;
   
   
   constructor( private cartservice:CartService,private http:HttpClient,private dbservice:DbseviceService) {
@@ -39,24 +42,79 @@ data:any;
       this.product =user;
       console.log("User data:", user);
         
-         const g =o.filter((d:any)=>{
+   
+      
+this.http.get<any>("http://localhost:3000/carttotal/").subscribe((t:any)=>{
 
-          if(d.email === loggedemailid){
-              
-            let h=0;
+let j =0;
+for(let item of this.product){
+    
+  j +=item.price*item.quantity;
+}
 
-            for(let item of d.items){
+
+
+  const e =t.find((u:any)=>{
+      return u.emailid === loggedemailid;
+       
+  })
+if(e){
+  this.http.patch<any>("http://localhost:3000/carttotal/"+loggedemailid ,{total:j}).subscribe((d)=>{
+    alert("patched successfully");
+  })
+}
+
+else{
+  this.http.post<any>("http://localhost:3000/carttotal/",{total:j,emailid:loggedemailid}).subscribe((d)=>{
                 
-              h += item.quantity*item.price;
-                
-          }
-                this.http.post("http://localhost:3000/carttotal/",h).subscribe((r)=>{
-                                       console.log("Cart total",h);
-                });
-        }
-         })
-    });
-  }
+                      alert("posted success");
+})
+
+}
+      
+
+  
+})});
+
+    }
+  
+  
+patchgt(){
+  this.http.get<any>("http://localhost:3000/cart/").subscribe((o)=>{
+      console.log("API response:", o);
+  
+      const loggedemailid = localStorage.getItem('loggedemailid');
+      console.log("Logged in user email:", loggedemailid);
+  
+      const user = o.filter((data:any)=>{
+        console.log("Email address in data:", data.email);
+        return data.email === loggedemailid;
+      });
+     
+
+      this.f=user;
+
+       
+    let gt=0;
+
+    for(let item of this.f){
+      gt +=item.price*item.quantity;
+    }
+      
+    this.gt =gt;
+
+
+  console.log("gt:",{gt});
+
+this.http.patch<any>("http://localhost:3000/carttotal/"+loggedemailid ,{total:gt}).subscribe((g)=>{
+  alert("updated inc");
+})
+     
+
+  })};
+
+ 
+  
 
 
   removeitem(id:any,index:any){
@@ -70,10 +128,14 @@ data:any;
     // }
       window.location.reload();
       
-
+     
  
 }
 
+
+
+
+  
   
 
   emptycart(){
@@ -92,13 +154,14 @@ data:any;
 
    const t =item.quantity *item.price;
    
-
+   this.patchgt();
    this.http.patch<any>("http://localhost:3000/cart/"+item.emailid,{quantity:item.quantity,total:t}).subscribe((o)=>{
     console.log(o);
    })
-  
+
   
   }
+
   decrementquantity(item:any){
     if(item.quantity>1){
       item.quantity--;
@@ -106,25 +169,34 @@ data:any;
     console.log(item.emailid);
 
     const t=item.quantity * item.price;
-
+    this.patchgt();
     this.http.patch<any>("http://localhost:3000/cart/"+item.emailid,{quantity:item.quantity,total:t}).subscribe((o)=>{
      console.log(o);
-    })
+    });
+    
+   
+    
   }
 
-
-  getCartTotal() {
-    let total = 0;
-
-    for (const item of this.product) {
-      total += item.price * item.quantity;
+    getCartTotal() {
     
+  
+    let total=0;
+   
+    for (const item of this.product) { 
+      total += item.price * item.quantity;
     }
+    console.log("ok",{total});
 
+  
     return  total;
-  };
+  }
 
  
+ 
 
-
+  
 }
+
+
+

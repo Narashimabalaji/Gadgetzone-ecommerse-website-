@@ -65,9 +65,10 @@
       "image": "assets/images/mblesl1.png",
       "description": "6GB ram 128ROM Amoled display,120HZ ref,",
       "price": "17000",
-      "quantity": "1",
+      "quantity": 3,
       "email": "2k19eee056@kiot.ac.in",
-      "emailid": 4
+      "emailid": 4,
+      "total": 51000
     },
     {
       "id:": "5",
@@ -80,46 +81,23 @@
       "emailid": 5
     },
     {
-      "model": "Oneplus 10r",
-      "image": "assets/images/oneplussale.jpg",
+      "id:": "6",
+      "model": "Onplus Nord",
+      "image": "assets/images/mblesl2.png",
       "description": "8GB ram 128ROM Amoled display,120HZ ref,",
-      "price": "55000",
+      "price": "30000",
       "quantity": "1",
       "email": "2k19eee056@kiot.ac.in",
+      "id": "2k19eee056@kiot.ac.in",
       "emailid": 6
-    },
-    {
-      "id:": "4",
-      "model": "Oneplus 11r",
-      "description": "8GB ram 128ROM Amoled display,120HZ ref,",
-      "image": "assets/images/oneplus11rblue.jpg",
-      "price": "45000",
-      "quantity": "1",
-      "email": "2k19eee056@kiot.ac.in",
-      "emailid": 7
-    },
-    {
-      "model": "Onplus CE2",
-      "image": "assets/images/oneplusCE.jpg",
-      "description": "8GB ram 128ROM Amoled display,130HZ ref,",
-      "price": 19000,
-      "quantity": 1,
-      "email": "balaji@gmail.com",
-      "emailid": 11,
-      "total": 19000
-    },
-    {
-      "id:": "5",
-      "model": "Samsung M15U",
-      "image": "assets/images/mblesl1.png",
-      "description": "6GB ram 128ROM Amoled display,120HZ ref,",
-      "price": 15000,
-      "quantity": 1,
-      "email": "balaji@gmail.com",
-      "emailid": 12
     }
   ],
-  "carttotal": [],
+  "carttotal": [
+    {
+      "total": 98000,
+      "emailid": "2k19eee056@kiot.ac.in"
+    }
+  ],
   "products": [
     {
       "id:": "1",
