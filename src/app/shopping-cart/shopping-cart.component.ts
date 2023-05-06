@@ -21,6 +21,8 @@ export class ShoppingCartComponent implements OnInit {
 data:any;
 
 gt:number=0;
+  k: number=0;
+  p:number=0;
   
   
   constructor( private cartservice:CartService,private http:HttpClient,private dbservice:DbseviceService) {
@@ -150,14 +152,32 @@ this.http.patch<any>("http://localhost:3000/carttotal/"+loggedemailid ,{total:gt
 
   incrementquantity(item:any|number){
     item.quantity++;
+   
    console.log(item.emailid);
 
    const t =item.quantity *item.price;
-   
-   this.patchgt();
+
+  
    this.http.patch<any>("http://localhost:3000/cart/"+item.emailid,{quantity:item.quantity,total:t}).subscribe((o)=>{
     console.log(o);
-   })
+   });
+
+   let h =0;
+
+   for (let item of this.product){
+
+    h +=item.price*item.quantity;
+   }
+
+    this.k =h;
+    const loggedemailid = localStorage.getItem('loggedemailid');
+    this.http.patch<any>("http://localhost:3000/carttotal/"+loggedemailid,{total:this.k}).subscribe((j)=>{
+
+    alert("inc ok");
+
+    }
+    );
+    
 
   
   }
@@ -165,15 +185,31 @@ this.http.patch<any>("http://localhost:3000/carttotal/"+loggedemailid ,{total:gt
   decrementquantity(item:any){
     if(item.quantity>1){
       item.quantity--;
+   
     }
     console.log(item.emailid);
 
     const t=item.quantity * item.price;
-    this.patchgt();
+    
     this.http.patch<any>("http://localhost:3000/cart/"+item.emailid,{quantity:item.quantity,total:t}).subscribe((o)=>{
      console.log(o);
     });
-    
+    let w =0;
+
+    for (let item of this.product){
+ 
+     w  +=item.price*item.quantity;
+    }
+ 
+     this.p =w;
+     const loggedemailid = localStorage.getItem('loggedemailid');
+     this.http.patch<any>("http://localhost:3000/carttotal/"+loggedemailid,{total:this.p}).subscribe((j)=>{
+ 
+     alert("dec ok");
+ 
+     }
+     );
+     
    
     
   }

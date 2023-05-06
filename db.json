@@ -65,20 +65,10 @@
       "image": "assets/images/mblesl1.png",
       "description": "6GB ram 128ROM Amoled display,120HZ ref,",
       "price": "17000",
-      "quantity": 3,
+      "quantity": 2,
       "email": "2k19eee056@kiot.ac.in",
-      "emailid": 4,
-      "total": 51000
-    },
-    {
-      "id:": "5",
-      "model": "Samsung M15U",
-      "image": "assets/images/mblesl1.png",
-      "description": "6GB ram 128ROM Amoled display,120HZ ref,",
-      "price": "17000",
-      "quantity": "1",
-      "email": "2k19eee056@kiot.ac.in",
-      "emailid": 5
+      "emailid": 5,
+      "total": 34000
     },
     {
       "id:": "6",
@@ -86,16 +76,78 @@
       "image": "assets/images/mblesl2.png",
       "description": "8GB ram 128ROM Amoled display,120HZ ref,",
       "price": "30000",
+      "quantity": 1,
+      "email": "2k19eee056@kiot.ac.in",
+      "id": "2k19eee056@kiot.ac.in",
+      "emailid": 6,
+      "total": 30000
+    },
+    {
+      "id:": "2",
+      "model": "Asus OLED",
+      "description": "Asus 256 SSD, 8GB RAM,built with AMD RAdan ",
+      "image": "assets/images/asusprodsle2.jpg",
+      "price": "40000",
+      "quantity": 3,
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 7,
+      "total": 120000
+    },
+    {
+      "id:": "4",
+      "model": "Oneplus 11r",
+      "description": "8GB ram 128ROM Amoled display,120HZ ref,",
+      "image": "assets/images/oneplus11rblue.jpg",
+      "price": "45000",
       "quantity": "1",
       "email": "2k19eee056@kiot.ac.in",
       "id": "2k19eee056@kiot.ac.in",
-      "emailid": 6
+      "emailid": 8
+    },
+    {
+      "id:": "7",
+      "model": "Redmi 11",
+      "image": "assets/images/redmisl1.png",
+      "description": "8GB ram 128ROM Amoled display,120HZ ref,",
+      "price": "15000",
+      "quantity": 2,
+      "email": "2k19eee056@kiot.ac.in",
+      "id": "2k19eee056@kiot.ac.in",
+      "emailid": 9,
+      "total": 30000
+    },
+    {
+      "id:": "4",
+      "model": "Oneplus 11r",
+      "description": "8GB ram 128ROM Amoled display,120HZ ref,",
+      "image": "assets/images/oneplus11rblue.jpg",
+      "price": "45000",
+      "quantity": 1,
+      "email": "balaji@gmail.com",
+      "emailid": 10,
+      "total": 45000
+    },
+    {
+      "id:": "6",
+      "model": "Onplus Nord",
+      "image": "assets/images/mblesl2.png",
+      "description": "8GB ram 128ROM Amoled display,120HZ ref,",
+      "price": "30000",
+      "quantity": 2,
+      "email": "balaji@gmail.com",
+      "id": "balaji@gmail.com",
+      "emailid": 11,
+      "total": 60000
     }
   ],
   "carttotal": [
     {
-      "total": 98000,
+      "total": 259000,
       "emailid": "2k19eee056@kiot.ac.in"
+    },
+    {
+      "total": 105000,
+      "emailid": "balaji@gmail.com"
     }
   ],
   "products": [
