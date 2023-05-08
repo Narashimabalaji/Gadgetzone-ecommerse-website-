@@ -97,5 +97,50 @@
     box-sizing: border-box;
   }
   
-
+  .container  .form-group-button{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+  }
+  .container  .form-group-button input{
+    position: absolute;
+    height: 100%;
+    width:100%;
+    padding: 0 35px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #ccc;
+    transition: all 0.2s ease;
   
+  }
+  
+  .container  .button{
+    margin-top: 20px;
+  }
+  .container  .button input{
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500px;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background:linear-gradient(45deg,#485461, #c430d7);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .container  .button input:hover{
+    background:linear-gradient(45deg,#5B6467, #a729b8);
+  }
+  
+  .error{
+  
+    background-color: rgb(228, 172, 172);
+    border-radius: 2px;
+    color: red;
+    padding: 0px 0px 0px 5px;
+  }
+  .error-container{
+    margin-top: 5px;
+  }

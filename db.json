@@ -117,27 +117,53 @@
       "total": 30000
     },
     {
+      "id:": "5",
+      "model": "Samsung M15U",
+      "image": "assets/images/mblesl1.png",
+      "description": "6GB ram 128ROM Amoled display,120HZ ref,",
+      "price": "17000",
+      "quantity": "1",
+      "emailid": "balaji@gmail.com"
+    },
+    {
+      "id:": "2",
+      "model": "Asus OLED",
+      "description": "Asus 256 SSD, 8GB RAM,built with AMD RAdan ",
+      "image": "assets/images/asusprodsle2.jpg",
+      "price": "40000",
+      "quantity": "1",
+      "email": "balaji@gmail.com",
+      "emailid": 10
+    },
+    {
+      "model": "Oneplus 10r",
+      "image": "assets/images/oneplussale.jpg",
+      "description": "8GB ram 128ROM Amoled display,120HZ ref,",
+      "price": "55000",
+      "quantity": 2,
+      "email": "balaji@gmail.com",
+      "emailid": 11,
+      "total": 110000
+    },
+    {
+      "model": "Onplus CE2",
+      "image": "assets/images/oneplusCE.jpg",
+      "description": "8GB ram 128ROM Amoled display,130HZ ref,",
+      "price": "19000",
+      "quantity": "1",
+      "email": "balaji@gmail.com",
+      "emailid": 12
+    },
+    {
       "id:": "4",
       "model": "Oneplus 11r",
       "description": "8GB ram 128ROM Amoled display,120HZ ref,",
       "image": "assets/images/oneplus11rblue.jpg",
       "price": "45000",
-      "quantity": 1,
-      "email": "balaji@gmail.com",
-      "emailid": 10,
-      "total": 45000
-    },
-    {
-      "id:": "6",
-      "model": "Onplus Nord",
-      "image": "assets/images/mblesl2.png",
-      "description": "8GB ram 128ROM Amoled display,120HZ ref,",
-      "price": "30000",
-      "quantity": 2,
+      "quantity": "1",
       "email": "balaji@gmail.com",
       "id": "balaji@gmail.com",
-      "emailid": 11,
-      "total": 60000
+      "emailid": 13
     }
   ],
   "carttotal": [
@@ -146,8 +172,28 @@
       "emailid": "2k19eee056@kiot.ac.in"
     },
     {
-      "total": 105000,
+      "total": 214000,
       "emailid": "balaji@gmail.com"
+    }
+  ],
+  "billingdetail": [
+    {
+      "username": "aarthiga",
+      "emailid": "balaji@gmail.com",
+      "phonenumber": "8838482585",
+      "address": "ggfhghhhj",
+      "city": "salem",
+      "state": "tamilnadu",
+      "pincode": "637501"
+    },
+    {
+      "username": "balaji",
+      "emailid": "aarthisiva@gmail.com",
+      "phonenumber": "9361120672",
+      "address": "ggfhghhhj",
+      "city": "salem",
+      "state": "tamilnadu",
+      "pincode": "637501"
     }
   ],
   "products": [

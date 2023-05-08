@@ -12,12 +12,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MobilesComponent } from './mobiles/mobiles.component';
 import { LaptopsComponent } from './laptops/laptops.component';
 import { TelivisonComponent } from './telivison/telivison.component';
-import { ShoppingcartdetailComponent } from './shoppingcartdetail/shoppingcartdetail.component';
 import { CheckoutpageComponent } from './checkoutpage/checkoutpage.component';
 import { PaymentpageComponent } from './paymentpage/paymentpage.component';
+import { ProductconfirmationComponent } from './productconfirmation/productconfirmation.component';
 
 @NgModule({
-  declarations: [										
+  declarations: [											
     AppComponent,
     HomeComponent,
       RegisterComponent,
@@ -26,9 +26,9 @@ import { PaymentpageComponent } from './paymentpage/paymentpage.component';
       MobilesComponent,
       LaptopsComponent,
       TelivisonComponent,
-      ShoppingcartdetailComponent,
       CheckoutpageComponent,
-      PaymentpageComponent
+      PaymentpageComponent,
+      ProductconfirmationComponent
    ],
   imports: [
     BrowserModule,

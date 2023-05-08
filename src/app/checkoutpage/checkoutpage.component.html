@@ -26,41 +26,102 @@
 </nav>
 
 
-
+<div class="container">
 <div class="checkout-page">
   <div class="row">
     <div class="col-md-5">
-      <form>
+      <form [formGroup]="BillingForm" (submit)="submitform()">
         <h2>Billing Information</h2>
         <div class="form-group">
           <label for="name">Full Name*</label>
-          <input type="text" id="name" name="name" required>
+          <input type="text" id="name" name="name" required  formControlName="username">
         </div>
-        <div class="form-group">
+        <div class="error-container">
+          <div *ngIf="BillingForm.controls['username'].invalid && (BillingForm.controls['username'].touched || BillingForm.controls['username'].dirty)" class="error">
+            <div *ngIf="BillingForm.controls['username'].errors?.['required']" class="error"> First Name is required </div>
+            <div *ngIf="BillingForm.controls['username'].errors?.['minlength']" class="error">First Name Minimum Length is 4</div>
+          </div>
+        </div>
+        <div class="form-group" formControlName="username">
           <label for="email">Email*</label>
-          <input type="email" id="email" name="email" required>
+          <input type="email" id="email" name="email" required formControlName="emailid" >
+        </div>
+        <div class="error-container">
+          <div *ngIf="BillingForm.controls['emailid'].invalid && (BillingForm.controls['emailid'].touched || BillingForm.controls['emailid'].dirty)" class="error">
+            <div *ngIf="BillingForm.controls['emailid'].errors?.['required']" class="error"> Emailid is required </div>
+           <div *ngIf="BillingForm.controls['emailid'].errors?.['pattern']" class="error">Enter  correct emailid</div>
+
+          </div>
         </div>
         <div class="form-group">
           <label for="phone">Phone*</label>
-          <input type="text" id="phone" name="phone" required>
+          <input type="text" id="phone" name="phone" required formControlName="phonenumber" minlength="10">
+        </div>
+        <div class="error-container">
+          <div *ngIf="BillingForm.controls['phonenumber'].invalid && (BillingForm.controls['emailid'].touched || BillingForm.controls['phonenumber'].dirty)" class="error">
+            <div *ngIf="BillingForm.controls['phonenumber'].errors?.['required']" class="error"> MobileNumber is required </div>
+           <div *ngIf="BillingForm.controls['phonenumber'].errors?.['pattern']" class="error">Enter  correct Mobilenumber</div>
+
+          </div>
         </div>
         <div class="form-group">
           <label for="address">Address*</label>
-          <input type="text" id="address" name="address" required>
+          <input type="text" id="address" name="address" required formControlName="address">
+        </div>
+        <div class="error-container">
+          <div *ngIf="BillingForm.controls['address'].invalid && (BillingForm.controls['address'].touched || BillingForm.controls['address'].dirty)" class="error">
+            <div *ngIf="BillingForm.controls['address'].errors?.['required']" class="error"> Please Enter your Adress for shipment </div>
+
+
+          </div>
         </div>
         <div class="form-group">
           <label for="city">City*</label>
-          <input type="text" id="city" name="city" required>
+          <input type="text" id="city" name="city" required formControlName="city">
         </div>
+        <div class="error-container">
+          <div *ngIf="BillingForm.controls['city'].invalid && (BillingForm.controls['city'].touched || BillingForm.controls['city'].dirty)" class="error">
+            <div *ngIf="BillingForm.controls['city'].errors?.['required']" class="error"> Please Enter your city </div>
+
+
+          </div>
+        </div>
+          
         <div class="form-group">
           <label for="state">State*</label>
-          <input type="text" id="state" name="state" required>
+          <input type="text" id="state" name="state" required  formControlName="state">
         </div>
+        <div class="error-container">
+          <div *ngIf="BillingForm.controls['state'].invalid && (BillingForm.controls['state'].touched || BillingForm.controls['state'].dirty)" class="error">
+            <div *ngIf="BillingForm.controls['state'].errors?.['required']" class="error"> Please Enter your state </div>
+
+
+          </div>
+        </div>
+
         <div class="form-group">
           <label for="zip">Pin Code*</label>
-          <input type="text" id="zip" name="zip" required>
+          <input type="text" id="zip" name="zip" required   formControlName="pincode">
         </div>
+
+        <div class="error-container">
+          <div *ngIf="BillingForm.controls['pincode'].invalid && (BillingForm.controls['state'].touched || BillingForm.controls['pincode'].dirty)" class="error">
+            <div *ngIf="BillingForm.controls['pincode'].errors?.['required']" class="error"> Please Enter your pincode </div>
+            <div *ngIf="BillingForm.controls['pincode'].errors?.['pattern']" class="error">Enter  correct pincode</div>
+
+
+          </div>
+        </div>
+
+        <div class="form-group-button button">
+          <input type="submit" value="Confirm" >
+
+        </div>
+
       </form>
+    </div>
+
+    
       </div>
     </div>
     

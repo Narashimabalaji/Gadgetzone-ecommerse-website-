@@ -8,9 +8,9 @@ import { MobilesComponent } from './mobiles/mobiles.component';
 import { LaptopsComponent } from './laptops/laptops.component';
 import { TelivisonComponent } from './telivison/telivison.component';
 import { AuthGuard } from './services/auth.guard';
-import { ShoppingcartdetailComponent } from './shoppingcartdetail/shoppingcartdetail.component';
 import { CheckoutpageComponent } from './checkoutpage/checkoutpage.component';
 import { PaymentpageComponent } from './paymentpage/paymentpage.component';
+import { ProductconfirmationComponent } from './productconfirmation/productconfirmation.component';
 
 
 const routes: Routes =[
@@ -30,13 +30,6 @@ const routes: Routes =[
 {
   path:"cart",
   component:ShoppingCartComponent,
-  canActivate:[AuthGuard],
-  children:[
-    {
-      path:':check',
-      component:ShoppingcartdetailComponent
-    }
-  ]
 
 },
 {
@@ -63,7 +56,13 @@ const routes: Routes =[
 {
   path:'payment',
   component:PaymentpageComponent
+},
+{
+  path:'productconfirmation',
+  component:ProductconfirmationComponent
+
 }
+
 
 ];
 

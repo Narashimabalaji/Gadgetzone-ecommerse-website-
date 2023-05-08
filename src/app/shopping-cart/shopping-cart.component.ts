@@ -43,11 +43,15 @@ gt:number=0;
            
       this.product =user;
       console.log("User data:", user);
-        
-   
+    
+  
+
+
+
+
       
 this.http.get<any>("http://localhost:3000/carttotal/").subscribe((t:any)=>{
-
+  const m =this.product.price;
 let j =0;
 for(let item of this.product){
     
@@ -55,16 +59,24 @@ for(let item of this.product){
 }
 
 
-
   const e =t.find((u:any)=>{
       return u.emailid === loggedemailid;
        
   })
+
+
+
+
 if(e){
   this.http.patch<any>("http://localhost:3000/carttotal/"+loggedemailid ,{total:j}).subscribe((d)=>{
     alert("patched successfully");
   })
 }
+
+
+
+  
+
 
 else{
   this.http.post<any>("http://localhost:3000/carttotal/",{total:j,emailid:loggedemailid}).subscribe((d)=>{

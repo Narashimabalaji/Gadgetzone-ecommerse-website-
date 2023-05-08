@@ -79,10 +79,10 @@ adduserinformation(body:any){
   return this.http.post("http://localhost:3000/users",body)
     }
     
-addtocartdb(body:any,email:any){
+addtocartdb(body:any,emailid:any){
   this.loggedemailid=localStorage.getItem('loggedemailid');
  
-  const data ={...body,email:this.loggedemailid,id:email}
+  const data ={...body,email:this.loggedemailid,id:emailid}
   return this.http.post<any>("http://localhost:3000/cart/",data);
 }
 
@@ -104,6 +104,26 @@ getdataforcart(){
   }));
  
 }
+
+addbillinginfo(body:any){
+  return this.http.post<any>("http://localhost:3000/billingdetail/",body)
 }
 
+totalproductincart(){
+ return  this.http.get<any>("http://localhost:3000/cart/").subscribe((o)=>{
+    console.log("API response:", o);
 
+    const loggedemailid = localStorage.getItem('loggedemailid');
+    console.log("Logged in user email:", loggedemailid);
+
+    const user = o.filter((data:any)=>{
+      console.log("Email address in data:", data.email);
+      return data.email === loggedemailid;
+    });
+         
+         return user;
+})}
+
+
+
+}
