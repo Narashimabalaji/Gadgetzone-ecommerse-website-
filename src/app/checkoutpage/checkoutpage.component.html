@@ -44,12 +44,12 @@
         </div>
         <div class="form-group" formControlName="username">
           <label for="email">Email*</label>
-          <input type="email" id="email" name="email" required formControlName="emailid" >
+          <input type="email" id="email" name="email" required formControlName="email" >
         </div>
         <div class="error-container">
-          <div *ngIf="BillingForm.controls['emailid'].invalid && (BillingForm.controls['emailid'].touched || BillingForm.controls['emailid'].dirty)" class="error">
-            <div *ngIf="BillingForm.controls['emailid'].errors?.['required']" class="error"> Emailid is required </div>
-           <div *ngIf="BillingForm.controls['emailid'].errors?.['pattern']" class="error">Enter  correct emailid</div>
+          <div *ngIf="BillingForm.controls['email'].invalid && (BillingForm.controls['email'].touched || BillingForm.controls['email'].dirty)" class="error">
+            <div *ngIf="BillingForm.controls['email'].errors?.['required']" class="error"> Emailid is required </div>
+           <div *ngIf="BillingForm.controls['email'].errors?.['pattern']" class="error">Enter  correct emailid</div>
 
           </div>
         </div>
@@ -58,7 +58,7 @@
           <input type="text" id="phone" name="phone" required formControlName="phonenumber" minlength="10">
         </div>
         <div class="error-container">
-          <div *ngIf="BillingForm.controls['phonenumber'].invalid && (BillingForm.controls['emailid'].touched || BillingForm.controls['phonenumber'].dirty)" class="error">
+          <div *ngIf="BillingForm.controls['phonenumber'].invalid && (BillingForm.controls['phonenumber'].touched || BillingForm.controls['phonenumber'].dirty)" class="error">
             <div *ngIf="BillingForm.controls['phonenumber'].errors?.['required']" class="error"> MobileNumber is required </div>
            <div *ngIf="BillingForm.controls['phonenumber'].errors?.['pattern']" class="error">Enter  correct Mobilenumber</div>
 

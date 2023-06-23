@@ -15,9 +15,15 @@ import { TelivisonComponent } from './telivison/telivison.component';
 import { CheckoutpageComponent } from './checkoutpage/checkoutpage.component';
 import { PaymentpageComponent } from './paymentpage/paymentpage.component';
 import { ProductconfirmationComponent } from './productconfirmation/productconfirmation.component';
+import { MessageService } from './message.service';
+import { AdminviewComponent } from './adminview/adminview.component';
+import { OrderplacedComponent } from './orderplaced/orderplaced.component';
+import { AdminorderdetailsComponent } from './adminorderdetails/adminorderdetails.component';
+import { SingleproductpageComponent } from './singleproductpage/singleproductpage.component';
+import { SingleproductviewService } from './singleproductview.service';
 
 @NgModule({
-  declarations: [											
+  declarations: [															
     AppComponent,
     HomeComponent,
       RegisterComponent,
@@ -28,7 +34,11 @@ import { ProductconfirmationComponent } from './productconfirmation/productconfi
       TelivisonComponent,
       CheckoutpageComponent,
       PaymentpageComponent,
-      ProductconfirmationComponent
+      ProductconfirmationComponent,
+      AdminviewComponent,
+      OrderplacedComponent,
+      AdminorderdetailsComponent,
+      SingleproductpageComponent
    ],
   imports: [
     BrowserModule,
@@ -40,7 +50,7 @@ import { ProductconfirmationComponent } from './productconfirmation/productconfi
     
     
   ],
-  providers: [],
+  providers: [SingleproductviewService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

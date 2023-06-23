@@ -24,7 +24,7 @@ export class CheckoutpageComponent implements OnInit {
 
   BillingForm=this.form.group({
     username:[,[Validators.required,Validators.minLength(4)]],
-    emailid:[,[Validators.required, Validators.email,Validators.pattern("[a-zA-Z0-9.-]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{3,}")]],
+    email:[,[Validators.required, Validators.email,Validators.pattern("[a-zA-Z0-9.-]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{3,}")]],
     phonenumber:[,[Validators.required,Validators.pattern("^[7-9][0-9]{9}$")]],
     address:[,[Validators.required,]],
     city:[,[Validators.required,]],

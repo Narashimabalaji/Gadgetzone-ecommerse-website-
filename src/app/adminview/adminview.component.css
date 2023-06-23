@@ -1,0 +1,33 @@
+
+
+  ul{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    
+  }
+ li{
+    list-style: none;
+    
+
+ }
+
+  
+   
+    .button button{
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500px;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background:linear-gradient(45deg,#4899df, #c430d7);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    
+  }
+  .button button:hover{
+    background:linear-gradient(45deg,#a93461, #a729b8);
+  }
+ 

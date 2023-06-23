@@ -14,7 +14,7 @@
  <td class="description-space">
 
  <strong><tr>{{item.model}}</tr> </strong>
-  <tr ><ul>
+  <tr (click)="productview(item)"  ><ul>
  <li>{{item.description1}}</li>
  <li>{{item.description2}}</li>   
  <li>{{item.description3}}</li>  
@@ -22,10 +22,13 @@
 </tr>
 
 </td>
- <td> <strong>{{item.price |currency : 'INR'}}</strong>
+ <td> <strong>{{test |currency : 'INR'}}</strong>
+ 
   <tr ><ul>
     <li style="list-style: none;color: green;"><s>{{item.discount |currency:'INR'}}</s></li>
     <li style="list-style: none;">{{item.delivery}}</li>
+    <li style="list-style: none;color: green;"><strong> {{ remainingtime }}</strong></li>
+
  
      </ul>
    </tr>
@@ -39,6 +42,17 @@
   </div>
 
  </div>
+
+ <div>
+  <h1>Product Page</h1>
+  <h2>Price: {{ discountedprice }}</h2>
+  <p>Remaining Time: {{ remainingtime }}</p>
+
+  <h1>{{test}}</h1>
+</div>
+
+
+<button (click)="offerok()">offer</button>
 
 
 

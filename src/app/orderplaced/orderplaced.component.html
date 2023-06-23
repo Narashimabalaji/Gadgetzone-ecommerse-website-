@@ -1,5 +1,29 @@
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+  <meta charset="UTF-8">
+  <title>Order Confirmation</title>
+  
+</head>
+<body>
+  <h1>Order Confirmation</h1>
+  
+  <div class="order-details">
+    <h2>Order Details</h2>
+    <p><strong>Order ID:</strong> 123456789</p>
+    <p><strong>Date:</strong> {{this.dt}}</p>
+    
+    <p *ngFor="let word of ordersummary"><strong>Shipping Address:</strong> {{word.address}} </p>
+
+   
+
+     
+    
+    <p><strong>Payment Method:</strong> Debit Card</p>
+  </div>
+  
+  <div class="order-summary">
+    <h2>Order Summary</h2>
+    
 
 
 <ng-container *ngIf="product.length!=0">
@@ -54,7 +78,6 @@
         
         </tr>
 
-        <button (click)="confirmproduct()">submit</button>
 
       </table>
   
@@ -79,3 +102,9 @@
 
 
 </ng-container>
+  
+  <div class="thank-you">
+    <h2>Thank you for your order!</h2>
+    <p>Your order has been placed successfully. We will process it shortly.</p>
+  </div>
+

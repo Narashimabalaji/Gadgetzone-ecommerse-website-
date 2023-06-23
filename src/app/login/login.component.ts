@@ -34,9 +34,9 @@ export class LoginComponent implements OnInit {
     const passwordval=this.LoginForm.controls['password'].value;
     this.service.logindetails(emailval,passwordval);
  console.log("logged in user",this.LoginForm.value);
+ 
+ this.service.adminlog(emailval,passwordval);
 
- if(this.returl!=null)
- this.route.navigate([this.returl]);
   }
 
 

@@ -58,3 +58,13 @@
     background-color: #0069d9;
   }
   
+  .error{
+  
+    background-color: rgb(228, 172, 172);
+    border-radius: 2px;
+    color: red;
+    padding: 0px 0px 0px 5px;
+  }
+  .error-container{
+    margin-top: 5px;
+  }

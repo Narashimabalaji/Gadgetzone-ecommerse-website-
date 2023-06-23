@@ -1,25 +1,23 @@
 import { Component, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
 import { DbseviceService } from '../dbservice.service';
 import { HttpClient } from '@angular/common/http';
-import { MessageService } from '../message.service';
-import { Route, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-productconfirmation',
-  templateUrl: './productconfirmation.component.html',
-  styleUrls: ['./productconfirmation.component.css']
+  selector: 'app-orderplaced',
+  templateUrl: './orderplaced.component.html',
+  styleUrls: ['./orderplaced.component.css']
 })
-export class ProductconfirmationComponent implements OnInit {
-  product: any=[];
+export class OrderplacedComponent implements OnInit {
+  product: any;
+  name: any;
   grandtotal: any;
+  ordersummary: any;
+  dt: any;
+ 
 
 
-  name: string|any;
-  email:string|any;
-  message: string|any;
-  
-
-  constructor(private dbservice:DbseviceService,private http:HttpClient,private messageservice:MessageService,private route:Router) { }
+  constructor(private route:Router,private orderdataservice:DbseviceService,private http:HttpClient) { }
 
   ngOnInit() {
 
@@ -60,40 +58,42 @@ export class ProductconfirmationComponent implements OnInit {
     })
 
 
+    //for billing detail display
+    
+    this.http.get<any>("http://localhost:3000/billingdetail/").subscribe((o)=>{
+      console.log("API response:", o);
+  
+      const loggedemailid = localStorage.getItem('loggedemailid');
+      console.log("Logged in user email:", loggedemailid);
+  
+      const user = o.filter((data:any)=>{
+        console.log("Email address billing in data:", data.emailid);
+        return data.emailid === loggedemailid;
+      });
+           
+      this.ordersummary =user;
+      console.log("User data:", user);
+
+
+  
+  
+  
+    })
+  
+  
+  this.dt= new Date();
+
   
   
   
   }
 
 
-  confirmproduct(){
-    const loggedemailid = localStorage.getItem('loggedemailid');
-         
-           this.email = loggedemailid;
-
-           this.route.navigate(['/payment']);
-
-           console.log(this.email)
-           console.log(this.name)
-       
-       this.messageservice.sendEmail(this.email).subscribe(
-        
-        (f)=>{
-             console.log(f);  
-          console.log('email sent successfully');
+ 
 
 
-       },
-         
-       error =>{
-        console.log('error sending email',error);
-
-       })
-
-       
 
 
-  }
+
 
 }
-

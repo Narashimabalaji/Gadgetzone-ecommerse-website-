@@ -11,6 +11,10 @@ import { AuthGuard } from './services/auth.guard';
 import { CheckoutpageComponent } from './checkoutpage/checkoutpage.component';
 import { PaymentpageComponent } from './paymentpage/paymentpage.component';
 import { ProductconfirmationComponent } from './productconfirmation/productconfirmation.component';
+import { AdminviewComponent } from './adminview/adminview.component';
+import { OrderplacedComponent } from './orderplaced/orderplaced.component';
+import { AdminorderdetailsComponent } from './adminorderdetails/adminorderdetails.component';
+import { SingleproductpageComponent } from './singleproductpage/singleproductpage.component';
 
 
 const routes: Routes =[
@@ -61,6 +65,29 @@ const routes: Routes =[
   path:'productconfirmation',
   component:ProductconfirmationComponent
 
+},
+
+{
+
+  path:'orderplaced',
+  component:OrderplacedComponent
+
+},
+{
+  path:'singlepageview',
+  component:SingleproductpageComponent
+
+},
+
+{
+
+    path:'admin',
+    component:AdminviewComponent,
+   
+},
+{
+  path:'orderview',
+  component:AdminorderdetailsComponent
 }
 
 

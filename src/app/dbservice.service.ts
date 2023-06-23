@@ -12,11 +12,37 @@ export class DbseviceService {
   user:any="";
   isLoggedIn:boolean = false;
   loggedemailid: string | any;
+   adminloggedin:boolean =false;
+   adminname:any;
+   password:any="";
+
 constructor(private http:HttpClient,private route:Router) { }
+
+
 
 getproducts(){
   return this.http.get('http://localhost:3000/profile')
 }
+
+adminlog(u:any,p:any){
+  this.adminname=u;
+  this.password=p;
+  this.adminloggedin=true;
+
+  if(this.adminname=="admin"){
+    this.route.navigate(['/admin']);
+
+  }
+
+ 
+
+}
+
+isadminloggedin(){
+  return this.adminloggedin;
+}
+
+
 
 logindetails(log:any,log1:any){
   console.log(log);
@@ -31,7 +57,7 @@ logindetails(log:any,log1:any){
  
 
   if(user){
-    alert('You are successfully login');
+    alert('welcome again ' +user.username);
     //for storing data in local storage 
   localStorage.setItem('loggedInUser',user.username);
   localStorage.setItem('loggedemailid',user.emailid);
@@ -44,10 +70,15 @@ logindetails(log:any,log1:any){
       window.location.reload();
        });
     }
+
+   
+
   else{
-    alert('user not found. please register first')
+    alert('user not found. please register first');
   }
 })
+
+
 }
 
 getusersdetails(){
@@ -106,7 +137,9 @@ getdataforcart(){
 }
 
 addbillinginfo(body:any){
-  return this.http.post<any>("http://localhost:3000/billingdetail/",body)
+  this.loggedemailid=localStorage.getItem('loggedemailid');
+       const mail={...body,emailid:this.loggedemailid}
+  return this.http.post<any>("http://localhost:3000/billingdetail/",mail)
 }
 
 totalproductincart(){

@@ -1,9 +1,18 @@
 <div class="payment-container">
   <h2>Payment Information</h2>
-  <form>
+  <form [formGroup]="paymentform" (submit)="orderplace()">
     <div class="form-group">
       <label for="card-number">Card Number</label>
-      <input type="text" id="card-number" name="card-number" required>
+      <input type="text" id="card-number" name="card-number" required  formControlName="cardnumber">
+    </div>
+
+    <div class="error-container">
+      <div *ngIf="paymentform.controls['cardnumber'].invalid && (paymentform.controls['cardnumber'].touched || paymentform.controls['cardnumber'].dirty)" class="error">
+        <div *ngIf="paymentform.controls['cardnumber'].errors?.['required']" class="error"> cardnumber is required </div>
+        <div *ngIf="paymentform.controls['cardnumber'].errors?.['minlength']" class="error"> Enter valid cardnumber </div>
+      </div>
+
+
     </div>
     <div class="form-group">
       <label for="expiry-date">Expiry Date</label>
@@ -13,6 +22,6 @@
       <label for="cvv">CVV</label>
       <input type="text" id="cvv" name="cvv" required>
     </div>
-    <button class="btn btn-primary">Pay Now</button>
+    <button class="btn btn-primary" type="submit">Pay Now</button>
   </form>
 </div>

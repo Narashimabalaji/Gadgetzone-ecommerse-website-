@@ -14,8 +14,8 @@
  <td class="description-space">
 
  <strong><tr>{{item.model}}</tr> </strong>
-  <tr ><ul>
- <li>{{item.description1}}</li>
+  <tr  (click)="productview(item)" ><ul>
+ <li >{{item.description1}}</li>
  <li>{{item.description2}}</li>   
  <li>{{item.description3}}</li>  
   </ul>
@@ -40,3 +40,4 @@
 
  </div>
 
+<router-outlet></router-outlet>

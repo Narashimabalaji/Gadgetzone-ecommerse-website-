@@ -3,8 +3,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { DbseviceService } from './dbservice.service';
 import { map } from 'rxjs';
-import { JsonPipe, KeyValuePipe } from '@angular/common';
-import { KeyedRead } from '@angular/compiler';
+
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +23,7 @@ public email2:any;
 
 
 constructor(private http:HttpClient,private dbservice:DbseviceService) { 
-  this.mail=this.dbservice.b;
+ 
  
 }
 
@@ -107,14 +106,7 @@ addtocart(a:any,email:any) {
 
 }
 
-gettotalprice():number{
 
-let grandtotal =0;
-this.cartitems.map((a:any)=>{
-  grandtotal += a.total;
-})
-return grandtotal;
-}
 
 Decrementqty(item:any|number){
  if(item.quantity>1){

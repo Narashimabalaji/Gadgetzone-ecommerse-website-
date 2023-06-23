@@ -22,8 +22,7 @@
       "emailid": "balaji@gmail.com",
       "password": "111111111",
       "cpassword": "111111111",
-      "id": "1",
-      "order": []
+      "id": "1"
     },
     {
       "username": "Aarthi",
@@ -37,32 +36,14 @@
       "emailid": "2k19eee056@kiot.ac.in",
       "password": "11111111",
       "cpassword": "11111111",
-      "id": 3,
-      "order": [
-        {
-          "id": "2",
-          "model": "Asus OLED",
-          "description": "Asus 256 SSD, 8GB RAM,built with AMD RAdan ",
-          "image": "assets/images/asusprodsle2.jpg",
-          "price": "40000",
-          "quantity": "1"
-        },
-        {
-          "id:": "5",
-          "model": "Samsung M15U",
-          "image": "assets/images/mblesl1.png",
-          "description": "6GB ram 128ROM Amoled display,120HZ ref,",
-          "price": "17000",
-          "quantity": "1"
-        }
-      ]
+      "id": 3
     }
   ],
   "cart": [
     {
       "id:": "5",
       "model": "Samsung M15U",
-      "image": "assets/images/mblesl1.png",
+      "image": "assets/images/realmesl1.png",
       "description": "6GB ram 128ROM Amoled display,120HZ ref,",
       "price": "17000",
       "quantity": 2,
@@ -164,16 +145,49 @@
       "email": "balaji@gmail.com",
       "id": "balaji@gmail.com",
       "emailid": 13
+    },
+    {
+      "id:": "3",
+      "model": "Asus OLED",
+      "description": "Asus 256 SSD, 8GB RAM,built with AMD RAdan ",
+      "image": "assets/images/asusprodsle2.jpg",
+      "price": "40000",
+      "quantity": 2,
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 14,
+      "total": 80000
+    },
+    {
+      "id:": "6",
+      "model": "Onplus Nord",
+      "image": "assets/images/mblesl2.png",
+      "description": "8GB ram 128ROM Amoled display,120HZ ref,",
+      "price": "30000",
+      "quantity": "1",
+      "email": null,
+      "emailid": 15
     }
   ],
   "carttotal": [
     {
-      "total": 259000,
+      "total": 339000,
       "emailid": "2k19eee056@kiot.ac.in"
     },
     {
       "total": 214000,
       "emailid": "balaji@gmail.com"
+    },
+    {
+      "total": 0,
+      "emailid": "_0pHojL"
+    },
+    {
+      "total": 0,
+      "emailid": "D7DWASx"
+    },
+    {
+      "total": 30000,
+      "emailid": "k025t8j"
     }
   ],
   "billingdetail": [
@@ -194,6 +208,16 @@
       "city": "salem",
       "state": "tamilnadu",
       "pincode": "637501"
+    },
+    {
+      "username": "balaji",
+      "email": "balaji@gmail.com",
+      "phonenumber": "9361120672",
+      "address": "96",
+      "city": "ss",
+      "state": "tamilnadu",
+      "pincode": "637501",
+      "emailid": "2k19eee056@kiot.ac.in"
     }
   ],
   "products": [
@@ -201,7 +225,7 @@
       "id:": "1",
       "model": "Asus M1A5U",
       "description": "Asus 256 SSD, 8GB RAM,built with AMD RAdam ",
-      "image": "assets/images/asus 2 sl.jpg",
+      "image": "assets/images/acerlpsl.png",
       "price": "50,000",
       "quantity": "1"
     },
@@ -347,7 +371,7 @@
   "laptops": [
     {
       "id": "1",
-      "model": "Onplus CE2",
+      "model": "Asus M1A5U",
       "image": "assets/images/asus 2 sl.jpg",
       "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
       "description2": "15.51 cm (6.5 inch) OLED Display",
@@ -359,7 +383,7 @@
     },
     {
       "id": "1",
-      "model": "Onplus CE2",
+      "model": "Asus OLED",
       "image": "assets/images/asusprodsle2.jpg",
       "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
       "description2": "15.51 cm (6.5 inch) OLED Display",
@@ -371,7 +395,7 @@
     },
     {
       "id": "1",
-      "model": "Onplus CE2",
+      "model": "Acer oled",
       "image": "assets/images/acerlpsl.png",
       "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
       "description2": "15.51 cm (6.5 inch) OLED Display",
