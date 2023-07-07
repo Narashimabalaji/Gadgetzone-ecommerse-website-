@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { SingleproductviewService } from '../singleproductview.service';
 import { HttpClient } from '@angular/common/http';
 import { forkJoin } from 'rxjs';
+import { DbseviceService } from '../dbservice.service';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-singleproductpage',
@@ -13,7 +15,8 @@ export class SingleproductpageComponent implements OnInit {
   particularproduct:any;
   product: any;
   
-  constructor(private showproduct:SingleproductviewService,private http:HttpClient) { 
+  constructor(private showproduct:SingleproductviewService,private http:HttpClient,
+    private dbservice:DbseviceService,private cartservice:CartService) { 
     
   }
 
@@ -50,8 +53,12 @@ export class SingleproductpageComponent implements OnInit {
 
     console.log("user",user);
 
+    console.log("finaldata",finaldata);
+
   
-  })}
+  })
+
+}
 
 
   getmultipledata(){
@@ -65,4 +72,24 @@ export class SingleproductpageComponent implements OnInit {
 
   }
 
+  addingtocart(item:any){
+    alert("added to your cart" );
+    const loggedemailid = localStorage.getItem('loggedemailid');
+
+    this.cartservice.addtocart(item,loggedemailid);
+  
+
+    
+    
+  }
+
+  directbuy(item:any){
+
+    alert("Directbuy");
+
+    this.dbservice.buynowservice(item);
+    localStorage.setItem('buy',"buy");
+
+
+  }
 }

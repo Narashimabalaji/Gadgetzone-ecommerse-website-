@@ -16,11 +16,26 @@
   "profile": {
     "name": "typicode"
   },
+  "admin": [
+    {
+      "name": "Balaji",
+      "emailid": "admin@gmail.com",
+      "password": "balaji@444",
+      "id": 1
+    }
+  ],
   "users": [
     {
       "username": "narashima.coe",
       "emailid": "balaji@gmail.com",
       "password": "111111111",
+      "cpassword": "111111111",
+      "id": "1"
+    },
+    {
+      "username": "Naveen",
+      "emailid": "2k19eee024@kiot.ac.in",
+      "password": "Gadgets@",
       "cpassword": "111111111",
       "id": "1"
     },
@@ -37,66 +52,15 @@
       "password": "11111111",
       "cpassword": "11111111",
       "id": 3
+    },
+    {
+      "username": "harish",
+      "emailid": "2k19me016@kiot.ac.in",
+      "password": "harish1!",
+      "cpassword": "harish1!"
     }
   ],
   "cart": [
-    {
-      "id:": "5",
-      "model": "Samsung M15U",
-      "image": "assets/images/realmesl1.png",
-      "description": "6GB ram 128ROM Amoled display,120HZ ref,",
-      "price": "17000",
-      "quantity": 2,
-      "email": "2k19eee056@kiot.ac.in",
-      "emailid": 5,
-      "total": 34000
-    },
-    {
-      "id:": "6",
-      "model": "Onplus Nord",
-      "image": "assets/images/mblesl2.png",
-      "description": "8GB ram 128ROM Amoled display,120HZ ref,",
-      "price": "30000",
-      "quantity": 1,
-      "email": "2k19eee056@kiot.ac.in",
-      "id": "2k19eee056@kiot.ac.in",
-      "emailid": 6,
-      "total": 30000
-    },
-    {
-      "id:": "2",
-      "model": "Asus OLED",
-      "description": "Asus 256 SSD, 8GB RAM,built with AMD RAdan ",
-      "image": "assets/images/asusprodsle2.jpg",
-      "price": "40000",
-      "quantity": 3,
-      "email": "2k19eee056@kiot.ac.in",
-      "emailid": 7,
-      "total": 120000
-    },
-    {
-      "id:": "4",
-      "model": "Oneplus 11r",
-      "description": "8GB ram 128ROM Amoled display,120HZ ref,",
-      "image": "assets/images/oneplus11rblue.jpg",
-      "price": "45000",
-      "quantity": "1",
-      "email": "2k19eee056@kiot.ac.in",
-      "id": "2k19eee056@kiot.ac.in",
-      "emailid": 8
-    },
-    {
-      "id:": "7",
-      "model": "Redmi 11",
-      "image": "assets/images/redmisl1.png",
-      "description": "8GB ram 128ROM Amoled display,120HZ ref,",
-      "price": "15000",
-      "quantity": 2,
-      "email": "2k19eee056@kiot.ac.in",
-      "id": "2k19eee056@kiot.ac.in",
-      "emailid": 9,
-      "total": 30000
-    },
     {
       "id:": "5",
       "model": "Samsung M15U",
@@ -117,207 +81,16 @@
       "emailid": 10
     },
     {
-      "model": "Oneplus 10r",
-      "image": "assets/images/oneplussale.jpg",
-      "description": "8GB ram 128ROM Amoled display,120HZ ref,",
-      "price": "55000",
-      "quantity": 2,
-      "email": "balaji@gmail.com",
-      "emailid": 11,
-      "total": 110000
-    },
-    {
-      "model": "Onplus CE2",
-      "image": "assets/images/oneplusCE.jpg",
-      "description": "8GB ram 128ROM Amoled display,130HZ ref,",
-      "price": "19000",
-      "quantity": "1",
-      "email": "balaji@gmail.com",
-      "emailid": 12
-    },
-    {
       "id:": "4",
       "model": "Oneplus 11r",
       "description": "8GB ram 128ROM Amoled display,120HZ ref,",
       "image": "assets/images/oneplus11rblue.jpg",
       "price": "45000",
-      "quantity": "1",
+      "quantity": 2,
       "email": "balaji@gmail.com",
       "id": "balaji@gmail.com",
-      "emailid": 13
-    },
-    {
-      "id:": "3",
-      "model": "Asus OLED",
-      "description": "Asus 256 SSD, 8GB RAM,built with AMD RAdan ",
-      "image": "assets/images/asusprodsle2.jpg",
-      "price": "40000",
-      "quantity": 2,
-      "email": "2k19eee056@kiot.ac.in",
-      "emailid": 14,
-      "total": 80000
-    },
-    {
-      "id:": "6",
-      "model": "Onplus Nord",
-      "image": "assets/images/mblesl2.png",
-      "description": "8GB ram 128ROM Amoled display,120HZ ref,",
-      "price": "30000",
-      "quantity": "1",
-      "email": null,
-      "emailid": 15
-    }
-  ],
-  "carttotal": [
-    {
-      "total": 339000,
-      "emailid": "2k19eee056@kiot.ac.in"
-    },
-    {
-      "total": 214000,
-      "emailid": "balaji@gmail.com"
-    },
-    {
-      "total": 0,
-      "emailid": "_0pHojL"
-    },
-    {
-      "total": 0,
-      "emailid": "D7DWASx"
-    },
-    {
-      "total": 30000,
-      "emailid": "k025t8j"
-    }
-  ],
-  "billingdetail": [
-    {
-      "username": "aarthiga",
-      "emailid": "balaji@gmail.com",
-      "phonenumber": "8838482585",
-      "address": "ggfhghhhj",
-      "city": "salem",
-      "state": "tamilnadu",
-      "pincode": "637501"
-    },
-    {
-      "username": "balaji",
-      "emailid": "aarthisiva@gmail.com",
-      "phonenumber": "9361120672",
-      "address": "ggfhghhhj",
-      "city": "salem",
-      "state": "tamilnadu",
-      "pincode": "637501"
-    },
-    {
-      "username": "balaji",
-      "email": "balaji@gmail.com",
-      "phonenumber": "9361120672",
-      "address": "96",
-      "city": "ss",
-      "state": "tamilnadu",
-      "pincode": "637501",
-      "emailid": "2k19eee056@kiot.ac.in"
-    }
-  ],
-  "products": [
-    {
-      "id:": "1",
-      "model": "Asus M1A5U",
-      "description": "Asus 256 SSD, 8GB RAM,built with AMD RAdam ",
-      "image": "assets/images/acerlpsl.png",
-      "price": "50,000",
-      "quantity": "1"
-    },
-    {
-      "id:": "2",
-      "model": "Asus OLED",
-      "description": "Asus 256 SSD, 8GB RAM,built with AMD RAdan ",
-      "image": "assets/images/asusprodsle2.jpg",
-      "price": "40000",
-      "quantity": "1"
-    },
-    {
-      "id:": "3",
-      "model": "Asus OLED",
-      "description": "Asus 256 SSD, 8GB RAM,built with AMD RAdan ",
-      "image": "assets/images/asusprodsle2.jpg",
-      "price": "40000",
-      "quantity": "1"
-    },
-    {
-      "id:": "4",
-      "model": "Oneplus 11r",
-      "description": "8GB ram 128ROM Amoled display,120HZ ref,",
-      "image": "assets/images/oneplus11rblue.jpg",
-      "price": "45000",
-      "quantity": "1"
-    },
-    {
-      "id:": "5",
-      "model": "Samsung M15U",
-      "image": "assets/images/mblesl1.png",
-      "description": "6GB ram 128ROM Amoled display,120HZ ref,",
-      "price": "17000",
-      "quantity": "1"
-    },
-    {
-      "id:": "6",
-      "model": "Onplus Nord",
-      "image": "assets/images/mblesl2.png",
-      "description": "8GB ram 128ROM Amoled display,120HZ ref,",
-      "price": "30000",
-      "quantity": "1"
-    },
-    {
-      "id:": "7",
-      "model": "Redmi 11",
-      "image": "assets/images/redmisl1.png",
-      "description": "8GB ram 128ROM Amoled display,120HZ ref,",
-      "price": "15000",
-      "quantity": "1"
-    },
-    {
-      "id": "8",
-      "model": "Onplus CE2",
-      "image": "assets/images/oneplusCE.jpg",
-      "description": "8GB ram 128ROM Amoled display,130HZ ref,",
-      "price": "19000",
-      "quantity": "1"
-    },
-    {
-      "id": "9",
-      "model": "Oneplus 10r",
-      "image": "assets/images/oneplussale.jpg",
-      "description": "8GB ram 128ROM Amoled display,120HZ ref,",
-      "price": "55000",
-      "quantity": "1"
-    }
-  ],
-  "mobiles": [
-    {
-      "id:": "1",
-      "model": "Oneplus 11r",
-      "image": "assets/images/oneplus11rblue.jpg",
-      "description1": "16 GB RAM | 568 GB ROM | Expandable Upto 1 TB",
-      "description2": "16.51 cm (6.5 inch) AMOLED Display",
-      "description3": "5000 mAh Battery",
-      "price": "49000",
-      "discount": "55000",
-      "delivery": "Free delivery",
-      "quantity": "1"
-    },
-    {
-      "id": "2",
-      "model": "Onplus CE2",
-      "image": "assets/images/oneplusCE.jpg",
-      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
-      "description2": "15.51 cm (6.5 inch) OLED Display",
-      "description3": "5000 mAh Battery",
-      "price": "19000",
-      "discount": "35000",
-      "delivery": "Free delivery",
-      "quantity": "1"
+      "emailid": 13,
+      "total": 90000
     },
     {
       "id": "3",
@@ -329,57 +102,10 @@
       "price": "19000",
       "discount": "25000",
       "delivery": "Free delivery",
-      "quantity": "1"
-    },
-    {
-      "id": "4",
-      "model": "Onplus CE2",
-      "image": "assets/images/mblesl2.png",
-      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
-      "description2": "15.51 cm (6.5 inch) OLED Display",
-      "description3": "5000 mAh Battery",
-      "price": "49000",
-      "discount": "55000",
-      "delivery": "Free delivery",
-      "quantity": "1"
-    },
-    {
-      "id": "5",
-      "model": "Onplus 10r",
-      "image": "assets/images/oneplussale.jpg",
-      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
-      "description2": "15.51 cm (6.5 inch) OLED Display",
-      "description3": "5000 mAh Battery",
-      "price": "49000",
-      "discount": "55000",
-      "delivery": "Free delivery",
-      "quantity": "1"
-    },
-    {
-      "id": "6",
-      "model": "Onplus CE2",
-      "image": "assets/images/realmesl1.png",
-      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
-      "description2": "15.51 cm (6.5 inch) OLED Display",
-      "description3": "5000 mAh Battery",
-      "price": "49000",
-      "discount": "55000",
-      "delivery": "Free delivery",
-      "quantity": "1"
-    }
-  ],
-  "laptops": [
-    {
-      "id": "1",
-      "model": "Asus M1A5U",
-      "image": "assets/images/asus 2 sl.jpg",
-      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
-      "description2": "15.51 cm (6.5 inch) OLED Display",
-      "description3": "5000 mAh Battery",
-      "price": "49000",
-      "discount": "55000",
-      "delivery": "Free delivery",
-      "quantity": "1"
+      "quantity": 2,
+      "email": "aarthi@gmail.com",
+      "emailid": 15,
+      "total": 38000
     },
     {
       "id": "1",
@@ -391,7 +117,702 @@
       "price": "49000",
       "discount": "55000",
       "delivery": "Free delivery",
-      "quantity": "1"
+      "quantity": 2,
+      "rating": "3",
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": "UABgs30",
+      "total": 98000
+    },
+    {
+      "id": "5",
+      "model": "Onplus 10r",
+      "image": "assets/images/oneplussale.jpg",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "5000 mAh Battery",
+      "price": "49000",
+      "discount": "55000",
+      "delivery": "Free delivery",
+      "quantity": 2,
+      "rating": "5",
+      "email": "balaji@gmail.com",
+      "emailid": "EeIlrJH",
+      "total": 98000
+    },
+    {
+      "id": "2",
+      "model": "Onplus CE3",
+      "image": "assets/images/oneplusCE.jpg",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "5000 mAh Battery",
+      "price": "19000",
+      "discount": "35000",
+      "delivery": "Free delivery",
+      "quantity": "1",
+      "rating": "5",
+      "email": "2k19eee024@kiot.ac.in",
+      "emailid": "i2ldiC7"
+    },
+    {
+      "id": "1",
+      "model": "Asus M1A5U",
+      "image": "assets/images/asus 2 sl.jpg",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "5000 mAh Battery",
+      "price": "49000",
+      "discount": "55000",
+      "delivery": "Free delivery",
+      "quantity": "1",
+      "rating": "4.5",
+      "email": "2k19eee024@kiot.ac.in",
+      "emailid": "fu24z2e"
+    },
+    {
+      "id": "1",
+      "model": "LG QLED",
+      "image": "assets/images/tv2.jpg",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "With Wifi and Bluetooth",
+      "price": "59000",
+      "discount": "55000",
+      "delivery": "Free delivery",
+      "quantity": "1",
+      "rating": "3",
+      "email": "2k19eee024@kiot.ac.in",
+      "emailid": "C_of6OX"
+    }
+  ],
+  "carttotal": [
+    {
+      "total": 98000,
+      "emailid": "2k19eee056@kiot.ac.in"
+    },
+    {
+      "total": 38000,
+      "emailid": "aarthi@gmail.com"
+    },
+    {
+      "total": 0,
+      "emailid": "QwZ45M8"
+    },
+    {
+      "total": 0,
+      "emailid": "kE3MoVv"
+    },
+    {
+      "total": 68000,
+      "emailid": "etmtlnK"
+    },
+    {
+      "total": 136000,
+      "emailid": "5gUATSc"
+    },
+    {
+      "total": 185000,
+      "emailid": "nJGAeFe"
+    },
+    {
+      "total": 228000,
+      "emailid": "balaji@gmail.com"
+    },
+    {
+      "total": 185000,
+      "emailid": "DNu2nlv"
+    },
+    {
+      "total": 127000,
+      "emailid": "2k19eee024@kiot.ac.in"
+    },
+    {
+      "total": 185000,
+      "emailid": "LRmkOiu"
+    },
+    {
+      "total": 204000,
+      "emailid": "dkY_Wek"
+    },
+    {
+      "total": 166000,
+      "emailid": "3ISHnZP"
+    },
+    {
+      "total": 68000,
+      "emailid": "FmSH2qk"
+    },
+    {
+      "total": 19000,
+      "emailid": "WINOZJZ"
+    },
+    {
+      "total": 0,
+      "emailid": "0YDjQqP"
+    },
+    {
+      "total": 0,
+      "emailid": "MTfczdd"
+    },
+    {
+      "total": 0,
+      "emailid": "0q99ChT"
+    },
+    {
+      "total": 0,
+      "emailid": "mjmOjV6"
+    },
+    {
+      "total": 0,
+      "emailid": "bXkTfZU"
+    },
+    {
+      "total": 0,
+      "emailid": "taDE3LD"
+    },
+    {
+      "total": 0,
+      "emailid": "ZEMDMXp"
+    },
+    {
+      "total": 0,
+      "emailid": "riIFlbn"
+    },
+    {
+      "total": 0,
+      "emailid": "R5P7Nw0"
+    },
+    {
+      "total": 0,
+      "emailid": "f1ILjCC"
+    },
+    {
+      "total": 0,
+      "emailid": "3Ph7_gc"
+    },
+    {
+      "total": 0,
+      "emailid": "jePnMmC"
+    },
+    {
+      "total": 0,
+      "emailid": "WoFF9UW"
+    },
+    {
+      "total": 0,
+      "emailid": "yOwrC-m"
+    },
+    {
+      "total": 0,
+      "emailid": "dWu1pDw"
+    },
+    {
+      "total": 0,
+      "emailid": "JXZRTVA"
+    },
+    {
+      "total": 0,
+      "emailid": "TEGpMOK"
+    },
+    {
+      "total": 0,
+      "emailid": "pVk6O8X"
+    },
+    {
+      "total": 0,
+      "emailid": "1Mi9Xk8"
+    }
+  ],
+  "billingdetail": [
+    {
+      "username": "balaji",
+      "phonenumber": "9361120672",
+      "address": "1/24,kalipatti",
+      "city": "salem",
+      "state": "tamilnadu",
+      "pincode": "637501",
+      "email": "2k19eee024@kiot.ac.in",
+      "emailid": 1
+    },
+    {
+      "username": "balaji",
+      "phonenumber": "9361120672",
+      "address": "1/24,kalipatti",
+      "city": "salem",
+      "state": "tamilnadu",
+      "pincode": "637501",
+      "email": "2k19eee024@kiot.ac.in",
+      "emailid": 2
+    }
+  ],
+  "orderdetails": [
+    {
+      "id": "1",
+      "model": "LG QLED",
+      "image": "assets/images/tv2.jpg",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "With Wifi and Bluetooth",
+      "price": "59000",
+      "discount": "55000",
+      "delivery": "Free delivery",
+      "quantity": "1",
+      "rating": "3",
+      "email": "2k19eee024@kiot.ac.in",
+      "payment": "debit",
+      "address": "1/24,kalipatti",
+      "time": "July 6, 2023 at 11:29 PM",
+      "emailid": 1
+    },
+    {
+      "id": "2",
+      "model": "Onplus CE3",
+      "image": "assets/images/oneplusCE.jpg",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "5000 mAh Battery",
+      "price": "19000",
+      "discount": "35000",
+      "delivery": "Free delivery",
+      "quantity": "1",
+      "rating": "5",
+      "email": "2k19eee024@kiot.ac.in",
+      "payment": "debit",
+      "address": "1/24,kalipatti",
+      "time": "July 6, 2023 at 11:37 PM",
+      "emailid": 2
+    },
+    {
+      "model": "SamsungUltra S23",
+      "description1": "5G|Android 13.0|1TB Storage",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "5000 mAh Battery",
+      "price": 138000,
+      "discount": 135000,
+      "delivery": "Free delivery",
+      "image": "assets/images/samsungultra.jpg",
+      "rating": 5,
+      "quantity": 1,
+      "emailid": 4,
+      "email": "2k19eee024@kiot.ac.in",
+      "payment": "debit",
+      "address": "1/24,kalipatti",
+      "time": "July 6, 2023 at 11:45 PM"
+    }
+  ],
+  "products": [
+    {
+      "id:": "1",
+      "model": "Asus M1A5U",
+      "description": "Asus 256 SSD, 8GB RAM,built with AMD RAdam ",
+      "image": "assets/images/acerlpsl.png",
+      "price": "50,000",
+      "quantity": "1",
+      "rating": "4"
+    },
+    {
+      "id:": "2",
+      "model": "Asus OLED",
+      "description": "Asus 256 SSD, 8GB RAM,built with AMD RAdan ",
+      "image": "assets/images/asusprodsle2.jpg",
+      "price": "40000",
+      "quantity": "1",
+      "rating": "4.5"
+    },
+    {
+      "id": "1",
+      "model": "Asus M1A5U",
+      "image": "assets/images/asus 2 sl.jpg",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "5000 mAh Battery",
+      "price": "49000",
+      "discount": "55000",
+      "delivery": "Free delivery",
+      "quantity": "1",
+      "rating": "4.5"
+    },
+    {
+      "id:": "4",
+      "model": "Oneplus 11r",
+      "description": "8GB ram 128ROM Amoled display,120HZ ref,",
+      "image": "assets/images/oneplus11rblue.jpg",
+      "price": "45000",
+      "quantity": "1",
+      "rating": "5"
+    },
+    {
+      "id": "3",
+      "model": "Samsung M32U",
+      "image": "assets/images/mblesl1.png",
+      "description1": "6 GB RAM | 128 GB ROM | Expandable Upto 500 GB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "4500 mAh Battery",
+      "price": "19000",
+      "discount": "25000",
+      "delivery": "Free delivery",
+      "quantity": "1",
+      "rating": "3.5"
+    },
+    {
+      "id": "2",
+      "model": "Onplus CE3",
+      "image": "assets/images/oneplusCE.jpg",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "5000 mAh Battery",
+      "price": "19000",
+      "discount": "35000",
+      "delivery": "Free delivery",
+      "quantity": "1",
+      "rating": "5"
+    },
+    {
+      "id:": "7",
+      "model": "Redmi 11",
+      "image": "assets/images/redmisl1.png",
+      "description": "8GB ram 128ROM Amoled display,120HZ ref,",
+      "price": "15000",
+      "quantity": "1",
+      "rating": "3"
+    },
+    {
+      "id": "8",
+      "model": "Onplus CE3",
+      "image": "assets/images/oneplusCE.jpg",
+      "description": "8GB ram 128ROM Amoled display,130HZ ref,",
+      "price": "19000",
+      "quantity": "1",
+      "rating": "4"
+    },
+    {
+      "id": "5",
+      "model": "Onplus 10r",
+      "image": "assets/images/oneplussale.jpg",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "5000 mAh Battery",
+      "price": "49000",
+      "discount": "55000",
+      "delivery": "Free delivery",
+      "quantity": "1",
+      "rating": "5"
+    }
+  ],
+  "mobiles": [
+    {
+      "id": "2",
+      "model": "Onplus CE3",
+      "image": "assets/images/oneplusCE.jpg",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "5000 mAh Battery",
+      "price": "19000",
+      "discount": "35000",
+      "delivery": "Free delivery",
+      "quantity": "1",
+      "rating": "5"
+    },
+    {
+      "id": "6",
+      "model": "Onplus 2T",
+      "image": "assets/images/realmesl1.png",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "5000 mAh Battery",
+      "price": "49000",
+      "discount": "55000",
+      "delivery": "Free delivery",
+      "quantity": "1",
+      "rating": "5"
+    },
+    {
+      "model": "Oneplus 11r",
+      "price": 40000,
+      "discount": 30000,
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "5000 mAh Battery",
+      "delivery": "Free delivery",
+      "image": "assets/images/oneplus11rblue.jpg",
+      "rating": 5,
+      "quantity": 1,
+      "emailid": 2
+    },
+    {
+      "model": "SamsungUltra S23",
+      "description1": "5G|Android 13.0|1TB Storage",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "5000 mAh Battery",
+      "price": 138000,
+      "discount": 135000,
+      "delivery": "Free delivery",
+      "image": "assets/images/samsungultra.jpg",
+      "rating": 5,
+      "quantity": 1,
+      "emailid": 4
+    },
+    {
+      "model": "Apple Iphone 14 (256)",
+      "description1": "15.54 cm (6.1-inch) Super Retina XDR \n",
+      "price": 149000,
+      "discount": 145000,
+      "delivery": "Free delivery",
+      "image": "assets/images/appleiphone14.jpg",
+      "rating": 5,
+      "quantity": 1,
+      "emailid": 5
+    },
+    {
+      "id": "3",
+      "model": "Samsung M32U",
+      "image": "assets/images/mblesl1.png",
+      "description1": "6 GB RAM | 128 GB ROM | Expandable Upto 500 GB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "4500 mAh Battery",
+      "price": "19000",
+      "discount": "25000",
+      "delivery": "Free delivery",
+      "quantity": "1",
+      "rating": "3.5"
+    },
+    {
+      "id": "4",
+      "model": "Onplus CE2",
+      "image": "assets/images/mblesl2.png",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "5000 mAh Battery",
+      "price": "49000",
+      "discount": "55000",
+      "delivery": "Free delivery",
+      "quantity": "1",
+      "rating": "4"
+    },
+    {
+      "model": "OnePlus 11r",
+      "description1": "12GB RAM| 256 Internal |5000MHZ Battery",
+      "description2": "48MP | Front 16MP Pixel",
+      "price": 50000,
+      "discount": 450000,
+      "delivery": "Free delivery",
+      "image": "assets/images/oneplussale.jpg",
+      "rating": 4.5,
+      "quantity": 1,
+      "emailid": 9
+    }
+  ],
+  "laptops": [
+    {
+      "emailid": "3",
+      "model": "Acer oled",
+      "image": "assets/images/acerlpsl.png",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "5000 mAh Battery",
+      "price": "49000",
+      "discount": "55000",
+      "delivery": "Free delivery",
+      "quantity": "1",
+      "rating": "5"
+    },
+    {
+      "emailid": "4",
+      "model": "HP KOZT",
+      "image": "assets/images/laphp.jpg",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "5000 mAh Battery",
+      "price": "49000",
+      "discount": "55000",
+      "delivery": "Free delivery",
+      "quantity": "1",
+      "rating": "4"
+    },
+    {
+      "model": "Asus OLED",
+      "description1": "8GB RAM |128 GB ROM |Expandable256",
+      "price": 50000,
+      "discount": 40000,
+      "delivery": "Free delivery",
+      "image": "assets/images/asusprodsle2.jpg",
+      "rating": 3,
+      "quantity": 1,
+      "emailid": 6
+    },
+    {
+      "model": "Asus Pro Oled 2",
+      "description1": "16GB RAM|256 SSD|AMOLED Display",
+      "description2": "INTEL 3567 PROCESSOR|WINDOWS 11",
+      "price": 35000,
+      "discount": 30000,
+      "delivery": "Free delivery",
+      "image": "assets/images/asusprodsle2.jpg",
+      "rating": 4.5,
+      "quantity": 1,
+      "emailid": 7
+    }
+  ],
+  "telivision": [
+    {
+      "emailid": "3",
+      "model": "Oneplus Nord TV",
+      "image": "assets/images/tv3.jpg",
+      "description1": "8 GB RAM | 128 GB ROM ",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "Expandable Upto 1 TB",
+      "price": "79000",
+      "discount": "55000",
+      "delivery": "Free delivery",
+      "quantity": "1",
+      "rating": "3"
+    },
+    {
+      "emailid": "4",
+      "model": "MI 4A",
+      "image": "assets/images/tv4.jpg",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "Android Telivision",
+      "price": "52000",
+      "discount": "65000",
+      "delivery": "Free delivery",
+      "quantity": "1",
+      "rating": "5"
+    },
+    {
+      "model": "Sony Oled 2",
+      "description1": "Full HD Crystal ",
+      "description2": "65' ANDROID TV ",
+      "description3": "4GB RAM With Internal of 8GB ROM ",
+      "price": 20000,
+      "discount": 30000,
+      "delivery": "Free delivery",
+      "image": "assets/images/tv1.jpg",
+      "rating": 5,
+      "quantity": 1,
+      "emailid": 5
+    }
+  ],
+  "directbuynowproducts": [
+    {
+      "id": "3",
+      "model": "Samsung M32U",
+      "image": "assets/images/mblesl1.png",
+      "description1": "6 GB RAM | 128 GB ROM | Expandable Upto 500 GB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "4500 mAh Battery",
+      "price": "19000",
+      "discount": "25000",
+      "delivery": "Free delivery",
+      "quantity": 2,
+      "email": "aarthi@gmail.com",
+      "emailid": 15,
+      "total": 38000,
+      "payment": "debit",
+      "address": "1/24,kalipatti"
+    },
+    {
+      "id:": "1",
+      "model": "Oneplus 11r",
+      "image": "assets/images/oneplus11rblue.jpg",
+      "description1": "16 GB RAM | 568 GB ROM | Expandable Upto 1 TB",
+      "description2": "16.51 cm (6.5 inch) AMOLED Display",
+      "description3": "5000 mAh Battery",
+      "price": "49000",
+      "discount": "55000",
+      "delivery": "Free delivery",
+      "quantity": "1",
+      "rating": "3.5",
+      "email": "aarthi@gmail.com",
+      "emailid": "tv3AN9j",
+      "payment": "debit",
+      "address": "1/24,kalipatti"
+    },
+    {
+      "id": "1",
+      "model": "HP KOZT",
+      "image": "assets/images/laphp.jpg",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "5000 mAh Battery",
+      "price": "49000",
+      "discount": "55000",
+      "delivery": "Free delivery",
+      "quantity": "1",
+      "rating": "4",
+      "email": "aarthi@gmail.com",
+      "emailid": "KpTZUYV",
+      "payment": "debit",
+      "address": "1/24,kalipatti"
+    },
+    {
+      "id": "1",
+      "model": "Oneplus Nord TV",
+      "image": "assets/images/tv3.jpg",
+      "description1": "8 GB RAM | 128 GB ROM ",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "Expandable Upto 1 TB",
+      "price": "79000",
+      "discount": "55000",
+      "delivery": "Free delivery",
+      "quantity": "1",
+      "rating": "3",
+      "email": "2k19eee056@kiot.ac.in",
+      "payment": "debit",
+      "address": "1/24,kalipatti",
+      "emailid": 16
+    },
+    {
+      "id": "1",
+      "model": "Asus M1A5U",
+      "image": "assets/images/asus 2 sl.jpg",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "5000 mAh Battery",
+      "price": "49000",
+      "discount": "55000",
+      "delivery": "Free delivery",
+      "quantity": "1",
+      "rating": "4.5",
+      "email": "2k19eee056@kiot.ac.in",
+      "payment": "debit",
+      "address": "1/24,kalipatti",
+      "emailid": 17
+    },
+    {
+      "id:": "1",
+      "model": "Oneplus 11r",
+      "image": "assets/images/oneplus11rblue.jpg",
+      "description1": "16 GB RAM | 568 GB ROM | Expandable Upto 1 TB",
+      "description2": "16.51 cm (6.5 inch) AMOLED Display",
+      "description3": "5000 mAh Battery",
+      "price": "49000",
+      "discount": "55000",
+      "delivery": "Free delivery",
+      "quantity": "1",
+      "rating": "3.5",
+      "email": "2k19me016@kiot.ac.in",
+      "payment": "debit",
+      "address": "1/24,kalipatti",
+      "emailid": 18
+    },
+    {
+      "id": "1",
+      "model": "HP KOZT",
+      "image": "assets/images/laphp.jpg",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "5000 mAh Battery",
+      "price": "49000",
+      "discount": "55000",
+      "delivery": "Free delivery",
+      "quantity": "1",
+      "rating": "4",
+      "email": "2k19eee024@kiot.ac.in",
+      "payment": "debit",
+      "address": "1/24,kalipatti",
+      "emailid": 19
     },
     {
       "id": "1",
@@ -403,57 +824,280 @@
       "price": "49000",
       "discount": "55000",
       "delivery": "Free delivery",
-      "quantity": "1"
-    }
-  ],
-  "telivision": [
+      "quantity": "1",
+      "rating": "5",
+      "email": "2k19eee024@kiot.ac.in",
+      "payment": "debit",
+      "address": "1/24,kalipatti",
+      "emailid": 20
+    },
     {
-      "id": "1",
-      "model": "Onplus CE2",
-      "image": "assets/images/tv1.jpg",
-      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
-      "description2": "15.51 cm (6.5 inch) OLED Display",
-      "description3": "5000 mAh Battery",
-      "price": "49000",
-      "discount": "55000",
-      "delivery": "Free delivery",
-      "quantity": "1"
+      "email": "2k19eee024@kiot.ac.in",
+      "payment": "debit",
+      "emailid": 21
     },
     {
       "id": "1",
-      "model": "Onplus CE2",
+      "model": "LG QLED",
       "image": "assets/images/tv2.jpg",
       "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
       "description2": "15.51 cm (6.5 inch) OLED Display",
-      "description3": "5000 mAh Battery",
-      "price": "49000",
+      "description3": "With Wifi and Bluetooth",
+      "price": "59000",
       "discount": "55000",
       "delivery": "Free delivery",
-      "quantity": "1"
+      "quantity": "1",
+      "rating": "3",
+      "email": "2k19eee024@kiot.ac.in",
+      "payment": "debit",
+      "address": "1/24,kalipatti",
+      "time": "July 6, 2023 at 11:29 PM",
+      "emailid": 22
     },
     {
-      "id": "1",
-      "model": "Onplus CE2",
-      "image": "assets/images/tv3.jpg",
+      "id": "2",
+      "model": "Onplus CE3",
+      "image": "assets/images/oneplusCE.jpg",
       "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
       "description2": "15.51 cm (6.5 inch) OLED Display",
       "description3": "5000 mAh Battery",
-      "price": "49000",
-      "discount": "55000",
+      "price": "19000",
+      "discount": "35000",
       "delivery": "Free delivery",
-      "quantity": "1"
+      "quantity": "1",
+      "rating": "5",
+      "email": "2k19eee024@kiot.ac.in",
+      "payment": "debit",
+      "address": "1/24,kalipatti",
+      "time": "July 6, 2023 at 11:37 PM",
+      "emailid": 23
     },
     {
-      "id": "1",
-      "model": "Onplus CE2",
-      "image": "assets/images/tv4.jpg",
-      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "model": "SamsungUltra S23",
+      "description1": "5G|Android 13.0|1TB Storage",
       "description2": "15.51 cm (6.5 inch) OLED Display",
       "description3": "5000 mAh Battery",
-      "price": "49000",
-      "discount": "55000",
+      "price": 138000,
+      "discount": 135000,
       "delivery": "Free delivery",
-      "quantity": "1"
+      "image": "assets/images/samsungultra.jpg",
+      "rating": 5,
+      "quantity": 1,
+      "emailid": 4,
+      "email": "2k19eee024@kiot.ac.in",
+      "payment": "debit",
+      "address": "1/24,kalipatti",
+      "time": "July 6, 2023 at 11:45 PM"
+    }
+  ],
+  "approveemail": [
+    {
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 1
+    },
+    {
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 2
+    },
+    {
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 3
+    },
+    {
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 4
+    },
+    {
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 5
+    },
+    {
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 6
+    },
+    {
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 7
+    },
+    {
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 8
+    },
+    {
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 9
+    },
+    {
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 10
+    },
+    {
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 11
+    },
+    {
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 12
+    },
+    {
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 13
+    },
+    {
+      "email": "2k19me016@kiot.ac.in",
+      "emailid": 14
+    },
+    {
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 15
+    },
+    {
+      "email": "2k19me016@kiot.ac.in",
+      "emailid": 16
+    },
+    {
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 17
+    },
+    {
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 18
+    },
+    {
+      "email": "2k19me016@kiot.ac.in",
+      "emailid": 19
+    },
+    {
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 20
+    },
+    {
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 21
+    },
+    {
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 22
+    },
+    {
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 23
+    },
+    {
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 24
+    },
+    {
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 25
+    },
+    {
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 26
+    },
+    {
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 27
+    },
+    {
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 28
+    },
+    {
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 29
+    },
+    {
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 30
+    },
+    {
+      "email": "aarthi@gmail.com",
+      "emailid": 31
+    },
+    {
+      "email": "aarthi@gmail.com",
+      "emailid": 32
+    },
+    {
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 33
+    },
+    {
+      "email": "2k19me016@kiot.ac.in",
+      "emailid": 34
+    },
+    {
+      "email": "aarthi@gmail.com",
+      "emailid": 35
+    },
+    {
+      "email": "aarthi@gmail.com",
+      "emailid": 36
+    },
+    {
+      "email": "aarthi@gmail.com",
+      "emailid": 37
+    },
+    {
+      "email": "aarthi@gmail.com",
+      "emailid": 38
+    },
+    {
+      "email": "aarthi@gmail.com",
+      "emailid": 39
+    },
+    {
+      "email": "aarthi@gmail.com",
+      "emailid": 40
+    },
+    {
+      "email": "aarthi@gmail.com",
+      "emailid": 41
+    },
+    {
+      "email": "aarthi@gmail.com",
+      "emailid": 42
+    },
+    {
+      "email": "aarthi@gmail.com",
+      "emailid": 43
+    },
+    {
+      "email": "aarthi@gmail.com",
+      "emailid": 44
+    },
+    {
+      "email": "aarthi@gmail.com",
+      "emailid": 45
+    },
+    {
+      "email": "aarthi@gmail.com",
+      "emailid": 46
+    },
+    {
+      "email": "aarthi@gmail.com",
+      "emailid": 47
+    },
+    {
+      "email": "aarthi@gmail.com",
+      "emailid": 48
+    },
+    {
+      "email": "aarthi@gmail.com",
+      "emailid": 49
+    },
+    {
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 50
+    },
+    {
+      "email": "aarthi@gmail.com",
+      "emailid": 51
+    },
+    {
+      "email": "2k19eee024@kiot.ac.in",
+      "emailid": 52
     }
   ]
 }

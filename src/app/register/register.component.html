@@ -10,13 +10,15 @@
         </div> -->
 
         <div class="form-group">
-          <input type="text" name="username" formControlName="username"  placeholder="Enter your Name">
+          <input type="text" name="username" formControlName="username"  placeholder="Enter your Name"  >
           <i class="fa fa-user"></i>
         </div>
         <div class="error-container">
         <div *ngIf="ResisterForm.controls['username'].invalid && (ResisterForm.controls['username'].touched || ResisterForm.controls['username'].dirty)" class="error">
-          <div *ngIf="ResisterForm.controls['username'].errors?.['required']" class="error"> First Name is required </div>
+          <div *ngIf="ResisterForm.controls['username'].errors?.['required']" class="error"> First Name is Required </div>
           <div *ngIf="ResisterForm.controls['username'].errors?.['minlength']" class="error">First Name Minimum Length is 4</div>
+          <div *ngIf="ResisterForm.controls['username'].errors?.['pattern']" class="error">Please Enter Valid Username</div>
+
         </div>
       </div>
 
@@ -28,6 +30,8 @@
           <div *ngIf="ResisterForm.controls['emailid'].invalid && (ResisterForm.controls['emailid'].touched || ResisterForm.controls['emailid'].dirty)" class="error">
             <div *ngIf="ResisterForm.controls['emailid'].errors?.['required']" class="error"> Emailid is required </div>
             <div *ngIf="ResisterForm.controls['emailid'].errors?.['email']" class="error">Enter a correct emailid</div>
+            <div *ngIf="ResisterForm.controls['emailid'].errors?.['pattern']" class="error">Invalid Email Format</div>
+
           </div>
         </div>
 
@@ -39,8 +43,10 @@
         <div class="error-container">
           <div *ngIf="ResisterForm.controls['password'].invalid && (ResisterForm.controls['password'].touched || ResisterForm.controls['password'].dirty)" class="error">
             <div *ngIf="ResisterForm.controls['password'].errors?.['required']" class="error"> password is required </div>
-            <div *ngIf="ResisterForm.controls['password'].errors?.['minlength']" class="error"> Enter a password atleast 8 to 15 characters </div>
+            <div *ngIf="ResisterForm.controls['password'].errors?.['minlength']" class="error"> Enter a password atleast 8  </div>
             <div *ngIf="ResisterForm.controls['password'].errors?.['pattern']" class="error">password should contains one special,caps,small & numbers characters</div>
+            <div *ngIf="ResisterForm.controls['password'].errors?.['maxlength']" class="error">password should be in 8 character</div>
+
           </div>
         </div>
 
@@ -55,7 +61,10 @@
           <div *ngIf="ResisterForm.controls['cpassword'].invalid && (ResisterForm.controls['cpassword'].touched || ResisterForm.controls['cpassword'].dirty)" class="error">
             <div *ngIf="ResisterForm.controls['cpassword'].errors?.['required']" class="error">Confirm password is required </div>
             <div *ngIf="ResisterForm.controls['cpassword'].errors?.['minlength']" class="error"> Enter a Confirm password atleast 8 to 15 characters </div>
-            <div *ngIf="ResisterForm.controls['cpassword'].errors?.['pattern']" class="error">password and confirm password does not match</div>
+            <div *ngIf="ResisterForm.controls['cpassword'].errors?.['Confirmedvalidators']" class="error"> Your password and confirrm password don't match </div>
+
+
+            
           </div>
         </div>
 

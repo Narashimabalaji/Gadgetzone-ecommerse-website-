@@ -3,6 +3,7 @@ import { DbseviceService } from '../dbservice.service';
 import { HttpClient } from '@angular/common/http';
 import { MessageService } from '../message.service';
 import { Route, Router } from '@angular/router';
+import { forkJoin } from 'rxjs';
 
 @Component({
   selector: 'app-productconfirmation',
@@ -10,19 +11,149 @@ import { Route, Router } from '@angular/router';
   styleUrls: ['./productconfirmation.component.css']
 })
 export class ProductconfirmationComponent implements OnInit {
+
+  
   product: any=[];
-  grandtotal: any;
+  grandtotal: any|number;
 
 
   name: string|any;
   email:string|any;
   message: string|any;
+  buyproduct: any;
+  buy: string | any;
   
 
-  constructor(private dbservice:DbseviceService,private http:HttpClient,private messageservice:MessageService,private route:Router) { }
+  constructor(private dbservice:DbseviceService,private http:HttpClient,private messageservice:MessageService,private route:Router) { 
 
-  ngOnInit() {
+    
+  }
 
+  // ngOnInit() {
+    
+    // this.http.get<any>("http://localhost:3000/cart/").subscribe((o)=>{
+    //   console.log("API response:", o);
+  
+    //   const loggedemailid = localStorage.getItem('loggedemailid');
+    //   console.log("Logged in user email:", loggedemailid);
+  
+    //   const user = o.filter((data:any)=>{
+    //     console.log("Email address in data:", data.email);
+    //     return data.email === loggedemailid;
+    //   });
+           
+      
+
+     
+    //   console.log("User data:", user);
+     
+      
+    //   this.name = user.username;
+
+    //   this.http.get<any>("http://localhost:3000/carttotal/").subscribe((k)=>{
+               
+    //            const l =k.filter((total:any)=>{
+                 
+    //                    return total.emailid === loggedemailid;
+    //            })
+
+    //            this.grandtotal =l;
+
+    //            console.log("total",this.grandtotal);
+
+    //   });
+     
+     
+      
+
+    
+  //   })
+  //   this.getmultipledata().subscribe(([o,k,l])=>{
+  //     console.log("API response:", o,k);
+  
+  //     const loggedemailid = localStorage.getItem('loggedemailid');
+  //     console.log("Logged in user email:", loggedemailid);
+  //     const itemmodel = localStorage.getItem('model');
+  
+      
+  
+  
+  
+  //     const user = o.filter((data:any)=>{
+  //       console.log("Email address in data:", data.email);
+  //       return data.model === itemmodel;
+  //     });
+  
+  //     const user2 =k.filter((data2:any)=>{
+  //       console.log("user2"+data2);
+  //       return data2.model === itemmodel;
+  //     })
+  //     const user3 =l.filter((data3:any)=>{
+  //       console.log("user3"+data3);
+  //       return data3.model === itemmodel;
+  //     })
+           
+  //     const finaldata =[...user,...user2,...user3];
+  //     this.buyproduct =finaldata;
+  
+  //     console.log("user",user);
+  
+  //     console.log("finaldata",finaldata);
+  
+    
+  //   })
+
+   
+  // this.datachanging();
+  
+  // }
+
+
+  ngOnInit(): void {
+    this.buy=localStorage.getItem('buy');
+
+      
+    if(this.buy=="buy"){
+      this.getmultipledata().subscribe(([o,k,l])=>{
+            console.log("API response:", o,k);
+        
+            const loggedemailid = localStorage.getItem('loggedemailid');
+            console.log("Logged in user email:", loggedemailid);
+            const itemmodel = localStorage.getItem('model');
+        
+            
+        
+        
+        
+            const user = o.filter((data:any)=>{
+              console.log("Email address in data:", data.email);
+              return data.model === itemmodel;
+            });
+        
+            const user2 =k.filter((data2:any)=>{
+              console.log("user2"+data2);
+              return data2.model === itemmodel;
+            })
+            const user3 =l.filter((data3:any)=>{
+              console.log("user3"+data3);
+              return data3.model === itemmodel;
+            })
+                 
+            const finaldata =[...user,...user2,...user3];
+            this.buyproduct =finaldata;
+
+            
+            console.log("user",user);
+        
+            console.log("finaldata",finaldata);
+        
+          
+          })
+
+    }
+
+    else{
+      
     this.http.get<any>("http://localhost:3000/cart/").subscribe((o)=>{
       console.log("API response:", o);
   
@@ -34,7 +165,10 @@ export class ProductconfirmationComponent implements OnInit {
         return data.email === loggedemailid;
       });
            
-      this.product =user;
+      
+            this.buyproduct=user;
+            
+     
       console.log("User data:", user);
      
       
@@ -52,19 +186,11 @@ export class ProductconfirmationComponent implements OnInit {
                console.log("total",this.grandtotal);
 
       });
-     
-     
-      
+    });
+  } 
 
-    
-    })
-
-
+    }
   
-  
-  
-  }
-
 
   confirmproduct(){
     const loggedemailid = localStorage.getItem('loggedemailid');
@@ -93,6 +219,22 @@ export class ProductconfirmationComponent implements OnInit {
        
 
 
+  }
+
+  getmultipledata(){
+    
+    const laptops =this.http.get<any>("http://localhost:3000/laptops");
+    const telivision =this.http.get<any>("http://localhost:3000/telivision");
+    const mobiles =this.http.get<any>("http://localhost:3000/mobiles");
+
+
+    return forkJoin([telivision,laptops,mobiles]);
+
+  }
+
+  datachanging(){
+    
+    
   }
 
 }

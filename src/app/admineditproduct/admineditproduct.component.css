@@ -1,0 +1,111 @@
+.admin-container {
+    display: flex;
+  }
+  
+  .form-group{
+    width:300px
+    
+
+  }
+  .form{
+    padding-left: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid whitesmoke;
+  }
+ .product-image{
+  width:200px;
+  height:200px;
+ }
+  
+
+
+  .productconatiner {
+display: flex;
+flex-direction:column-reverse;
+justify-content: center;
+ 
+  
+
+  }
+
+  
+ 
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  textarea,
+  input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 8px 16px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+
+  
+
+  ul{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    
+  }
+ li{
+    list-style: none;
+    
+
+ }
+
+  
+   
+    .button-1 button{
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500px;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background:linear-gradient(45deg,#4899df, #c430d7);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    
+  }
+  .button-1 button:hover{
+    background:linear-gradient(45deg,#a93461, #a729b8);
+  }
+ .card{
+  display: flex;
+  flex-direction: row;
+
+  flex-wrap: wrap;
+ width: 95%;
+ margin-left: 18px;
+ }
+ .card .card1{
+padding: 10px;
+margin: 5px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+
+ }

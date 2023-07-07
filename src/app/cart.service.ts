@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { DbseviceService } from './dbservice.service';
 import { map } from 'rxjs';
+import { AuthGuard } from './services/auth.guard';
+import { AuthguardGuard } from './services/authguard.guard';
 
 
 @Injectable({
@@ -19,21 +21,24 @@ public email2:any;
  public cart:any=[];
   loggedemailid: any | string;
   mail: any;
- 
+ productcount: any;
 
 
-constructor(private http:HttpClient,private dbservice:DbseviceService) { 
+constructor(private http:HttpClient,private dbservice:DbseviceService,private authservice:AuthguardGuard) { 
  
  
 }
 
 
 ngOnInit(){
- 
+
+
+  
 }
 
 
 getProducts(){
+  console.log("length of item",this.productlist);
   return this.productlist.asObservable();
 }
 
@@ -51,10 +56,16 @@ gt:number=0;
 
 addtocart(a:any,email:any) {
 
+  
+
   this.dbservice.addtocartdb(a,email).subscribe((data)=>{
          
     console.log(data);
   })
+
+}
+
+
 
 
 
@@ -104,7 +115,7 @@ addtocart(a:any,email:any) {
  
   
 
-}
+
 
 
 

@@ -23,6 +23,7 @@ data:any;
 gt:number=0;
   k: number=0;
   p:number=0;
+  cartcheckout: any;
   
   
   constructor( private cartservice:CartService,private http:HttpClient,private dbservice:DbseviceService) {
@@ -43,6 +44,8 @@ gt:number=0;
            
       this.product =user;
       console.log("User data:", user);
+
+             
     
   
 
@@ -90,8 +93,8 @@ else{
   
 })});
 
+
     }
-  
   
 patchgt(){
   this.http.get<any>("http://localhost:3000/cart/").subscribe((o)=>{
@@ -241,7 +244,22 @@ this.http.patch<any>("http://localhost:3000/carttotal/"+loggedemailid ,{total:gt
   }
 
  
- 
+  addcartset(){
+
+    localStorage.removeItem('buy');
+
+    this.cartcheckout =this.product;
+
+    console.log("ok addcartset",this.cartcheckout);
+
+    this.dbservice.cartbuy(this.product);
+
+    localStorage.setItem('cartitems',"cart");
+
+
+
+
+  }
 
   
 }

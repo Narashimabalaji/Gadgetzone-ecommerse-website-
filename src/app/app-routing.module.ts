@@ -15,11 +15,16 @@ import { AdminviewComponent } from './adminview/adminview.component';
 import { OrderplacedComponent } from './orderplaced/orderplaced.component';
 import { AdminorderdetailsComponent } from './adminorderdetails/adminorderdetails.component';
 import { SingleproductpageComponent } from './singleproductpage/singleproductpage.component';
+import { AuthguardGuard } from './services/authguard.guard';
+import { SmartwatchesComponent } from './smartwatches/smartwatches.component';
+import { AdmineditproductComponent } from './admineditproduct/admineditproduct.component';
+import { UserorderdetailsComponent } from './userorderdetails/userorderdetails.component';
 
 
 const routes: Routes =[
 
-  { path:'',
+  { 
+    path:'',
     component:HomeComponent
   },
   {
@@ -52,11 +57,22 @@ const routes: Routes =[
   path:'telivision',
   component:TelivisonComponent
 },
+{
+  path:'smartwatches',
+  component:SmartwatchesComponent
+
+},
 
 {
   path:'checkout',
+  canActivate:[AuthguardGuard],
   component:CheckoutpageComponent
+
 },
+
+
+  
+ 
 {
   path:'payment',
   component:PaymentpageComponent
@@ -88,6 +104,13 @@ const routes: Routes =[
 {
   path:'orderview',
   component:AdminorderdetailsComponent
+},
+{
+  path:'adminedit',
+  component:AdmineditproductComponent
+},{
+  path:'userorderview',
+  component:UserorderdetailsComponent
 }
 
 

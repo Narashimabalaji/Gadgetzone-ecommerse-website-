@@ -3,3 +3,44 @@ th{
     border: 1px solid black;
 }
 
+.table-card{
+   padding-left: 20px;
+   margin:auto;
+   
+}
+
+tbody tr td{
+    border: 1px solid black;
+    align-items: center;
+}
+
+tbody ul{
+    border:1px solid black;
+}
+.table-card img{
+    width:100px;
+    height:130px;
+}
+
+.approve-button{
+    background-color: rgba(255, 255, 0, 0.6);
+
+}
+
+   
+ button{
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500px;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background:linear-gradient(45deg,#4899df, #c430d7);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    
+  }
+   button:hover{
+    background:linear-gradient(45deg,#a93461, #a729b8);
+  }

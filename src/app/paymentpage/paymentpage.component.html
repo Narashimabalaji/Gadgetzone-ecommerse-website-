@@ -1,6 +1,6 @@
 <div class="payment-container">
   <h2>Payment Information</h2>
-  <form [formGroup]="paymentform" (submit)="orderplace()">
+  <form [formGroup]="paymentform" (submit)="submit()">
     <div class="form-group">
       <label for="card-number">Card Number</label>
       <input type="text" id="card-number" name="card-number" required  formControlName="cardnumber">
@@ -25,3 +25,5 @@
     <button class="btn btn-primary" type="submit">Pay Now</button>
   </form>
 </div>
+
+<router-outlet></router-outlet>

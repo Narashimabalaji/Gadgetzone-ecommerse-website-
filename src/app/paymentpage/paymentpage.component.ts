@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { DbseviceService } from '../dbservice.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-paymentpage',
@@ -8,9 +10,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./paymentpage.component.css']
 })
 export class PaymentpageComponent implements OnInit {
+  
 
 
-  constructor(private route:Router,private forms:FormBuilder) { }
+  constructor(private route:Router,private forms:FormBuilder,private dbservice:DbseviceService,private http:HttpClient) { }
 
   ngOnInit() {
   }
@@ -22,9 +25,20 @@ export class PaymentpageComponent implements OnInit {
   })
 
 
+submit(){
+  if(this.paymentform.valid){
+    this.route.navigate(['orderplaced']).then(()=>{
+      window.location.reload();
+       });
+
+
+       this.dbservice.buynowpaymentverified();
 
 
 
+}
+
+}
 
   orderplace(){
 
@@ -35,6 +49,8 @@ export class PaymentpageComponent implements OnInit {
       }
   }
 
-
+directbuynow(){
+    
+}
 
 }

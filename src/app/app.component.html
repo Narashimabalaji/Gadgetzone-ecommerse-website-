@@ -5,28 +5,42 @@
 
   <!-- {{pro|json}} -->
   <div class="header">
-    <a routerLink="home">
+    <a routerLink="home" *ngIf="adminlogin==false">
   <div class="logo">
 <h3>GadgetZone</h3>
 </div></a>
-<nav class="items">
- 
-</nav>
-<div class="search-box">
+
+
+
+<a routerLink="admin" *ngIf="adminlogin==true">
+  <div class="logo">
+<h3>GadgetZone</h3>
+</div></a>
+
+
+
+<div class="search-box"  *ngIf="adminlogin==false"  >
   <span><input type="search" placeholder="search"></span>
-  <i class="fa fa-search search"></i>
+  <!-- <i class="fa fa-search search"></i> -->
 </div>
+
 
 <div class="login" >
   
 
-
-  <a routerLink="cart">
-    <div class="shopping-cart">
-    <div class="cart-icon" >
-      <i class="fa fa-cart-arrow-down"></i><div class="badge btn-danger" style="top:-20px;right:-0px;position: relative;">{{totalitem}}</div>
+  <div class="dropdown">
+ <li class="dropdownbtn" ><i class="fa fa-sort-desc" >My Account</i></li>
+    <div class="dropdown-content" *ngIf="loggedInUser!==null" >
+      <a routerLink="/userorderview"  *ngIf="adminlogin==false">Orders</a>
+      <a href="#"><i class="fa fa-heart"  *ngIf="adminlogin==false"> WishList</i></a>
+     <a (click)="logout()"  *ngIf="loggedInUser!==null "  style="cursor:pointer;">Logout</a>
+      
+    </div>
   </div>
-  </div></a>
+  
+  
+
+
   <div>
     <i class="fa fa-user-o" >&nbsp;&nbsp;{{loggedInUser}}</i>
   </div>
@@ -35,15 +49,24 @@
 
 </div>
 
-<div *ngIf="loggedInUser!==null" style="cursor:pointer;">
-  <a (click)="logout()">Logout</a>
-</div>
+
+
+
+
+<ng-container  *ngIf="adminlogin==false" >
     <div class="shopping-cart">
     <div class="cart-icon" >
-      <i class="fa fa-heart"></i>
+      
   </div>
   </div>
 
+  <a routerLink="cart">
+    <div class="shopping-cart">
+    <div class="cart-icon" >
+      <i class="fa fa-cart-arrow-down"></i><div class="badge btn-danger" style="top:-20px;right:-0px;position: relative;"></div>
+  </div>
+  </div></a>
+</ng-container>
 
 </div>
 
@@ -55,7 +78,7 @@
   <ul>
     <li routerLink="mobiles">Mobiles</li>
     <li routerLink="laptops">Laptops</li>
-    <li routerLink="telivision">Telivision</li>
+    <li routerLink="telivision">Television</li>
     <li>Computer Accessories</li>
     <li>Smart Watches</li>
     <li>Headphones</li>
@@ -102,7 +125,7 @@
           <li><a routerLink="">deals of the day</a></li>
           <li><a routerLink="">Mobiles</a></li>
           <li><a routerLink="">Electronic Gadgets</a></li>
-          <li><a routerLink="">Telivisions</a></li>
+          <li><a routerLink="">Televisions</a></li>
         </ul>
       </div>
 

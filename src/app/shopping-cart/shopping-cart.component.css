@@ -6,3 +6,29 @@
 .table input{
     width:20px;
 }
+
+.Emptycartimg{
+    width:500px;
+    height:500px;
+ 
+   border: none;
+
+}
+
+.container-cart{
+    width:200px;
+ margin-left:600px;
+ border:none;
+ 
+}
+
+.cartsentence{
+    margin-left: 120px;
+    font-size: large;
+
+
+}
+.Emptycart-button{
+    margin-left: 190px;
+
+}

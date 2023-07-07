@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { DbseviceService } from '../dbservice.service';
 import { CartService } from '../cart.service';
+import { SingleproductviewService } from '../singleproductview.service';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,9 @@ export class HomeComponent {
   public productList :any;
   public email:any;
   loggedemailid:any|string;
-  constructor(private service:DbseviceService,private cartservice:CartService){
+  product2: any;
+  product3: any;
+  constructor(private service:DbseviceService,private cartservice:CartService,private showproduct:SingleproductviewService){
     
     this.email=this.service.u;
  
@@ -24,6 +27,17 @@ export class HomeComponent {
     console.log(this.productList);
 
   });
+
+  this.service.gettelivision().subscribe(res=>{
+    this.product2=res;  
+    
+  });
+
+  this.service.getlaptops().subscribe(res=>{
+    this.product3=res;
+});
+
+  
   
   
 
@@ -36,6 +50,10 @@ export class HomeComponent {
   }
 
   
+  productview(item:any) {
+
+    this.showproduct.newtab(item);
+  }
 
   
   addtocart(item:any){

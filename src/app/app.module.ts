@@ -21,9 +21,14 @@ import { OrderplacedComponent } from './orderplaced/orderplaced.component';
 import { AdminorderdetailsComponent } from './adminorderdetails/adminorderdetails.component';
 import { SingleproductpageComponent } from './singleproductpage/singleproductpage.component';
 import { SingleproductviewService } from './singleproductview.service';
+import { AddressstoredComponent } from './addressstored/addressstored.component';
+import { LayoutComponent } from './layout/layout.component';
+import { SmartwatchesComponent } from './smartwatches/smartwatches.component';
+import { AdmineditproductComponent } from './admineditproduct/admineditproduct.component';
+import { UserorderdetailsComponent } from './userorderdetails/userorderdetails.component';
 
 @NgModule({
-  declarations: [															
+  declarations: [																				
     AppComponent,
     HomeComponent,
       RegisterComponent,
@@ -38,7 +43,12 @@ import { SingleproductviewService } from './singleproductview.service';
       AdminviewComponent,
       OrderplacedComponent,
       AdminorderdetailsComponent,
-      SingleproductpageComponent
+      SingleproductpageComponent,
+      AddressstoredComponent,
+      LayoutComponent,
+      SmartwatchesComponent,
+      AdmineditproductComponent,
+      UserorderdetailsComponent
    ],
   imports: [
     BrowserModule,

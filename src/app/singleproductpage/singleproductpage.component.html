@@ -1,13 +1,71 @@
-<p>
-  singleproductpage works!
-</p>
 
-<ul>
-  <li *ngFor="let item of product">
+    <table class="table ">
 
-    {{item.model}}
 
-   <img src=" {{item.image}}" alt="">
 
-  </li>
-</ul>
+<tbody >
+
+  <tr *ngFor="let item of product;let i =index">
+
+
+ <td class="productimage" ><img src="{{item.image}}">
+
+  <tr>
+    <div class="choicebuttons">
+      <div>
+        <button id="addtocart" (click)="addingtocart(item)"><i class="fa fa-shopping-cart " style="color:rgba(0, 0, 0, 0.806);" ></i>Add to cart</button>
+    
+      </div>
+    <div>
+        
+    <button id="buynow" (click)="directbuy(item)" routerLink="/checkout"><i class="fa fa-bolt " style="color:black;" ></i>Buy Now</button>
+    </div>
+    
+      
+    </div>
+  </tr>
+
+</td>
+
+
+
+ <td class="description-space" >
+
+ <strong><tr>{{item.model}}</tr> </strong>
+
+
+  <tr class="description" >
+    
+    <ul>
+
+   <li><strong>{{item.price |currency : 'INR'}}</strong></li> 
+    <li style="list-style: none;color: green;"><s>{{item.discount |currency:'INR'}}</s></li>
+ <li>{{item.description1}}</li>
+ <li>{{item.description2}}</li>   
+ <li>{{item.description3}}</li>  
+
+  </ul>
+</tr>
+
+
+
+
+</td>
+
+
+ <td>
+  
+
+
+
+</td>
+
+
+    </table>
+   
+ 
+     <router-outlet></router-outlet>
+
+
+  
+

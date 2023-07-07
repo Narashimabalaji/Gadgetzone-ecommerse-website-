@@ -22,6 +22,8 @@ constructor(private dbservice:DbseviceService,private http:HttpClient) { }
    localStorage.setItem('model',item.model);
   }
 
+
+ 
   
 }
 

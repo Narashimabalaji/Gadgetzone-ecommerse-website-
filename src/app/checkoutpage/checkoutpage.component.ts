@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DbseviceService } from '../dbservice.service';
 import { Router } from '@angular/router';
 
@@ -13,18 +13,19 @@ import { Router } from '@angular/router';
 
 export class CheckoutpageComponent implements OnInit {
   
-
+  form2!: FormGroup;
 
 
   constructor(private form:FormBuilder,private http:HttpClient,private dbservice:DbseviceService,private route:Router) { }
 
   ngOnInit() {
+    
+    
   }
 
-
+ 
   BillingForm=this.form.group({
     username:[,[Validators.required,Validators.minLength(4)]],
-    email:[,[Validators.required, Validators.email,Validators.pattern("[a-zA-Z0-9.-]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{3,}")]],
     phonenumber:[,[Validators.required,Validators.pattern("^[7-9][0-9]{9}$")]],
     address:[,[Validators.required,]],
     city:[,[Validators.required,]],
@@ -42,6 +43,8 @@ export class CheckoutpageComponent implements OnInit {
         
           this.dbservice.addbillinginfo(this.BillingForm.value).subscribe((d) =>{
                alert("billdata");
+
+
                this.route.navigate(['/productconfirmation']);
 
           });

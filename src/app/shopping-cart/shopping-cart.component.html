@@ -49,7 +49,7 @@
   <td colspan="4"></td>
   <td><button (click)="emptycart()" class=" btn btn-danger">Empty cart</button></td>
   <td><button routerLink="/home" class=" btn btn-primary">shopmore</button></td>
-  <td><button class="btn btn-success" routerLink="/checkout">Checkout</button></td>
+  <td><button class="btn btn-success" routerLink="/checkout" (click)="addcartset()">Checkout</button></td>
    <td><strong>grand total:{{getCartTotal()}} </strong></td>
 </tr>
 
@@ -66,12 +66,19 @@
 
 <ng-container *ngIf="product.length ==0">
 
-  <div class="container">
+  <div class="container-cart">
 
     <div class="card">
 
-      <img src="assets/images/emtycart.jpg" alt="">
+      <img src="assets/images/cartety.gif" alt="" class="Emptycartimg">
+      
 
+
+    </div>
+
+    <div class="Emptycart-button">
+
+      <button routerLink="/home" class=" btn btn-primary">shopmore</button>
     </div>
 
   </div>

@@ -1,0 +1,30 @@
+<div class="card-container">
+
+  <div class="card">
+
+<ng-container *ngFor="let item of this.order">
+
+
+  <div class="product-container">
+    <img src="{{item.image}}" alt="">
+
+
+
+  <div class="product-model">
+{{item.model}} 
+<div style="padding-top:20px;color:gray">
+{{item.description1}}
+</div>
+
+</div>
+
+<div class="product-price">
+  {{item.price}}
+</div>
+</div>
+
+</ng-container>
+  </div>
+
+
+</div>

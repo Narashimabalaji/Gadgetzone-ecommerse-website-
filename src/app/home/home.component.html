@@ -63,15 +63,68 @@
       
 </div>
 
-<div class="container">
+<!-- <div class="container">
     <div class="row">
         <ng-container *ngFor="let item of productList">
 
-            <div class="card col-md-3">
+            <div class="card ">
              <img src="{{item.image}}" alt="">
           <h5>₹{{item.price }}</h5>   
              <h5>{{item.model}}</h5>
-             <button class="btn btn-secondary btn-sm" (click)="addtocart(item)">Add to cart</button>
+
+            </div>
+
+
+        </ng-container>
+
+    </div>
+
+</div> -->
+
+<!-- <div class="image-flex">
+ 
+
+     <div class="slide heading">
+
+     </div>
+    <ng-container *ngFor="let item of productList">
+        <div class="item">
+            <img src="{{item.image}}" alt="">
+        </div>
+      
+      </ng-container>
+</div> -->.
+
+<div class="banner-heading-container">
+    <h1 class="banner-heading">Top Rated</h1>
+  </div>
+  
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of productList" >
+
+            <div class="card col-md-3" style="cursor:pointer;" (click)="productview(item)">
+             <img src="{{item.image}}" alt="">
+             
+             <div class="rating-tag">
+                <span class="rating-icon">★</span>
+                <span class="rating-value">{{ item.rating }}</span>
+              </div>
+            <div class="model-text">
+                {{item.model}}
+            </div>
+
+            <div>
+                {{item.description}}
+                {{item.description1}}
+            </div>
+            <div class="model-price">
+                ₹{{item.price }}
+            </div>
+             
+
+
 
             </div>
 
@@ -82,6 +135,96 @@
 
 </div>
 
+
+<div class="banner-container2">
+    <h1 class="banner-heading2"> Amazing deals on telivisions</h1>
+  </div>
+  
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of product2">
+         
+            <div class="card col-md-2" style="cursor:pointer;" (click)="productview(item)">
+             <img src="{{item.image}}" alt="">
+             <!-- <div class="wishlist">
+             <i class="fa fa-heart"></i>
+
+             </div> -->
+             
+             <div class="rating-tag">
+                <span class="rating-icon">★</span>
+                <span class="rating-value">{{ item.rating }}</span>
+              </div>
+            <div class="model-text">
+                {{item.model}}
+            </div>
+
+            <div>
+                {{item.description}}
+                {{item.description1}}
+            </div>
+            <div class="model-price">
+                ₹{{item.price }}
+            </div>
+             
+
+
+
+            </div>
+
+
+        </ng-container>
+
+    </div>
+    <div class="car-banner">
+        <h3 class="banner-heading2">Free delivery Eligible </h3>
+        <img src="/assets/images/./truck3.png/" alt="Car" class="car" />
+      </div>
+
+</div>
+  
+ 
+<div class="container" >
+    <div class="row">
+        <ng-container *ngFor="let item of product3">
+
+            <div class="card col-md-2" (click)="productview(item)" style="cursor:pointer;">
+             <img src="{{item.image}}" alt="">
+             
+             <div class="rating-tag">
+                <span class="rating-icon">★</span>
+                <span class="rating-value">{{ item.rating }}</span>
+              </div>
+            <div class="model-text">
+                {{item.model}}
+            </div>
+
+            <div>
+                {{item.description}}
+                {{item.description1}}
+            </div>
+            <div class="model-price">
+                ₹{{item.price }}
+            </div>
+             
+
+
+
+            </div>
+
+
+        </ng-container>
+
+    </div>
+   
+
+</div>
+  
+
+  
+
+
+  
 
 
 

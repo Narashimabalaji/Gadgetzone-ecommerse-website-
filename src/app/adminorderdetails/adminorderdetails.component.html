@@ -1,5 +1,5 @@
 <table>
-
+<div class="table-card">
     <thead>
         <tr>
             <th>S.NO</th>
@@ -15,6 +15,32 @@
         </tr>
     </thead>
 
+    <tbody>
+        <tr *ngFor="let item of this.product;let i =index">
+       <td>{{i+1}}</td>
+       <td>{{item.email}}</td>
+       <td id="itemimage"><img src="{{item.image}}" alt=""></td>
+       
+<td>
+    <li>{{item.description1}}</li>
+        <li>{{item.description2}}</li>  
+</td>
+        
+       <td>{{item.quantity}}</td>
+       <td>{{ item.price}}</td>
+       <td>{{item.quantity * item.price}}</td>
+      
+       <td>{{item.payment}}</td>
+       <td>{{item.address}}</td>
+
+       <td><button (click)="sendEmail(item)"  >{{buttontext}}</button></td>
+
+       
+      </tr>
+
+<tr>
+
+</div>
 
 
 </table>

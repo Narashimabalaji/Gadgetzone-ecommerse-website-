@@ -1,0 +1,146 @@
+
+<div class="button-1">
+  <ul>
+ <li> <button  (click)="mobilesdata()" >Mobiles</button> </li>
+
+  <li> <button (click)="laptopdata()" >Laptops</button> </li>
+
+  <li> <button (click)="televisiondata()">Television</button> </li>
+
+  <li> <button >Computer Accessories</button> </li>
+
+  <li> <button >Headphones</button> </li>
+
+  <li> <button >Smart Watches</button> </li>
+
+</ul>
+
+
+</div>
+
+
+<div class="admin-container">
+
+
+  <div class="form">
+  <h2>Add Product</h2>
+  <form [formGroup]="Productaddform" (submit)="addProduct()">
+    <div class="form-group">
+      <label for="name">Model Name:</label>
+
+      <!-- <div class="form-group"><input type="text" name="title" formControlName="title"  placeholder="title"></div> -->
+
+      <input type="text" id="name" name="name" for placeholder="Enter Name of the product " formControlName="model" >
+    </div>
+    <div class="form-group">
+      <label for="description">Description1:</label>
+      <textarea id="description" name="description" formControlName="description1"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description2:</label>
+      <textarea id="description" name="description" formControlName="description2"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="price">Price:</label>
+      <input type="number" id="price" name="price" formControlName="price"  >
+    </div>
+    <div class="form-group">
+      <label for="discount">DiscountPrice:</label>
+      <input type="number" id="discountprice" name="discountprice" formControlName="discount"  >
+    </div>
+
+    <div class="form-group">
+      <label for="discount">Delivery:</label>
+      <input type="text" id="delivery" name="delivery" formControlName="delivery"  >
+    </div>
+
+    <div class="form-group">
+      <label for="quantity">Quantity</label>
+      <input type="number" id="quantity" name="quantity" formControlName="quantity"  >
+    </div>
+
+    
+    <div class="form-group">
+      <label for="ID">ID</label>
+      <input type="number" id="ID" name="id" formControlName="emailid"  >
+    </div>
+
+    <div class="form-group">
+      <label for="image">Image:</label>
+      <input type="text" id="image" name="image" formControlName="image" >
+    </div>
+
+    <div class="form-group">
+      <label for="rating">Rating</label>
+      <input type="number" id="rating" name="rating" formControlName="rating"  >
+    </div>
+
+
+
+    <button type="submit" [disabled]="!this.Productaddform.valid">Add</button>
+  </form>
+  </div>
+
+
+
+
+
+  <div class="productconatiner">
+
+  <div class="card">
+
+    
+          <ng-container *ngFor="let item of mobileproduct" >
+
+          <div class="card1" style="cursor:pointer;" >
+           <img src="{{item.image}}" alt="" class="product-image">
+        
+           
+           <div class="rating-tag">
+              <span class="rating-icon">★</span>
+              <span class="rating-value">{{ item.rating }}</span>
+            </div>
+          <div class="model-text">
+              {{item.model}}
+          </div>
+
+          <div>
+              {{item.description}}
+              {{item.description1}}
+          </div>
+          <div class="model-price">
+              ₹{{item.price }}     <s style="list-style: none;color: green;">{{item.discount |currency:'INR'}}</s>
+
+          </div>
+
+          <div class="function-continer">
+            <i class="fa fa-pencil fa-2x" ></i>
+            <i class="fa fa-trash-o fa-2x"   (click)="datadel(item)"></i>
+           
+
+         
+
+        </div>
+
+          </div>
+         
+          
+
+      </ng-container>
+    </div>
+
+
+
+  </div>
+
+
+
+
+  </div>
+
+  
+
+
+

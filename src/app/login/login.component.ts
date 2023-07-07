@@ -3,6 +3,7 @@ import { Router ,ActivatedRoute} from '@angular/router';
 import { FormBuilder, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { DbseviceService } from '../dbservice.service';
+import { BuynowrestrictService } from '../Buynowrestrict.service';
 
 @Component({
   selector: 'app-login',
@@ -16,9 +17,11 @@ export class LoginComponent implements OnInit {
   // saved:any;
   showPassword:boolean=false;
   email:any="";
-  returl:any="home";
-
-  constructor(private http:HttpClient,private service:DbseviceService,private route:Router,private routerguard:ActivatedRoute, private forms:FormBuilder) { 
+  retUrl:any="home";
+  loggedin:boolean=false;
+  constructor(private http:HttpClient,private service:DbseviceService,private route:Router,private routerguard:ActivatedRoute, 
+    private forms:FormBuilder,private dbservice:DbseviceService,private buyrestrict:BuynowrestrictService
+    ) { 
 
   
   }
@@ -33,11 +36,19 @@ export class LoginComponent implements OnInit {
     const emailval=this.LoginForm.controls['emailid'].value;
     const passwordval=this.LoginForm.controls['password'].value;
     this.service.logindetails(emailval,passwordval);
+    
  console.log("logged in user",this.LoginForm.value);
  
+//  this.loggedin = true;
+//      this.buyrestrict.log(emailval,passwordval);
+//  console.log("okali baruthuda",this.loggedin);
  this.service.adminlog(emailval,passwordval);
 
+
+  // this.dbservice.isLoggedIn=true;
+
   }
+
 
 
   togglePasswordVisibility(): void {
@@ -46,6 +57,8 @@ export class LoginComponent implements OnInit {
 
 
   ngOnInit() {
+
+   
     // this.routerguard.queryParamMap.subscribe(parama=>{
     //   this.returl=parama.get('returl');
     //   console.log("Logincomponent/ngOnInit",this.returl);
