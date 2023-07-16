@@ -12,6 +12,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent {
   title = 'gadgetzone2';
+
+  isLoading: boolean = false;
    totalitem :number=0;
   loggedInUser:any|string;
   loggedemailid:any;
@@ -44,15 +46,22 @@ ngOnInit(): void {
  
 }
 
+
+loadData() {
+  this.isLoading = true;
+  // Perform data loading or any asynchronous operation here
+  // After the operation is complete, set isLoading to false
+}
+
 getadmin(){
   // this.dbservice.getadmins();
   // console.log("gsm", this.dbservice.getadmins());
   this.http.get<any>('http://localhost:3000/admin').subscribe(res=>{
     res.filter((data:any)=>{
       console.log("login",this.adminlogin);
-      if(data.emailid===this.loggedemailid){
+      if(data.emailid===this.loggedemailid)
+      {
         this.adminlogin=true;
-        
       }
     })
   })
@@ -62,11 +71,18 @@ logout(){
   localStorage.removeItem('loggedInUser');
   localStorage.removeItem('loggedemailid');
   localStorage.clear();
+
   this.router.navigate(['/home']).then(()=>{
+    this.isLoading = true;
     window.location.reload();
 
   })
 
   
 }
+
+
+
+
+
 }

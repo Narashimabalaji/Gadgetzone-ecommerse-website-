@@ -82,5 +82,12 @@ buttontext = 'Approve';
     this.http.post<any>("http://localhost:3001/approveemail",emailObject).subscribe((res =>{
       console.log(res);
     }));
+
+     this.http.patch<any>("http://localhost:3000/directbuynowproducts/"+item.emailid,{Orderstatus:"Ready For shipment"}).subscribe((update:any)=>{
+      console.log(update);
+     });
 }
+
+
+
 }

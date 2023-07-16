@@ -4,6 +4,7 @@ import { DbseviceService } from '../dbservice.service';
 import { HttpClient } from '@angular/common/http';
 import { forkJoin } from 'rxjs';
 import { getLocaleDateFormat } from '@angular/common';
+import { AddressService } from '../address.service';
 
 @Component({
   selector: 'app-orderplaced',
@@ -21,8 +22,12 @@ export class OrderplacedComponent implements OnInit {
  gettime:any;
   getdate: any;
 
+  
+  selectedAddress: any;
 
-  constructor(private route:Router,private orderdataservice:DbseviceService,private http:HttpClient) { }
+
+  constructor(private route:Router,private orderdataservice:DbseviceService,private http:HttpClient,
+    private addressservice:AddressService) { }
 
   ngOnInit() {
     this.buy=localStorage.getItem('buy');
@@ -109,33 +114,41 @@ export class OrderplacedComponent implements OnInit {
 
     //for billing detail display
     
-    this.http.get<any>("http://localhost:3000/billingdetail/").subscribe((o)=>{
-      console.log("API response:", o);
+    // this.http.get<any>("http://localhost:3000/billingdetail/").subscribe((o)=>{
+    //   console.log("API response:", o);
   
-      const loggedemailid = localStorage.getItem('loggedemailid');
-      console.log("Logged in user email:", loggedemailid);
+    //   const loggedemailid = localStorage.getItem('loggedemailid');
+    //   console.log("Logged in user email:", loggedemailid);
   
-      const user = o.filter((data:any)=>{
-        console.log("Email address billing in data:", data.emailid);
-        return data.email === loggedemailid;
-      });
+    //   const user = o.filter((data:any)=>{
+    //     console.log("Email address billing in data:", data.emailid);
+    //     return data.email === loggedemailid;
+    //   });
            
-      this.ordersummary =user;
-      console.log("User data:", user);
+    //   this.ordersummary =user;
+    //   console.log("User data:", user);
 
 
   
   
   
-    })
+    // })
   
   
   this.dt= new Date;
   
-  this.gettime=this.dt.toLocaleString('en-US', {day:'numeric',month:'long',year:'numeric', hour: 'numeric', minute: 'numeric', hour12: true });
+  this.gettime=this.dt.toLocaleString('en-US', {day:'numeric',weekday: 'short' ,month:'long',year:'numeric', hour: 'numeric', minute: 'numeric', hour12: true });
 
   
-  this.getdate.getdate();
+
+
+
+  this.addressservice.sendaddress().subscribe((address:any)=>{
+
+    this.selectedAddress = address;
+    console.log("selected check address",address);
+})
+
   
   }
 

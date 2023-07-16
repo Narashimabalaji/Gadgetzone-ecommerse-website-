@@ -12,7 +12,14 @@
     <p><strong>Order ID:</strong> 123456789</p>
     <p><strong>Date:</strong> {{this.gettime}}</p>
     
-    <p *ngFor="let word of ordersummary"><strong>Shipping Address:</strong> {{word.address}} </p>
+  <strong>Shipping Address:</strong><div *ngIf="selectedAddress">
+
+      <p>{{selectedAddress.username}}</p>
+      <p>{{selectedAddress.address}}</p>
+      <p>{{selectedAddress.city}}</p>
+    
+    
+    </div>
 
    
 

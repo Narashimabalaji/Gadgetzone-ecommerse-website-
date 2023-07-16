@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { map } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AddressService } from './address.service';
 
 @Injectable({
   providedIn: 'root'
@@ -30,13 +31,32 @@ export class DbseviceService {
   dt: any;
   gettime: any;
   mail: string | any;
+  selectedAddress: any;
+  finaladdress: any;
+  addressid: any|number;
+  selectaddress: any;
+  address2: any;
+  pudhuadress: any|string;
+  add3: any;
+  orderstatus:any;
 
    
-constructor(private http:HttpClient,private route:Router, private routerguard:ActivatedRoute,private https:HttpClientModule) { }
+constructor(private http:HttpClient,private route:Router, private routerguard:ActivatedRoute,
+  private https:HttpClientModule,
+  private addressservice:AddressService) { }
 
 ngOnInit(){
+ 
+  
+ 
+  this.http.get<any>("http://localhost:3000/billingdetail/"+this.addressid).subscribe((res:any)=>{
+    
+ 
+  this.pudhuadress =res;
 
+alert("Pudhuadress"+this.pudhuadress.username);
 
+})
 
 }
 
@@ -200,11 +220,28 @@ adduserinformation(body:any){
 
 
 
-addtocartdb(body:any,emailid:any) {
+addtocartdb(body:any) {
   
   this.loggedemailid=localStorage.getItem('loggedemailid');
-  const data ={...body,email:this.loggedemailid,}
-  return this.http.post<any>("http://localhost:3000/cart/",data);
+  
+  // const data ={...body,email:this.loggedemailid,productid:body.emailid}
+
+  let data1 ={
+    image:body.image,
+    model:body.model,
+    quantity:body.quantity,
+    rating:body.rating,
+    email:this.loggedemailid,
+    delivery:body.delivery,
+    discount:body.discount,
+    price:body.price,
+    description1:body.description1,
+    description2:body.description2
+
+
+  }
+
+  return this.http.post<any>("http://localhost:3000/cart/",data1);
  }
 
 
@@ -232,6 +269,7 @@ addbillinginfo(body:any){
   this.loggedemailid=localStorage.getItem('loggedemailid');
        const mail={...body,email:this.loggedemailid}
        this.address=mail.address;
+       
   return this.http.post<any>("http://localhost:3000/billingdetail/",mail)
 }
 
@@ -255,13 +293,38 @@ buynowservice(data:any){
 
   this.buynowproduct=data;
   console.log("buy now product",this.buynowproduct);
-  
- 
-    
+  this.addressid = localStorage.getItem('address');
+
+   this.http.get<any>("http://localhost:3000/billingdetail/"+this.addressid).subscribe((res:any) =>{
+                 
+               this.add3=res;
+
+})
 
 }
+  
+ 
+address1(){
+
+
+
+
+ 
+ 
+ 
+ }
+
+
 cartbuy(data:any){
   this.cartproducts =data;
+  this.addressid = localStorage.getItem('address');
+
+  this.http.get<any>("http://localhost:3000/billingdetail/"+this.addressid).subscribe((res:any) =>{
+                
+              this.add3=res;
+
+})
+
 }
 buynowdatachange():Boolean{
 
@@ -269,23 +332,60 @@ buynowdatachange():Boolean{
 
 }
 
+
+
 buynowpaymentverified(){
   this.loggedemailid=localStorage.getItem('loggedemailid');
   this.buyside=localStorage.getItem('buy');
   this.cartside=localStorage.getItem('cartitems');
 
+
+
   this.dt= new Date;
   
-  this.gettime=this.dt.toLocaleString('en-US', {day:'numeric',month:'long',year:'numeric', hour: 'numeric', minute: 'numeric', hour12: true });
+  this.gettime=this.dt.toLocaleString('en-US', {day:'numeric',weekday: 'short',month:'long',year:'numeric', hour: 'numeric', minute: 'numeric', hour12: true });
 
 
 
 if(this.buyside == 'buy'){
 
 const payment="debit";
-  const data ={...this.buynowproduct,email:this.loggedemailid,payment:payment,address:this.address,time:this.gettime}
+   const data ={...this.buynowproduct,email:this.loggedemailid,payment:payment,address:this.address,time:this.gettime}
 
-   this.http.post<any>("http://localhost:3000/directbuynowproducts/",data).subscribe((f=>{
+  const body =this.buynowproduct
+
+  
+
+ 
+
+const address4=this.add3;
+
+
+  const data1={
+    image:body.image,
+    model:body.model,
+    quantity:body.quantity,
+    rating:body.rating,
+    email:this.loggedemailid,
+    delivery:body.delivery,
+    discount:body.discount,
+    price:body.price,
+    description1:body.description1,
+    description2:body.description2,
+    Time:this.gettime,
+    Payment:payment,
+
+  
+   
+
+  }
+
+  const data2 ={...data1,Name:address4.username,Address:address4.address,City:address4.city,
+    State:address4.state,
+    Phonenumber:address4.phonenumber,
+    Orderstatus:"Order in Transit"}
+
+   this.http.post<any>("http://localhost:3000/directbuynowproducts/",data2).subscribe((f=>{
     alert("Your order has been placed successfully");
    }))
 
@@ -296,18 +396,64 @@ else if(this.cartside == 'cart'){
 
   const payment="debit";
 
-  this.cartproducts.forEach((product: any)=>{
-    const data ={...product,payment:payment,address:this.address,time:this.gettime};
-    this.http.post<any>("http://localhost:3000/directbuynowproducts/",data).subscribe((f=>{
+  const address4=this.add3;
+  
 
-    }))
+
+  this.cartproducts.forEach((product: any)=>{
+    // const data ={...product,payment:payment,Name:this.address,time:this.gettime};
+
+    const body =product;
 
    
+     
+   
+   
+    const data1={
+      image:body.image,
+      model:body.model,
+      quantity:body.quantity,
+      rating:body.rating,
+      email:this.loggedemailid,
+      delivery:body.delivery,
+      discount:body.discount,
+      price:body.price,
+      description1:body.description1,
+      description2:body.description2,
+      Time:this.gettime,
+      Payment:payment,
+      
+     
+     
+  
+    }
 
+    const data2 ={...data1,Name:address4.username,Address:address4.address,City:address4.city,
+      State:address4.state,
+      Phonenumber:address4.phonenumber,
+      Orderstatus:"Order in Transit"}
+
+    this.http.post<any>("http://localhost:3000/directbuynowproducts/",data2).subscribe((f=>{
+      alert("Success");
+
+    }))
+alert("no directbuynow products")
+  
   })
+
+  
+ 
+
+  }
 
   
 
 }
+
+
+
+Addressavail(){
+       
+  return this.http.get<any>("http://localhost:3000/billingdetail")
 }
 }

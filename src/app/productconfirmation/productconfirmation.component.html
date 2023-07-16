@@ -109,7 +109,14 @@
 
 
         </tbody>
+<div *ngIf="selectedAddress">
 
+  <p>{{selectedAddress.username}}</p>
+  <p>{{selectedAddress.address}}</p>
+  <p>{{selectedAddress.city}}</p>
+
+
+</div>
         <tr *ngFor="let item of grandtotal" >
           <td  colspan="4"></td>
           <td> <strong>GrandTotal:{{item.total}}</strong> </td>
@@ -118,7 +125,7 @@
         </tr>
 
         <button (click)="confirmproduct()">submit</button>
-
+        
       </table>
     </div>
   </div>

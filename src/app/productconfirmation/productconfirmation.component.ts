@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { DbseviceService } from '../dbservice.service';
 import { HttpClient } from '@angular/common/http';
 import { MessageService } from '../message.service';
-import { Route, Router } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 import { forkJoin } from 'rxjs';
+import { AddressService } from '../address.service';
 
 @Component({
   selector: 'app-productconfirmation',
@@ -22,9 +23,15 @@ export class ProductconfirmationComponent implements OnInit {
   message: string|any;
   buyproduct: any;
   buy: string | any;
+  selectedAddress: any;
+  addressid:any|number; 
+
   
 
-  constructor(private dbservice:DbseviceService,private http:HttpClient,private messageservice:MessageService,private route:Router) { 
+  constructor(private dbservice:DbseviceService,private http:HttpClient,private messageservice:MessageService,private route:Router,
+    
+    private router:ActivatedRoute,
+    private addressservice:AddressService) { 
 
     
   }
@@ -188,6 +195,14 @@ export class ProductconfirmationComponent implements OnInit {
       });
     });
   } 
+ 
+   
+ this.addressservice.sendaddress().subscribe((address:any)=>{
+
+          this.selectedAddress = address;
+          console.log("selected112 address",this.selectedAddress);
+ })
+
 
     }
   
@@ -216,8 +231,7 @@ export class ProductconfirmationComponent implements OnInit {
 
        })
 
-       
-
+this.datachanging();
 
   }
 
@@ -233,8 +247,7 @@ export class ProductconfirmationComponent implements OnInit {
   }
 
   datachanging(){
-    
-    
+   
   }
 
 }

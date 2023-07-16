@@ -22,6 +22,9 @@ public email2:any;
   loggedemailid: any | string;
   mail: any;
  productcount: any;
+  cartproduct: any;
+  cartid: any;
+  samecartitem: any;
 
 
 constructor(private http:HttpClient,private dbservice:DbseviceService,private authservice:AuthguardGuard) { 
@@ -54,16 +57,43 @@ order:any={};
 f:number=0;
 gt:number=0;
 
-addtocart(a:any,email:any) {
+addtocart(a:any) {
+
+ 
+
+
+
+// for(var cartpro in this.cartproduct ){
+//   this.cartid=this.cartproduct[cartpro].model;
+  
+
+//   if(a.model==this.cartid&&){
+//     this.samecartitem=this.cartid;
+
+
+//   }
+// }
+// if(a.id==this.samecartitem ){
+//   alert("your item is already added to cart");
+// }else{
 
   
 
-  this.dbservice.addtocartdb(a,email).subscribe((data)=>{
+
+
+
+
+  this.dbservice.addtocartdb(a).subscribe((data)=>{
          
     console.log(data);
   })
 
 }
+
+
+
+ 
+
 
 
 

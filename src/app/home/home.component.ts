@@ -14,6 +14,14 @@ export class HomeComponent {
   loggedemailid:any|string;
   product2: any;
   product3: any;
+
+  images: { url: string, alt: string }[] = [
+    { url: '/assets/images/./slide1.png', alt: 'Image 1' },
+    { url: '/assets/images/./slide2.gif', alt: 'Image 2' },
+    { url: '/assets/images/./slide3.jpg', alt: 'Image 3' }
+  ];
+
+  activeIndex = 0;
   constructor(private service:DbseviceService,private cartservice:CartService,private showproduct:SingleproductviewService){
     
     this.email=this.service.u;
@@ -45,9 +53,17 @@ export class HomeComponent {
   //   Object.assign(a,{quantity:1,total:a.price});
     
   // });
+  this.startCarousel();
+}
+
+
+
+startCarousel() {
+  setInterval(() => {
+    this.activeIndex = (this.activeIndex + 1) % this.images.length;
+  }, 3000); // Change slide every 3 seconds (adjust as needed)
+}
   
-  
-  }
 
   
   productview(item:any) {
@@ -57,7 +73,7 @@ export class HomeComponent {
 
   
   addtocart(item:any){
-   this.cartservice.addtocart(item,this.loggedemailid);
+   this.cartservice.addtocart(item);
    this.loggedemailid=localStorage.getItem('loggedemailid');
    console.log(this.loggedemailid)
    

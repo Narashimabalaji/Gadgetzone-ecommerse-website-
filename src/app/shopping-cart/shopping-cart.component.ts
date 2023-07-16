@@ -24,6 +24,9 @@ gt:number=0;
   k: number=0;
   p:number=0;
   cartcheckout: any;
+  productl: any;
+  dis: any;
+  delivery:any;
   
   
   constructor( private cartservice:CartService,private http:HttpClient,private dbservice:DbseviceService) {
@@ -43,11 +46,23 @@ gt:number=0;
       });
            
       this.product =user;
-      console.log("User data:", user);
+      console.log("User data:", user.length);
 
-             
+      this.productl =user.length;
+
     
-  
+
+             console.log("delivery",this.delivery);
+    
+  if(this.productl.length>1){
+
+    this.delivery ='Free delivery';
+
+  }
+
+ else if(this.productl.length<1){
+  this.delivery ='40';
+ }
 
 
 
@@ -61,18 +76,28 @@ for(let item of this.product){
   j +=item.price*item.quantity;
 }
 
-
+let Q =0;
+  for(let item of this.product){
+      
+    Q +=item.discount*item.quantity;
+  }
+  
   const e =t.find((u:any)=>{
       return u.emailid === loggedemailid;
        
   })
 
 
-
+  
+  
+  
 
 if(e){
-  this.http.patch<any>("http://localhost:3000/carttotal/"+loggedemailid ,{total:j}).subscribe((d)=>{
-    alert("patched successfully");
+  this.http.patch<any>("http://localhost:3000/carttotal/"+loggedemailid ,{total:j,discount:Q}).subscribe((d)=>{
+    // alert("patched successfully");
+    
+
+        this.dis= d.discount;
   })
 }
 
@@ -82,16 +107,23 @@ if(e){
 
 
 else{
-  this.http.post<any>("http://localhost:3000/carttotal/",{total:j,emailid:loggedemailid}).subscribe((d)=>{
+  this.http.post<any>("http://localhost:3000/carttotal/",{total:j,emailid:loggedemailid,discount:Q}).subscribe((d)=>{
                 
-                      alert("posted success");
+  this.dis =d.discount;
+                      // alert("posted success");
 })
 
 }
       
 
+//for discount information
+
+
+
   
 })});
+
+
 
 
     }
@@ -124,11 +156,12 @@ patchgt(){
   console.log("gt:",{gt});
 
 this.http.patch<any>("http://localhost:3000/carttotal/"+loggedemailid ,{total:gt}).subscribe((g)=>{
-  alert("updated inc");
+  // alert("updated inc");
 })
      
 
-  })};
+  })
+};
 
  
   
@@ -137,7 +170,7 @@ this.http.patch<any>("http://localhost:3000/carttotal/"+loggedemailid ,{total:gt
   removeitem(id:any,index:any){
     this.cartservice.deleteitem(id).subscribe((d) =>{
          
-      alert("User deleted");
+      // alert("User deleted");
     })
     
     // if(this.product === id){
@@ -190,8 +223,7 @@ this.http.patch<any>("http://localhost:3000/carttotal/"+loggedemailid ,{total:gt
 
     alert("inc ok");
 
-    }
-    );
+    });
     
 
   

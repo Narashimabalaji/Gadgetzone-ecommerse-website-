@@ -30,7 +30,27 @@
       "emailid": "balaji@gmail.com",
       "password": "111111111",
       "cpassword": "111111111",
-      "id": "1"
+      "id": "1",
+      "cart": [
+        {
+          "id:": "2",
+          "model": "Asus OLED",
+          "description": "Asus 256 SSD, 8GB RAM,built with AMD RAdan ",
+          "image": "assets/images/asusprodsle2.jpg",
+          "price": "40000",
+          "quantity": "1",
+          "rating": "4.5"
+        },
+        {
+          "id:": "7",
+          "model": "Redmi 11",
+          "image": "assets/images/redmisl1.png",
+          "description": "8GB ram 128ROM Amoled display,120HZ ref,",
+          "price": "15000",
+          "quantity": "1",
+          "rating": "3"
+        }
+      ]
     },
     {
       "username": "Naveen",
@@ -62,265 +82,76 @@
   ],
   "cart": [
     {
-      "id:": "5",
-      "model": "Samsung M15U",
-      "image": "assets/images/mblesl1.png",
-      "description": "6GB ram 128ROM Amoled display,120HZ ref,",
-      "price": "17000",
-      "quantity": "1",
-      "emailid": "balaji@gmail.com"
+      "image": "assets/images/oneplus11rblue.jpg",
+      "model": "Oneplus 11r",
+      "quantity": 1,
+      "rating": 5,
+      "email": "2k19eee024@kiot.ac.in",
+      "delivery": "Free delivery",
+      "discount": 60000,
+      "price": 40000,
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "emailid": 1,
+      "total": 40000
     },
     {
-      "id:": "2",
-      "model": "Asus OLED",
-      "description": "Asus 256 SSD, 8GB RAM,built with AMD RAdan ",
       "image": "assets/images/asusprodsle2.jpg",
-      "price": "40000",
+      "model": "Asus OLED",
+      "quantity": 1,
+      "rating": 3,
+      "email": "aarthi@gmail.com",
+      "delivery": "Free delivery",
+      "discount": 40000,
+      "price": 50000,
+      "description1": "8GB RAM |128 GB ROM |Expandable256",
+      "emailid": 8
+    },
+    {
+      "image": "assets/images/iqooneo7image.jpg",
+      "model": "iqooneo7",
       "quantity": "1",
-      "email": "balaji@gmail.com",
+      "rating": "5",
+      "email": "2k19eee056@kiot.ac.in",
+      "delivery": "Free delivery",
+      "discount": "35000",
+      "price": "29000",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "17.22 cm (6.78 inch) Display",
       "emailid": 10
     },
     {
-      "id:": "4",
-      "model": "Oneplus 11r",
-      "description": "8GB ram 128ROM Amoled display,120HZ ref,",
-      "image": "assets/images/oneplus11rblue.jpg",
-      "price": "45000",
-      "quantity": 2,
-      "email": "balaji@gmail.com",
-      "id": "balaji@gmail.com",
-      "emailid": 13,
-      "total": 90000
-    },
-    {
-      "id": "3",
-      "model": "Samsung M32U",
-      "image": "assets/images/mblesl1.png",
-      "description1": "6 GB RAM | 128 GB ROM | Expandable Upto 500 GB",
-      "description2": "15.51 cm (6.5 inch) OLED Display",
-      "description3": "4500 mAh Battery",
-      "price": "19000",
-      "discount": "25000",
-      "delivery": "Free delivery",
-      "quantity": 2,
-      "email": "aarthi@gmail.com",
-      "emailid": 15,
-      "total": 38000
-    },
-    {
-      "id": "1",
-      "model": "Asus OLED",
-      "image": "assets/images/asusprodsle2.jpg",
-      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
-      "description2": "15.51 cm (6.5 inch) OLED Display",
-      "description3": "5000 mAh Battery",
-      "price": "49000",
-      "discount": "55000",
-      "delivery": "Free delivery",
-      "quantity": 2,
-      "rating": "3",
+      "image": "assets/images/realmenazroimage.jpg",
+      "model": "realmenazro",
+      "quantity": 1,
+      "rating": 5,
       "email": "2k19eee056@kiot.ac.in",
-      "emailid": "UABgs30",
-      "total": 98000
-    },
-    {
-      "id": "5",
-      "model": "Onplus 10r",
-      "image": "assets/images/oneplussale.jpg",
-      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
-      "description2": "15.51 cm (6.5 inch) OLED Display",
-      "description3": "5000 mAh Battery",
-      "price": "49000",
-      "discount": "55000",
       "delivery": "Free delivery",
-      "quantity": 2,
-      "rating": "5",
-      "email": "balaji@gmail.com",
-      "emailid": "EeIlrJH",
-      "total": 98000
-    },
-    {
-      "id": "2",
-      "model": "Onplus CE3",
-      "image": "assets/images/oneplusCE.jpg",
+      "discount": 15000,
+      "price": 10999,
       "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
-      "description2": "15.51 cm (6.5 inch) OLED Display",
-      "description3": "5000 mAh Battery",
-      "price": "19000",
-      "discount": "35000",
-      "delivery": "Free delivery",
-      "quantity": "1",
-      "rating": "5",
-      "email": "2k19eee024@kiot.ac.in",
-      "emailid": "i2ldiC7"
-    },
-    {
-      "id": "1",
-      "model": "Asus M1A5U",
-      "image": "assets/images/asus 2 sl.jpg",
-      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
-      "description2": "15.51 cm (6.5 inch) OLED Display",
-      "description3": "5000 mAh Battery",
-      "price": "49000",
-      "discount": "55000",
-      "delivery": "Free delivery",
-      "quantity": "1",
-      "rating": "4.5",
-      "email": "2k19eee024@kiot.ac.in",
-      "emailid": "fu24z2e"
-    },
-    {
-      "id": "1",
-      "model": "LG QLED",
-      "image": "assets/images/tv2.jpg",
-      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
-      "description2": "15.51 cm (6.5 inch) OLED Display",
-      "description3": "With Wifi and Bluetooth",
-      "price": "59000",
-      "discount": "55000",
-      "delivery": "Free delivery",
-      "quantity": "1",
-      "rating": "3",
-      "email": "2k19eee024@kiot.ac.in",
-      "emailid": "C_of6OX"
+      "description2": "17.02 cm (6.7 inch) OLED Display",
+      "emailid": 11
     }
   ],
   "carttotal": [
     {
-      "total": 98000,
-      "emailid": "2k19eee056@kiot.ac.in"
-    },
-    {
-      "total": 38000,
-      "emailid": "aarthi@gmail.com"
-    },
-    {
-      "total": 0,
-      "emailid": "QwZ45M8"
-    },
-    {
-      "total": 0,
-      "emailid": "kE3MoVv"
-    },
-    {
-      "total": 68000,
-      "emailid": "etmtlnK"
-    },
-    {
-      "total": 136000,
-      "emailid": "5gUATSc"
-    },
-    {
-      "total": 185000,
-      "emailid": "nJGAeFe"
-    },
-    {
-      "total": 228000,
-      "emailid": "balaji@gmail.com"
-    },
-    {
-      "total": 185000,
-      "emailid": "DNu2nlv"
-    },
-    {
-      "total": 127000,
+      "total": 40000,
       "emailid": "2k19eee024@kiot.ac.in"
     },
     {
-      "total": 185000,
-      "emailid": "LRmkOiu"
-    },
-    {
-      "total": 204000,
-      "emailid": "dkY_Wek"
-    },
-    {
-      "total": 166000,
-      "emailid": "3ISHnZP"
-    },
-    {
-      "total": 68000,
-      "emailid": "FmSH2qk"
-    },
-    {
-      "total": 19000,
-      "emailid": "WINOZJZ"
+      "total": 39999,
+      "emailid": "2k19eee056@kiot.ac.in",
+      "discount": 50000
     },
     {
       "total": 0,
-      "emailid": "0YDjQqP"
+      "emailid": "2k19me016@kiot.ac.in"
     },
     {
-      "total": 0,
-      "emailid": "MTfczdd"
-    },
-    {
-      "total": 0,
-      "emailid": "0q99ChT"
-    },
-    {
-      "total": 0,
-      "emailid": "mjmOjV6"
-    },
-    {
-      "total": 0,
-      "emailid": "bXkTfZU"
-    },
-    {
-      "total": 0,
-      "emailid": "taDE3LD"
-    },
-    {
-      "total": 0,
-      "emailid": "ZEMDMXp"
-    },
-    {
-      "total": 0,
-      "emailid": "riIFlbn"
-    },
-    {
-      "total": 0,
-      "emailid": "R5P7Nw0"
-    },
-    {
-      "total": 0,
-      "emailid": "f1ILjCC"
-    },
-    {
-      "total": 0,
-      "emailid": "3Ph7_gc"
-    },
-    {
-      "total": 0,
-      "emailid": "jePnMmC"
-    },
-    {
-      "total": 0,
-      "emailid": "WoFF9UW"
-    },
-    {
-      "total": 0,
-      "emailid": "yOwrC-m"
-    },
-    {
-      "total": 0,
-      "emailid": "dWu1pDw"
-    },
-    {
-      "total": 0,
-      "emailid": "JXZRTVA"
-    },
-    {
-      "total": 0,
-      "emailid": "TEGpMOK"
-    },
-    {
-      "total": 0,
-      "emailid": "pVk6O8X"
-    },
-    {
-      "total": 0,
-      "emailid": "1Mi9Xk8"
+      "total": 50000,
+      "emailid": "aarthi@gmail.com",
+      "discount": 40000
     }
   ],
   "billingdetail": [
@@ -341,8 +172,68 @@
       "city": "salem",
       "state": "tamilnadu",
       "pincode": "637501",
-      "email": "2k19eee024@kiot.ac.in",
+      "email": "2k19eee056@kiot.ac.in",
       "emailid": 2
+    },
+    {
+      "username": "balaji",
+      "phonenumber": "9361120672",
+      "address": "1/24,northpet",
+      "city": "sathymangalam",
+      "state": "tamilnadu",
+      "pincode": "637503",
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 3
+    },
+    {
+      "username": "Harish",
+      "phonenumber": "9361120672",
+      "address": "1/24,kalipatti",
+      "city": "salem",
+      "state": "tamilnadu",
+      "pincode": "637501",
+      "email": "2k19me016@kiot.ac.in",
+      "emailid": 4
+    },
+    {
+      "username": "Aarthiga",
+      "phonenumber": "8838482585",
+      "address": "1/24,Northpet",
+      "city": "sathyamangalam",
+      "state": "Tamilnadu",
+      "pincode": "637501",
+      "email": "aarthi@gmail.com",
+      "emailid": 5
+    },
+    {
+      "username": "Aarthiga",
+      "phonenumber": "9361120672",
+      "address": "1/24,kalipatti",
+      "city": "salem",
+      "state": "tamilnadu",
+      "pincode": "637501",
+      "email": "aarthi@gmail.com",
+      "emailid": 6
+    },
+    {
+      "username": "Narashimabalaji",
+      "phonenumber": "9750941156",
+      "address": "1/24,kalipatti",
+      "city": "salem",
+      "state": "tamilnadu",
+      "pincode": "637501",
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 7
+    },
+    {
+      "username": "balaji",
+      "phonenumber": "9361120672",
+      "address": "1/24,kalipatti",
+      "city": "salem",
+      "state": "tamilnadu",
+      "pincode": "637501",
+      "email": "2k19eee056@kiot.ac.in",
+      "emailid": 8
     }
   ],
   "orderdetails": [
@@ -434,7 +325,7 @@
     },
     {
       "id:": "4",
-      "model": "Oneplus 11r",
+      "model": "Oneplus11r",
       "description": "8GB ram 128ROM Amoled display,120HZ ref,",
       "image": "assets/images/oneplus11rblue.jpg",
       "price": "45000",
@@ -486,111 +377,7 @@
       "rating": "4"
     },
     {
-      "id": "5",
-      "model": "Onplus 10r",
-      "image": "assets/images/oneplussale.jpg",
-      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
-      "description2": "15.51 cm (6.5 inch) OLED Display",
-      "description3": "5000 mAh Battery",
-      "price": "49000",
-      "discount": "55000",
-      "delivery": "Free delivery",
-      "quantity": "1",
-      "rating": "5"
-    }
-  ],
-  "mobiles": [
-    {
-      "id": "2",
-      "model": "Onplus CE3",
-      "image": "assets/images/oneplusCE.jpg",
-      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
-      "description2": "15.51 cm (6.5 inch) OLED Display",
-      "description3": "5000 mAh Battery",
-      "price": "19000",
-      "discount": "35000",
-      "delivery": "Free delivery",
-      "quantity": "1",
-      "rating": "5"
-    },
-    {
-      "id": "6",
-      "model": "Onplus 2T",
-      "image": "assets/images/realmesl1.png",
-      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
-      "description2": "15.51 cm (6.5 inch) OLED Display",
-      "description3": "5000 mAh Battery",
-      "price": "49000",
-      "discount": "55000",
-      "delivery": "Free delivery",
-      "quantity": "1",
-      "rating": "5"
-    },
-    {
-      "model": "Oneplus 11r",
-      "price": 40000,
-      "discount": 30000,
-      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
-      "description2": "15.51 cm (6.5 inch) OLED Display",
-      "description3": "5000 mAh Battery",
-      "delivery": "Free delivery",
-      "image": "assets/images/oneplus11rblue.jpg",
-      "rating": 5,
-      "quantity": 1,
-      "emailid": 2
-    },
-    {
-      "model": "SamsungUltra S23",
-      "description1": "5G|Android 13.0|1TB Storage",
-      "description2": "15.51 cm (6.5 inch) OLED Display",
-      "description3": "5000 mAh Battery",
-      "price": 138000,
-      "discount": 135000,
-      "delivery": "Free delivery",
-      "image": "assets/images/samsungultra.jpg",
-      "rating": 5,
-      "quantity": 1,
-      "emailid": 4
-    },
-    {
-      "model": "Apple Iphone 14 (256)",
-      "description1": "15.54 cm (6.1-inch) Super Retina XDR \n",
-      "price": 149000,
-      "discount": 145000,
-      "delivery": "Free delivery",
-      "image": "assets/images/appleiphone14.jpg",
-      "rating": 5,
-      "quantity": 1,
-      "emailid": 5
-    },
-    {
-      "id": "3",
-      "model": "Samsung M32U",
-      "image": "assets/images/mblesl1.png",
-      "description1": "6 GB RAM | 128 GB ROM | Expandable Upto 500 GB",
-      "description2": "15.51 cm (6.5 inch) OLED Display",
-      "description3": "4500 mAh Battery",
-      "price": "19000",
-      "discount": "25000",
-      "delivery": "Free delivery",
-      "quantity": "1",
-      "rating": "3.5"
-    },
-    {
-      "id": "4",
-      "model": "Onplus CE2",
-      "image": "assets/images/mblesl2.png",
-      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
-      "description2": "15.51 cm (6.5 inch) OLED Display",
-      "description3": "5000 mAh Battery",
-      "price": "49000",
-      "discount": "55000",
-      "delivery": "Free delivery",
-      "quantity": "1",
-      "rating": "4"
-    },
-    {
-      "model": "OnePlus 11r",
+      "model": "OnePlus 10t",
       "description1": "12GB RAM| 256 Internal |5000MHZ Battery",
       "description2": "48MP | Front 16MP Pixel",
       "price": 50000,
@@ -598,8 +385,335 @@
       "delivery": "Free delivery",
       "image": "assets/images/oneplussale.jpg",
       "rating": 4.5,
+      "quantity": 1
+    }
+  ],
+  "mobiles": [
+    {
+      "id": "2",
+      "model": "Onplus CE3",
+      "detailmodel": "OnePlus Nord CE 2 5G (Bahamas Blue, 8GB RAM, 128GB Storage)",
+      "image": "assets/images/oneplusCE.jpg",
+      "image1": "assets/images/oneplusce3img2.jpg",
+      "image2": "assets/images/oneplusce3img3.jpg",
+      "image3": "assets/images/oneplusce3img4.jpg",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "5000 mAh Battery",
+      "price": "19000",
+      "discount": "35000",
+      "delivery": "Free delivery",
+      "quantity": "1",
+      "rating": "5",
+      "availoffer1": "Bank OfferFlat ₹1,250 Off on HDFC Bank Credit Card EMI Trxns on orders priced between ₹15,000 to ₹39,999",
+      "availoffer2": "Bank OfferGet 10% Cashback on Samsung Axis bank Credit Card",
+      "availoffer3": "Special PriceGet extra ₹6000 off (price inclusive of cashback/coupon)",
+      "seller": "Authorised Seller",
+      "seller1": "7 Days Service Center Replacement/Repair",
+      "box": "Phone,SIM Tray Ejector, Adapter, Phone Case, USB Cable",
+      "OTGCompaitable": "Yes",
+      "Touchscreen": "Yes",
+      "HybridSim": "Yes",
+      "SimType": "Dual Sim",
+      "BrowseType": "Smartphones",
+      "color": "Blue Tide",
+      "ModelName": "Nord CE 2 Lite 5G",
+      "ModelNumber": "CPH2381",
+      "Resolution": "2412 x 1080 Pixels",
+      "DisplaySize": "16.74 cm (6.59 inch)",
+      "InternalStorage": "128 GB",
+      "RAM": "6GB",
+      "MemoryCardSlotType": "Dedicated Slot",
+      "PrimaryCamera": "64MP Rear Camera",
+      "NetworkType": "5G",
+      "SupportedNetworks": "5G",
+      "BatteryCapacity": "5000 mAh",
+      "WarrantySummary": "12 Months"
+    },
+    {
+      "id": "6",
+      "model": "iqooneo7",
+      "detailmodel": "iQOO Neo 7 5G (Frost Blue, 8GB RAM, 128GB Storage) | Dimensity 8200, only 4nm Processor in The Segment | 50% Charge in 10 mins | Motion Control & 90 FPS Gaming",
+      "image": "assets/images/iqooneo7image.jpg",
+      "image1": "assets/images/iqooneo7image1.jpg",
+      "image2": "assets/images/iqooneo7image2.jpg",
+      "image3": "assets/images/iqooneo7image3.jpg",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "17.22 cm (6.78 inch) Display",
+      "description3": "5000 mAh Battery",
+      "price": "29000",
+      "discount": "35000",
+      "delivery": "Free delivery",
+      "quantity": "1",
+      "rating": "5",
+      "availoffer1": "Bank OfferFlat ₹1,250 Off on HDFC Bank Credit Card EMI Trxns on orders priced between ₹15,000 to ₹39,999",
+      "availoffer2": "Bank OfferGet 10% Cashback on Samsung Axis bank Credit Card",
+      "availoffer3": "Special PriceGet extra ₹6000 off (price inclusive of cashback/coupon)",
+      "seller": "Authorised Seller",
+      "seller1": "7 Days Service Center Replacement/Repair",
+      "box": "Cell phone, Charger, USB cable, Earphone jack adapter, Eject tool, Quick start guide, Warranty card, Phone case.",
+      "OTGCompaitable": "Yes",
+      "Touchscreen": "Yes",
+      "HybridSim": "Yes",
+      "SimType": "Dual Sim",
+      "BrowseType": "Smartphones",
+      "color": "Black",
+      "ModelName": "iqooneo7",
+      "ModelNumber": "I2214",
+      "Resolution": "2412 x 1080 Pixels",
+      "DisplaySize": "17.02 cm (6.7 inch)",
+      "InternalStorage": "128 GB",
+      "RAM": "6GB",
+      "MemoryCardSlotType": "Dedicated Slot",
+      "PrimaryCamera": "64MP Rear Camera",
+      "NetworkType": "5G",
+      "SupportedNetworks": "5G",
+      "BatteryCapacity": "5000 mAh",
+      "WarrantySummary": "12 Months domestic warranty"
+    },
+    {
+      "model": "Oneplus 11r",
+      "detailmodel": "OnePlus 11R 5G (Galactic Silver, 128 GB)  (8 GB RAM)",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "17.02 cm (6.7 inch) OLED Display",
+      "price": 40000,
+      "discount": 60000,
+      "delivery": "Free delivery",
+      "image": "assets/images/oneplus11rblue.jpg",
+      "image1": "assets/images/oneplus11rimage1.jpg",
+      "image2": "assets/images/oneplus11rimage2.jpg",
+      "image3": "assets/images/oneplus11rimage3.jpg",
+      "availoffer1": "Bank OfferFlat ₹1,250 Off on HDFC Bank Credit Card EMI Trxns on orders priced between ₹15,000 to ₹39,999",
+      "availoffer2": "Bank OfferGet 10% Cashback on Samsung Axis bank Credit Card",
+      "availoffer3": "Special PriceGet extra ₹6000 off (price inclusive of cashback/coupon)",
+      "rating": 5,
       "quantity": 1,
+      "emailid": 2,
+      "box": "Phone,SIM Tray Ejector, Adapter, Phone Case, USB Cable",
+      "OTGCompaitable": "Yes",
+      "Touchscreen": "Yes",
+      "HybridSim": "Yes",
+      "SimType": "Dual Sim",
+      "BrowseType": "Smartphones",
+      "color": "Black",
+      "ModelName": "11r 5G",
+      "ModelNumber": "CPH2487",
+      "Resolution": "2412 x 1080 Pixels",
+      "DisplaySize": "17.02 cm (6.7 inch)",
+      "InternalStorage": "128 GB",
+      "RAM": "6GB",
+      "MemoryCardSlotType": "Dedicated Slot",
+      "PrimaryCamera": "50MP Rear Camera",
+      "NetworkType": "5G",
+      "SupportedNetworks": "5G",
+      "BatteryCapacity": "5000 mAh",
+      "WarrantySummary": "Domestic warranty of 12 months on phone & 6 months on accessories",
+      "seller": "Authorised Seller",
+      "seller1": "7 Days Service Center Replacement/Repair"
+    },
+    {
+      "model": "realmenazro",
+      "detailmodel": "realme narzo N53 (Feather Gold, 6GB+128GB) 33W Segment Fastest Charging | Slimmest Phone in Segment | 90 Hz Smooth Display",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "17.02 cm (6.7 inch) OLED Display",
+      "description3": "5000 mAh Battery",
+      "price": 10999,
+      "discount": 15000,
+      "delivery": "Free delivery",
+      "image": "assets/images/realmenazroimage.jpg",
+      "image1": "assets/images/realmenazroimage1.jpg",
+      "image2": "assets/images/realmenazroimage2.jpg",
+      "image3": "assets/images/realmenazroimage3.jpg",
+      "availoffer1": "Bank OfferFlat ₹1,250 Off on HDFC Bank Credit Card EMI Trxns on orders priced between ₹15,000 to ₹39,999",
+      "availoffer2": "Bank OfferGet 10% Cashback on Samsung Axis bank Credit Card",
+      "availoffer3": "Special PriceGet extra ₹6000 off (price inclusive of cashback/coupon)",
+      "rating": 5,
+      "quantity": 1,
+      "emailid": 2,
+      "box": "Phone,SIM Tray Ejector, Adapter, Phone Case, USB Cable",
+      "OTGCompaitable": "Yes",
+      "Touchscreen": "Yes",
+      "HybridSim": "Yes",
+      "SimType": "Dual Sim",
+      "BrowseType": "Smartphones",
+      "color": "Black",
+      "ModelName": "11r 5G",
+      "ModelNumber": "CPH2487",
+      "Resolution": "2412 x 1080 Pixels",
+      "DisplaySize": "17.02 cm (6.7 inch)",
+      "InternalStorage": "128 GB",
+      "RAM": "6GB",
+      "MemoryCardSlotType": "Dedicated Slot",
+      "PrimaryCamera": "50MP Rear Camera",
+      "NetworkType": "5G",
+      "SupportedNetworks": "5G",
+      "BatteryCapacity": "5000 mAh",
+      "WarrantySummary": "Domestic warranty of 12 months on phone & 6 months on accessories",
+      "seller": "Authorised Seller",
+      "seller1": "7 Days Service Center Replacement/Repair"
+    },
+    {
+      "model": "Apple Iphone 14 (256)",
+      "detailmodel": "APPLE iPhone 14 Pro Max (Deep Purple, 128 GB)",
+      "description1": "iOS 16 | 128 GB ROM | A16 Bionic Chip, 6 Core Processor",
+      "description2": "17.02 cm (6.7 inch) OLED Display",
+      "description3": "48MP + 12MP + 12MP | 12MP Front Camera",
+      "price": 149000,
+      "discount": 145000,
+      "delivery": "Free delivery",
+      "image": "assets/images/appleiphone14.jpg",
+      "image1": "assets/images/iphone14image1.jpg",
+      "image2": "assets/images/iphone14image2.jpg",
+      "image3": "assets/images/iphone14image3.jpg",
+      "rating": 5,
+      "quantity": 1,
+      "availoffer1": "Bank OfferFlat ₹1,250 Off on HDFC Bank Credit Card EMI Trxns on orders priced between ₹15,000 to ₹39,999",
+      "availoffer2": "Bank OfferGet 10% Cashback on Samsung Axis bank Credit Card",
+      "availoffer3": "Special PriceGet extra ₹6000 off (price inclusive of cashback/coupon)",
+      "box": "Handset, USB-C to Lightning Cable, Documentation",
+      "OTGCompaitable": "Yes",
+      "Touchscreen": "Yes",
+      "HybridSim": "Yes",
+      "SimType": "Dual Sim(Nano + eSIM)",
+      "BrowseType": "Smartphones",
+      "color": "Deep Purple",
+      "ModelName": "iPhone 14 Pro Max",
+      "ModelNumber": "MQ9T3HN/A",
+      "Resolution": "2412 x 1080 Pixels",
+      "DisplaySize": "17.02 cm (6.7 inch)  Dynamic Island, Always-On Display, Pro Motion Technology with Adaptive Refresh Rates Upto 120 Hz, HDR Display, True Tone, Wide Colour (P3), Haptic Touch, Contrast Ratio: 20,00,000:1, Max Brightness: 1,000 nits, Peak Brightness: 1,600 nits, Peak Brightness (Outdoor): 2,000 nits",
+      "InternalStorage": "128 GB",
+      "RAM": "6GB",
+      "MemoryCardSlotType": "128GB",
+      "PrimaryCamera": "48MP + 12MP + 12MP",
+      "NetworkType": "5G",
+      "SupportedNetworks": "5G, 4G VOLTE, 4G, 3G, 2G",
+      "BatteryCapacity": "5000 mAh",
+      "WarrantySummary": "1 Year Warranty for Phone and 6 Months Warranty for In-Box Accessories",
+      "seller": "Authorised Seller",
+      "seller1": "7 Days Service Center Replacement/Repair",
+      "emailid": 5
+    },
+    {
+      "id": "4",
+      "model": "Motorola ",
+      "detailmodel": "Motorola G62 5G (6GB, 128GB) (Midnight Gray)",
+      "image": "assets/images/motog62image.jpg",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "description3": "5000 mAh Battery",
+      "price": "29000",
+      "discount": "55000",
+      "delivery": "Free delivery",
+      "quantity": "1",
+      "rating": "2",
+      "image1": "assets/images/motog62image1.jpg",
+      "image2": "assets/images/motog62image2.jpg",
+      "image3": "assets/images/motog62image3.jpg",
+      "availoffer1": "Bank OfferFlat ₹1,250 Off on HDFC Bank Credit Card EMI Trxns on orders priced between ₹15,000 to ₹39,999",
+      "availoffer2": "Bank OfferGet 10% Cashback on Samsung Axis bank Credit Card",
+      "availoffer3": "Special PriceGet extra ₹6000 off (price inclusive of cashback/coupon)",
+      "box": "Handset, USB-C to Lightning Cable, Documentation",
+      "OTGCompaitable": "Yes",
+      "Touchscreen": "Yes",
+      "HybridSim": "Yes",
+      "SimType": "Dual Sim(Nano + eSIM)",
+      "BrowseType": "Smartphones",
+      "color": "Deep Purple",
+      "ModelName": "iPhone 14 Pro Max",
+      "ModelNumber": "MQ9T3HN/A",
+      "Resolution": "2412 x 1080 Pixels",
+      "DisplaySize": "17.02 cm (6.7 inch) ",
+      "RAM": "6GB",
+      "MemoryCardSlotType": "128GB",
+      "PrimaryCamera": "48MP + 12MP + 12MP",
+      "NetworkType": "5G",
+      "SupportedNetworks": "5G",
+      "BatteryCapacity": "5000 mAh",
+      "WarrantySummary": "1 Year Warranty for Phone and 6 Months Warranty for In-Box Accessories",
+      "seller": "Authorised Seller",
+      "seller1": "7 Days Service Center Replacement/Repair"
+    },
+    {
+      "model": "OnePlus 10t",
+      "detailmodel": "OnePlus 10T 5G (Moonstone Black, 12GB RAM, 256GB Storage)",
+      "description1": "12GB RAM| 256 Internal |5000MHZ Battery",
+      "description2": "48MP | Front 16MP Pixel",
+      "description3": "4800 mAh Battery",
+      "price": 50000,
+      "discount": 450000,
+      "delivery": "Free delivery",
+      "image": "assets/images/oneplus10timage.jpg",
+      "rating": 4.5,
+      "quantity": 1,
+      "image1": "assets/images/oneplus10timage1.jpg",
+      "image2": "assets/images/oneplus10timage2.jpg",
+      "image3": "assets/images/oneplus10timage3.jpg",
+      "availoffer1": "Bank OfferFlat ₹1,250 Off on HDFC Bank Credit Card EMI Trxns on orders priced between ₹15,000 to ₹39,999",
+      "availoffer2": "Bank OfferGet 10% Cashback on Samsung Axis bank Credit Card",
+      "availoffer3": "Special PriceGet extra ₹6000 off (price inclusive of cashback/coupon)",
+      "box": "Phone,SIM Tray Ejector, Adapter, Phone Case, USB Cable",
+      "OTGCompaitable": "Yes",
+      "Touchscreen": "Yes",
+      "HybridSim": "No",
+      "SimType": "Dual Sim",
+      "BrowseType": "Smartphones",
+      "color": "Moonstone Black",
+      "ModelName": "11r 5G",
+      "ModelNumber": "CPH2413/JO",
+      "Resolution": "2412 x 1080 Pixels",
+      "DisplaySize": "17.02 cm (6.7 inch)",
+      "InternalStorage": "128 GB",
+      "RAM": "6GB",
+      "MemoryCardSlotType": "Dedicated Slot",
+      "PrimaryCamera": "50MP Rear Camera",
+      "NetworkType": "5G",
+      "SupportedNetworks": "5G",
+      "BatteryCapacity": "4800 mAh",
+      "WarrantySummary": "1 Year Manufacturer Warranty for Handset and 6 Months Warranty for In the Box Accessories",
+      "seller": "Authorised Seller",
+      "seller1": "7 Days Service Center Replacement/Repair",
       "emailid": 9
+    },
+    {
+      "model": "Samsung S23",
+      "detailmodel": "Samsung Galaxy S23 Ultra 5G (Green, 12GB, 256GB Storage)",
+      "description1": "12 GB RAM | 256 GB ROM",
+      "description2": "17.27 cm (6.8 inch) Quad HD+ Display",
+      "description3": "200MP + 10MP + 12MP + 10MP | 12MP Front Camera",
+      "price": 124000,
+      "discount": 130000,
+      "quantity": 1,
+      "rating": "5",
+      "delivery": "Free delivery",
+      "image": "assets/images/samsungultra.jpg",
+      "image1": "assets/images/samsungs23image1.jpg",
+      "image2": "assets/images/samsungs23image2.jpg",
+      "image3": "assets/images/samsungs23image3.jpg",
+      "availoffer1": "Bank OfferFlat ₹1,250 Off on HDFC Bank Credit Card EMI Trxns on orders priced between ₹15,000 to ₹39,999",
+      "availoffer2": "Bank OfferGet 10% Cashback on Samsung Axis bank Credit Card",
+      "availoffer3": "Special PriceGet extra ₹6000 off (price inclusive of cashback/coupon)",
+      "box": "Handset, Sim Ejection Pin, USB Cable, Manual, Pen",
+      "OTGCompaitable": "Yes",
+      "Touchscreen": "Yes",
+      "HybridSim": "No",
+      "SimType": "Dual Sim",
+      "BrowseType": "Smartphones",
+      "color": "Green",
+      "ModelName": "Galaxy S23 Ultra 5G",
+      "ModelNumber": "SM-S918BZGCINS",
+      "Resolution": "3088 x 1440 PIxels",
+      "DisplaySize": "17.02 cm (6.7 inch)",
+      "InternalStorage": "128 GB",
+      "RAM": "6GB",
+      "MemoryCardSlotType": "Dedicated Slot",
+      "PrimaryCamera": "200MP + 10MP + 12MP + 10MP",
+      "NetworkType": "5G",
+      "SupportedNetworks": "5G,4G, 3G, 2G",
+      "BatteryCapacity": "5000 mAh",
+      "WarrantySummary": "1 Year Manufacturer Warranty for Handset and 6 Months Warranty for In the Box Accessories",
+      "seller": "Authorised Seller",
+      "seller1": "7 Days Service Center Replacement/Repair",
+      "emailid": 10
     }
   ],
   "laptops": [
@@ -617,19 +731,6 @@
       "rating": "5"
     },
     {
-      "emailid": "4",
-      "model": "HP KOZT",
-      "image": "assets/images/laphp.jpg",
-      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
-      "description2": "15.51 cm (6.5 inch) OLED Display",
-      "description3": "5000 mAh Battery",
-      "price": "49000",
-      "discount": "55000",
-      "delivery": "Free delivery",
-      "quantity": "1",
-      "rating": "4"
-    },
-    {
       "model": "Asus OLED",
       "description1": "8GB RAM |128 GB ROM |Expandable256",
       "price": 50000,
@@ -641,16 +742,16 @@
       "emailid": 6
     },
     {
-      "model": "Asus Pro Oled 2",
-      "description1": "16GB RAM|256 SSD|AMOLED Display",
-      "description2": "INTEL 3567 PROCESSOR|WINDOWS 11",
-      "price": 35000,
-      "discount": 30000,
+      "model": "HP KOZT",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "15.51 cm (6.5 inch) OLED Display",
+      "price": 59000,
+      "discount": "55000",
       "delivery": "Free delivery",
-      "image": "assets/images/asusprodsle2.jpg",
-      "rating": 4.5,
-      "quantity": 1,
-      "emailid": 7
+      "image": "assets/images/laphp.jpg",
+      "rating": "4",
+      "quantity": "1",
+      "emailid": "4"
     }
   ],
   "telivision": [
@@ -668,19 +769,6 @@
       "rating": "3"
     },
     {
-      "emailid": "4",
-      "model": "MI 4A",
-      "image": "assets/images/tv4.jpg",
-      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
-      "description2": "15.51 cm (6.5 inch) OLED Display",
-      "description3": "Android Telivision",
-      "price": "52000",
-      "discount": "65000",
-      "delivery": "Free delivery",
-      "quantity": "1",
-      "rating": "5"
-    },
-    {
       "model": "Sony Oled 2",
       "description1": "Full HD Crystal ",
       "description2": "65' ANDROID TV ",
@@ -696,203 +784,71 @@
   ],
   "directbuynowproducts": [
     {
-      "id": "3",
-      "model": "Samsung M32U",
-      "image": "assets/images/mblesl1.png",
-      "description1": "6 GB RAM | 128 GB ROM | Expandable Upto 500 GB",
-      "description2": "15.51 cm (6.5 inch) OLED Display",
-      "description3": "4500 mAh Battery",
-      "price": "19000",
-      "discount": "25000",
-      "delivery": "Free delivery",
-      "quantity": 2,
-      "email": "aarthi@gmail.com",
-      "emailid": 15,
-      "total": 38000,
-      "payment": "debit",
-      "address": "1/24,kalipatti"
-    },
-    {
-      "id:": "1",
-      "model": "Oneplus 11r",
-      "image": "assets/images/oneplus11rblue.jpg",
-      "description1": "16 GB RAM | 568 GB ROM | Expandable Upto 1 TB",
-      "description2": "16.51 cm (6.5 inch) AMOLED Display",
-      "description3": "5000 mAh Battery",
-      "price": "49000",
-      "discount": "55000",
-      "delivery": "Free delivery",
-      "quantity": "1",
-      "rating": "3.5",
-      "email": "aarthi@gmail.com",
-      "emailid": "tv3AN9j",
-      "payment": "debit",
-      "address": "1/24,kalipatti"
-    },
-    {
-      "id": "1",
-      "model": "HP KOZT",
-      "image": "assets/images/laphp.jpg",
-      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
-      "description2": "15.51 cm (6.5 inch) OLED Display",
-      "description3": "5000 mAh Battery",
-      "price": "49000",
-      "discount": "55000",
-      "delivery": "Free delivery",
-      "quantity": "1",
-      "rating": "4",
-      "email": "aarthi@gmail.com",
-      "emailid": "KpTZUYV",
-      "payment": "debit",
-      "address": "1/24,kalipatti"
-    },
-    {
-      "id": "1",
-      "model": "Oneplus Nord TV",
-      "image": "assets/images/tv3.jpg",
-      "description1": "8 GB RAM | 128 GB ROM ",
-      "description2": "15.51 cm (6.5 inch) OLED Display",
-      "description3": "Expandable Upto 1 TB",
-      "price": "79000",
-      "discount": "55000",
-      "delivery": "Free delivery",
-      "quantity": "1",
-      "rating": "3",
-      "email": "2k19eee056@kiot.ac.in",
-      "payment": "debit",
-      "address": "1/24,kalipatti",
-      "emailid": 16
-    },
-    {
-      "id": "1",
-      "model": "Asus M1A5U",
-      "image": "assets/images/asus 2 sl.jpg",
-      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
-      "description2": "15.51 cm (6.5 inch) OLED Display",
-      "description3": "5000 mAh Battery",
-      "price": "49000",
-      "discount": "55000",
-      "delivery": "Free delivery",
-      "quantity": "1",
-      "rating": "4.5",
-      "email": "2k19eee056@kiot.ac.in",
-      "payment": "debit",
-      "address": "1/24,kalipatti",
-      "emailid": 17
-    },
-    {
-      "id:": "1",
-      "model": "Oneplus 11r",
-      "image": "assets/images/oneplus11rblue.jpg",
-      "description1": "16 GB RAM | 568 GB ROM | Expandable Upto 1 TB",
-      "description2": "16.51 cm (6.5 inch) AMOLED Display",
-      "description3": "5000 mAh Battery",
-      "price": "49000",
-      "discount": "55000",
-      "delivery": "Free delivery",
-      "quantity": "1",
-      "rating": "3.5",
-      "email": "2k19me016@kiot.ac.in",
-      "payment": "debit",
-      "address": "1/24,kalipatti",
-      "emailid": 18
-    },
-    {
-      "id": "1",
-      "model": "HP KOZT",
-      "image": "assets/images/laphp.jpg",
-      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
-      "description2": "15.51 cm (6.5 inch) OLED Display",
-      "description3": "5000 mAh Battery",
-      "price": "49000",
-      "discount": "55000",
-      "delivery": "Free delivery",
-      "quantity": "1",
-      "rating": "4",
-      "email": "2k19eee024@kiot.ac.in",
-      "payment": "debit",
-      "address": "1/24,kalipatti",
-      "emailid": 19
-    },
-    {
-      "id": "1",
-      "model": "Acer oled",
-      "image": "assets/images/acerlpsl.png",
-      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
-      "description2": "15.51 cm (6.5 inch) OLED Display",
-      "description3": "5000 mAh Battery",
-      "price": "49000",
-      "discount": "55000",
-      "delivery": "Free delivery",
-      "quantity": "1",
-      "rating": "5",
-      "email": "2k19eee024@kiot.ac.in",
-      "payment": "debit",
-      "address": "1/24,kalipatti",
-      "emailid": 20
-    },
-    {
-      "email": "2k19eee024@kiot.ac.in",
-      "payment": "debit",
-      "emailid": 21
-    },
-    {
-      "id": "1",
-      "model": "LG QLED",
-      "image": "assets/images/tv2.jpg",
-      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
-      "description2": "15.51 cm (6.5 inch) OLED Display",
-      "description3": "With Wifi and Bluetooth",
-      "price": "59000",
-      "discount": "55000",
-      "delivery": "Free delivery",
-      "quantity": "1",
-      "rating": "3",
-      "email": "2k19eee024@kiot.ac.in",
-      "payment": "debit",
-      "address": "1/24,kalipatti",
-      "time": "July 6, 2023 at 11:29 PM",
-      "emailid": 22
-    },
-    {
-      "id": "2",
-      "model": "Onplus CE3",
-      "image": "assets/images/oneplusCE.jpg",
-      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
-      "description2": "15.51 cm (6.5 inch) OLED Display",
-      "description3": "5000 mAh Battery",
-      "price": "19000",
-      "discount": "35000",
-      "delivery": "Free delivery",
-      "quantity": "1",
-      "rating": "5",
-      "email": "2k19eee024@kiot.ac.in",
-      "payment": "debit",
-      "address": "1/24,kalipatti",
-      "time": "July 6, 2023 at 11:37 PM",
-      "emailid": 23
-    },
-    {
-      "model": "SamsungUltra S23",
-      "description1": "5G|Android 13.0|1TB Storage",
-      "description2": "15.51 cm (6.5 inch) OLED Display",
-      "description3": "5000 mAh Battery",
-      "price": 138000,
-      "discount": 135000,
-      "delivery": "Free delivery",
-      "image": "assets/images/samsungultra.jpg",
-      "rating": 5,
+      "image": "assets/images/asusprodsle2.jpg",
+      "model": "Asus OLED",
       "quantity": 1,
-      "emailid": 4,
-      "email": "2k19eee024@kiot.ac.in",
-      "payment": "debit",
-      "address": "1/24,kalipatti",
-      "time": "July 6, 2023 at 11:45 PM"
+      "rating": 3,
+      "email": "2k19eee056@kiot.ac.in",
+      "delivery": "Free delivery",
+      "discount": 40000,
+      "price": 50000,
+      "description1": "8GB RAM |128 GB ROM |Expandable256",
+      "Time": "Sun, July 16, 2023 at 4:35 PM",
+      "Payment": "debit",
+      "Name": "balaji",
+      "Address": "1/24,kalipatti",
+      "City": "salem",
+      "State": "tamilnadu",
+      "Phonenumber": "9361120672",
+      "Orderstatus": "Order in Transit",
+      "emailid": 1
+    },
+    {
+      "image": "assets/images/iqooneo7image.jpg",
+      "model": "iqooneo7",
+      "quantity": "1",
+      "rating": "5",
+      "email": "2k19eee056@kiot.ac.in",
+      "delivery": "Free delivery",
+      "discount": "35000",
+      "price": "29000",
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "17.22 cm (6.78 inch) Display",
+      "Time": "Sun, July 16, 2023 at 4:35 PM",
+      "Payment": "debit",
+      "Name": "Narashimabalaji",
+      "Address": "1/24,kalipatti",
+      "City": "salem",
+      "State": "tamilnadu",
+      "Phonenumber": "9750941156",
+      "Orderstatus": "Order in Transit",
+      "emailid": 2
+    },
+    {
+      "image": "assets/images/realmenazroimage.jpg",
+      "model": "realmenazro",
+      "quantity": 1,
+      "rating": 5,
+      "email": "2k19eee056@kiot.ac.in",
+      "delivery": "Free delivery",
+      "discount": 15000,
+      "price": 10999,
+      "description1": "8 GB RAM | 128 GB ROM | Expandable Upto 1 TB",
+      "description2": "17.02 cm (6.7 inch) OLED Display",
+      "Time": "Sun, July 16, 2023 at 4:35 PM",
+      "Payment": "debit",
+      "Name": "Narashimabalaji",
+      "Address": "1/24,kalipatti",
+      "City": "salem",
+      "State": "tamilnadu",
+      "Phonenumber": "9750941156",
+      "Orderstatus": "Order in Transit",
+      "emailid": 3
     }
   ],
   "approveemail": [
     {
-      "email": "2k19eee056@kiot.ac.in",
+      "email": "2k19eee024@kiot.ac.in",
       "emailid": 1
     },
     {
@@ -906,198 +862,6 @@
     {
       "email": "2k19eee056@kiot.ac.in",
       "emailid": 4
-    },
-    {
-      "email": "2k19eee056@kiot.ac.in",
-      "emailid": 5
-    },
-    {
-      "email": "2k19eee056@kiot.ac.in",
-      "emailid": 6
-    },
-    {
-      "email": "2k19eee056@kiot.ac.in",
-      "emailid": 7
-    },
-    {
-      "email": "2k19eee056@kiot.ac.in",
-      "emailid": 8
-    },
-    {
-      "email": "2k19eee056@kiot.ac.in",
-      "emailid": 9
-    },
-    {
-      "email": "2k19eee056@kiot.ac.in",
-      "emailid": 10
-    },
-    {
-      "email": "2k19eee056@kiot.ac.in",
-      "emailid": 11
-    },
-    {
-      "email": "2k19eee056@kiot.ac.in",
-      "emailid": 12
-    },
-    {
-      "email": "2k19eee056@kiot.ac.in",
-      "emailid": 13
-    },
-    {
-      "email": "2k19me016@kiot.ac.in",
-      "emailid": 14
-    },
-    {
-      "email": "2k19eee056@kiot.ac.in",
-      "emailid": 15
-    },
-    {
-      "email": "2k19me016@kiot.ac.in",
-      "emailid": 16
-    },
-    {
-      "email": "2k19eee056@kiot.ac.in",
-      "emailid": 17
-    },
-    {
-      "email": "2k19eee056@kiot.ac.in",
-      "emailid": 18
-    },
-    {
-      "email": "2k19me016@kiot.ac.in",
-      "emailid": 19
-    },
-    {
-      "email": "2k19eee056@kiot.ac.in",
-      "emailid": 20
-    },
-    {
-      "email": "2k19eee056@kiot.ac.in",
-      "emailid": 21
-    },
-    {
-      "email": "2k19eee056@kiot.ac.in",
-      "emailid": 22
-    },
-    {
-      "email": "2k19eee056@kiot.ac.in",
-      "emailid": 23
-    },
-    {
-      "email": "2k19eee056@kiot.ac.in",
-      "emailid": 24
-    },
-    {
-      "email": "2k19eee056@kiot.ac.in",
-      "emailid": 25
-    },
-    {
-      "email": "2k19eee056@kiot.ac.in",
-      "emailid": 26
-    },
-    {
-      "email": "2k19eee056@kiot.ac.in",
-      "emailid": 27
-    },
-    {
-      "email": "2k19eee056@kiot.ac.in",
-      "emailid": 28
-    },
-    {
-      "email": "2k19eee056@kiot.ac.in",
-      "emailid": 29
-    },
-    {
-      "email": "2k19eee056@kiot.ac.in",
-      "emailid": 30
-    },
-    {
-      "email": "aarthi@gmail.com",
-      "emailid": 31
-    },
-    {
-      "email": "aarthi@gmail.com",
-      "emailid": 32
-    },
-    {
-      "email": "2k19eee056@kiot.ac.in",
-      "emailid": 33
-    },
-    {
-      "email": "2k19me016@kiot.ac.in",
-      "emailid": 34
-    },
-    {
-      "email": "aarthi@gmail.com",
-      "emailid": 35
-    },
-    {
-      "email": "aarthi@gmail.com",
-      "emailid": 36
-    },
-    {
-      "email": "aarthi@gmail.com",
-      "emailid": 37
-    },
-    {
-      "email": "aarthi@gmail.com",
-      "emailid": 38
-    },
-    {
-      "email": "aarthi@gmail.com",
-      "emailid": 39
-    },
-    {
-      "email": "aarthi@gmail.com",
-      "emailid": 40
-    },
-    {
-      "email": "aarthi@gmail.com",
-      "emailid": 41
-    },
-    {
-      "email": "aarthi@gmail.com",
-      "emailid": 42
-    },
-    {
-      "email": "aarthi@gmail.com",
-      "emailid": 43
-    },
-    {
-      "email": "aarthi@gmail.com",
-      "emailid": 44
-    },
-    {
-      "email": "aarthi@gmail.com",
-      "emailid": 45
-    },
-    {
-      "email": "aarthi@gmail.com",
-      "emailid": 46
-    },
-    {
-      "email": "aarthi@gmail.com",
-      "emailid": 47
-    },
-    {
-      "email": "aarthi@gmail.com",
-      "emailid": 48
-    },
-    {
-      "email": "aarthi@gmail.com",
-      "emailid": 49
-    },
-    {
-      "email": "2k19eee056@kiot.ac.in",
-      "emailid": 50
-    },
-    {
-      "email": "aarthi@gmail.com",
-      "emailid": 51
-    },
-    {
-      "email": "2k19eee024@kiot.ac.in",
-      "emailid": 52
     }
   ]
 }

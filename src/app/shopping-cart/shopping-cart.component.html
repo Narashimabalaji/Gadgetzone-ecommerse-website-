@@ -15,7 +15,7 @@
             <th>SN.O</th>
             <th>Product Name</th>
             <th>productImage</th>
-            <th>Description</th>
+            <!-- <th>Description</th> -->
             <th>price</th>
             <th>quantity</th>
             <th>Total</th>
@@ -27,12 +27,12 @@
          <td>{{i+1}}</td>
          <td>{{item.model}}</td>
          <td style="width:200px;"><img src="{{item.image}}" alt=""></td>
-         <td>{{item.description}}</td>
+         <!-- <td>{{item.description}}</td> -->
          <td>₹{{item.price}}</td>
 
-         <td><button (click)="incrementquantity(item)">+</button>
+         <td><button (click)="incrementquantity(item)" class="inc">+</button>
           <input type="text"   value="{{item.quantity}}" >
-        <button (click)="decrementquantity(item)">-</button>
+        <button (click)="decrementquantity(item)" class="dec">-</button>
         
         
         </td>
@@ -50,13 +50,56 @@
   <td><button (click)="emptycart()" class=" btn btn-danger">Empty cart</button></td>
   <td><button routerLink="/home" class=" btn btn-primary">shopmore</button></td>
   <td><button class="btn btn-success" routerLink="/checkout" (click)="addcartset()">Checkout</button></td>
-   <td><strong>grand total:{{getCartTotal()}} </strong></td>
+   <!-- <td><strong>grand total:{{getCartTotal()}} </strong></td> -->
 </tr>
 
         </tbody>
 
       </table>
   
+
+    </div>
+
+
+    <div class="totalproduct-page">
+
+      <table class="totalproduct-pagetable">
+        <thead>
+          <th>Price details</th>
+        </thead>
+<hr>
+        <tr>
+          <td> Price({{ this.productl}} item)  <td>
+
+          <td>₹ {{getCartTotal()}}</td>
+
+        </tr>
+
+        <tr>
+          <td> Discount <td>
+
+          <td> -₹ {{this.dis}}</td>
+
+        </tr>
+
+        <tr>
+          <td>Delivery Charges  <td>
+
+          <td> {{ this.delivery}}</td>
+
+        </tr>
+        <hr>
+
+        <tr>
+          <td > <strong>Total Payable </strong><td>
+
+          <td> ₹{{ getCartTotal()}}</td>
+
+        </tr>
+        
+      </table>
+      <br>
+<strong>You have saved ₹{{this.dis}} on this Order</strong>
 
     </div>
   </div>

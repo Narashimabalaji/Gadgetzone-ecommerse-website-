@@ -18,11 +18,11 @@
 </div></a>
 
 
-
 <div class="search-box"  *ngIf="adminlogin==false"  >
   <span><input type="search" placeholder="search"></span>
   <!-- <i class="fa fa-search search"></i> -->
 </div>
+
 
 
 <div class="login" >
@@ -88,7 +88,7 @@
 
 
 
-
+<app-Loader *ngIf="isLoading"></app-Loader>
 
 
 <router-outlet></router-outlet>

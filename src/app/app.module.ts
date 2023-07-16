@@ -26,9 +26,11 @@ import { LayoutComponent } from './layout/layout.component';
 import { SmartwatchesComponent } from './smartwatches/smartwatches.component';
 import { AdmineditproductComponent } from './admineditproduct/admineditproduct.component';
 import { UserorderdetailsComponent } from './userorderdetails/userorderdetails.component';
+import { LoaderComponent } from './Loader/Loader.component';
+import { ImagechangeDirective } from './singleproductpage/imagechange.directive';
 
 @NgModule({
-  declarations: [																				
+  declarations: [																					
     AppComponent,
     HomeComponent,
       RegisterComponent,
@@ -48,7 +50,9 @@ import { UserorderdetailsComponent } from './userorderdetails/userorderdetails.c
       LayoutComponent,
       SmartwatchesComponent,
       AdmineditproductComponent,
-      UserorderdetailsComponent
+      UserorderdetailsComponent,
+      LoaderComponent,
+      ImagechangeDirective
    ],
   imports: [
     BrowserModule,
@@ -56,7 +60,7 @@ import { UserorderdetailsComponent } from './userorderdetails/userorderdetails.c
     RouterModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
     
     
   ],

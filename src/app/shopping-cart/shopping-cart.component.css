@@ -1,5 +1,5 @@
 .table img{
-    width:200px;
+    width:150px;
     
 }
 
@@ -32,3 +32,43 @@
     margin-left: 190px;
 
 }
+
+.card-table{
+    display:flex;
+   gap:80px;
+   padding-left: 120px;
+}
+
+ .totalproduct-page  td{
+    padding:10px;
+    gap:100px;
+ }
+ 
+.inc,.dec{
+    background-color: white;
+   
+    border-radius: 50%;
+   
+}
+
+
+    input{
+      padding:3px;
+      width:7px;
+    }
+ .totalproduct-page table th{
+    padding:10px;
+    color:#8080808f;
+ }
+ .totalproduct-page table{
+    border:1px solid rgba(0, 0, 0, 0.29);
+
+    width:400px;
+    height:200px;
+    font-family:  Roboto,Arial,sans-serif;
+   
+    box-shadow: 0 4px 6px rgba(0.368, 0.368, 0.368, 0.368);
+
+    position:sticky;
+    top:0;
+ }

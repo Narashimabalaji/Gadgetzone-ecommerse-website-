@@ -1,15 +1,40 @@
 
+
+
+<div class="container">
+ 
+  
+
+  <div class="image-container" *ngFor="let item of product;let i =index">
+    <nav class="to-stick">
+      <ul class="sub-img">
+        <li><img src="{{item.image}}" appImagechange></li>
+
+        <li><img src="{{item.image1}}" appImagechange></li>
+        <li><img src="{{item.image2}}" appImagechange></li>
+        <li><img src="{{item.image3}}" appImagechange></li>
+      </ul>
+    </nav>
+
+
+  </div>
+
     <table class="table ">
 
 
 
 <tbody >
 
+ 
+
   <tr *ngFor="let item of product;let i =index">
 
 
- <td class="productimage" ><img src="{{item.image}}">
+ <td class="productimage" >
 
+  <div class="Images-container">
+  <img  src="{{item.image}}" id="preview" class="pro-image" >
+ 
   <tr>
     <div class="choicebuttons">
       <div>
@@ -18,52 +43,232 @@
       </div>
     <div>
         
-    <button id="buynow" (click)="directbuy(item)" routerLink="/checkout"><i class="fa fa-bolt " style="color:black;" ></i>Buy Now</button>
+    <button id="buynow" (click)="directbuy(item)" routerLink="/checkout"><i class="fa fa-bolt " style="color:white;" ></i>Buy Now</button>
     </div>
     
       
-    </div>
+    
+  </div>
   </tr>
-
+</div>
 </td>
 
 
 
  <td class="description-space" >
 
- <strong><tr>{{item.model}}</tr> </strong>
+  <div class="content-detail">
 
+ <h4><tr>{{item.detailmodel}}</tr> </h4>
 
+ <div class="rating-tag">
+  <span class="rating-icon">★  </span>
+  <span class="rating-value">{{ item.rating }}</span>
+</div>
   <tr class="description" >
     
-    <ul>
+  
+    <ul class="price-detail">
 
-   <li><strong>{{item.price |currency : 'INR'}}</strong></li> 
-    <li style="list-style: none;color: green;"><s>{{item.discount |currency:'INR'}}</s></li>
- <li>{{item.description1}}</li>
- <li>{{item.description2}}</li>   
- <li>{{item.description3}}</li>  
+   <li >{{item.price |currency : 'INR'}}</li> 
+    <li style=" color: green; font-size: small;"><s>{{item.discount |currency:'INR'}}</s></li>
+  </ul>
+
+  <hr>
+    <div  class="specification-detail">
+<div>
+      <h6>HighLights</h6>
+      <ul class="descript">
+ <li><span>{{item.description1}}</span></li>
+ <li><span>{{item.description2}}</span></li>   
+ <li> <span>{{item.description3}}</span></li>  
+</ul>
+
+<h6>Seller</h6>
+
+<ul class="seller">
+<li><span>{{item.seller}}</span></li>
+<li><span>{{item.seller1}}</span></li>
+
+</ul>
+
+</div>
+
+<div class="payment-text">
+  <h6>Easy Payment option</h6>
+  <ul class="Payment-option">
+    <li><span>Cash on Delivery</span></li>
+    <li><span>Credit/ Debit/ ATM card</span></li>
+    <li><span>actual delivery of product</span></li>
+    <li><span>No advance payment needed</span></li>
+
+
 
   </ul>
+</div>
+</div>
+ 
+</tr>
+<hr>
+<h5 >Available Offers</h5>
+<ul class="tag-container">
+<li><img  src="assets/images/pricetag.png"  class="tag" >{{item.availoffer1}}</li>
+<li><img  src="assets/images/pricetag.png"  class="tag" >{{item.availoffer2}}</li>
+<li><img  src="assets/images/pricetag.png"  class="tag" >{{item.availoffer3}}</li>
+
+
+</ul>
+<hr>
+<div class="spec-table" >
+<table >
+<tr class="head">
+  <th> <h4>Specification</h4> </th>
 </tr>
 
-
-
-
-</td>
-
-
- <td>
+<tr>
+  <th> <h5>General</h5> </th>
+</tr>
   
+<tr>
+  <td>In the box</td>
+  <td>{{item.box}}</td>
+</tr>
 
+<tr>
+  <td>Model Number</td>
+  <td>{{item.ModelNumber}}</td>
+</tr>
 
+<tr>
+  <td>Model Name</td>
+  <td>{{item.ModelName}}</td>
+</tr>
 
+<tr>
+  <td>Color</td>
+  <td>{{item.color}}</td>
+</tr>
+
+<tr>
+  <td>Browse Type</td>
+  <td>{{item.BrowseType}}</td>
+</tr>
+
+<tr>
+  <td>SimType</td>
+  <td>{{item.SimType}}</td>
+</tr>
+
+<tr>
+  <td>Hybrid Sim</td>
+  <td>{{item.HybridSim}}</td>
+</tr>
+
+<tr>
+  <td>Touchscreen</td>
+  <td>{{item.Touchscreen}}</td>
+</tr>
+
+<tr>
+  <td>OTG Compaitable</td>
+  <td>{{item.OTGCompaitable}}</td>
+</tr>
+<hr>
+<tr>
+  <td>Display</td>
+
+ 
+</tr>
+
+<tr>
+  <td>Display Size</td>
+  <td>{{item.DisplaySize}}</td>
+</tr>
+<tr>
+  <td>Resolution</td>
+  <td>{{item.Resolution}}</td>
+</tr>
+
+<hr>
+<tr>
+  <td>Memory & Storage Features</td>
+</tr>
+
+<tr>
+  <td>Internal Storage</td>
+  <td>{{item.InternalStorage}}</td>
+</tr>
+
+<tr>
+  <td>RAM</td>
+  <td>{{item.RAM}}</td>
+</tr>
+
+<tr>
+  <td>Memory Card Slot Type</td>
+  <td>{{item.MemoryCardSlotType}}</td>
+</tr>
+<hr>
+<tr>
+  <td>Camera Features</td>
+ 
+</tr>
+
+<tr>
+  <td>Primary Camera</td>
+  <td>{{item.PrimaryCamera}}</td>
+</tr>
+<hr>
+<tr>
+  <td>Connectivity Features</td>
+  
+</tr>
+
+<tr>
+  <td>Supported Networks</td>
+  <td>{{item.NetworkType}}</td>
+</tr>
+
+<tr>
+  <td>Network Type</td>
+  <td>{{item.SupportedNetworks}}</td>
+</tr>
+<hr>
+<tr>
+  <td>Battery & Power Features</td>
+  
+</tr>
+
+<tr>
+  <td>Battery Capacity</td>
+  <td>{{item.BatteryCapacity}}</td>
+</tr>
+
+<hr>
+
+<tr>
+  <td>Warranty</td>
+</tr>
+
+<tr>
+  <td>Warranty Summary</td>
+  <td>{{item.WarrantySummary}}</td>
+</tr>
+
+</table>
+</div> 
+
+</div>
 </td>
+
+
+
 
 
     </table>
+    
    
- 
+  </div>
      <router-outlet></router-outlet>
 
 

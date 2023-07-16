@@ -19,10 +19,15 @@ export class AdmineditproductComponent implements OnInit {
 
   Laptopdata =false;
 
+  Edit :boolean=false;
+
   delproduct:any;
 
   Model:any;
   idendity: any;
+  itemid: any;
+
+  buttontext:any
 
   constructor(private dbservice:DbseviceService,private http:HttpClient,private forms:FormBuilder) { }
 
@@ -35,6 +40,8 @@ export class AdmineditproductComponent implements OnInit {
     // console.log(this.mobileproduct+":geted data")
 
     // }))
+
+    this.buttontext='Select product to Add'
     
   }
   
@@ -50,12 +57,13 @@ export class AdmineditproductComponent implements OnInit {
     image:[,[Validators.required,]],
     rating:[,[Validators.required,]],
     quantity:[,[Validators.required,]],
-    emailid:[,[Validators.required,]],
     
 
 
   })
   addProduct(){
+
+    
 
     if(this.Mobiledata == true) {
 
@@ -96,9 +104,11 @@ export class AdmineditproductComponent implements OnInit {
 
   }
     
+ 
 
+    }
 
-  }
+   
 
 
   getmultipledata(){
@@ -153,6 +163,7 @@ datadel(item:any){
     }))
  
     this.Laptopdata =true;
+    this.buttontext ='Add Laptop Products';
 
    
   }
@@ -166,6 +177,8 @@ mobilesdata(){
     }))
 
     this.Mobiledata=true;
+
+    this.buttontext ='Add mobile Products';
 }
 
 televisiondata(){
@@ -178,6 +191,59 @@ televisiondata(){
     }));
 
     this.Television=true;
-}
+
+    this.buttontext ='Add Television Products';
 
 }
+
+
+onEdit(item:any){
+  this.itemid=item.emailid;
+   this.Productaddform.controls['model'].setValue(item.model);
+   this.Productaddform.controls['description1'].setValue(item.description1);
+   this.Productaddform.controls['description2'].setValue(item.description2);
+   this.Productaddform.controls['price'].setValue(item.price);
+   this.Productaddform.controls['discount'].setValue(item.discount);
+   this.Productaddform.controls['delivery'].setValue(item.delivery);
+   this.Productaddform.controls['quantity'].setValue(item.quantity);
+   this.Productaddform.controls['rating'].setValue(item.rating);
+   this.Productaddform.controls['image'].setValue(item.image);
+
+
+    
+
+   this.Edit ==true;
+
+  
+
+   this.buttontext ='Edit Product';
+
+}
+   
+update(){
+  
+
+    if(this.Mobiledata == true)
+this.http.put<any>('http://localhost:3000/mobiles/'+this.itemid,this.Productaddform.value).subscribe(res=>{
+  alert("Updated successfully");
+  this.Productaddform.reset();
+
+});
+
+if(this.Television == true){
+  this.http.put<any>("http://localhost:3000/telivision/" +this.itemid,this.Productaddform.value).subscribe((res=>{
+    alert("Updated successfully");
+  }))
+
+}
+
+if(this.Mobiledata == true){
+  this.http.put<any>("http://localhost:3000/mobiles/" +this.itemid,this.Productaddform.value).subscribe((res=>{
+    alert("Updated successfully");
+  }))
+  
+}}
+
+
+}
+

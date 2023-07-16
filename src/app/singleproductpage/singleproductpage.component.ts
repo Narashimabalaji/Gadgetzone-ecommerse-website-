@@ -76,7 +76,7 @@ export class SingleproductpageComponent implements OnInit {
     alert("added to your cart" );
     const loggedemailid = localStorage.getItem('loggedemailid');
 
-    this.cartservice.addtocart(item,loggedemailid);
+    this.cartservice.addtocart(item);
   
 
     

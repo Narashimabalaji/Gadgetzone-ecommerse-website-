@@ -134,6 +134,13 @@
     background:linear-gradient(45deg,#5B6467, #a729b8);
   }
   
+  .container{
+    display:flex;
+  }
+
+  .checkout-page{
+    width:600px;
+  }
   .error{
   
     background-color: rgb(228, 172, 172);
@@ -147,4 +154,8 @@
 
   .optionadress{
     display:flex
+  }
+
+  .address-select{
+  
   }

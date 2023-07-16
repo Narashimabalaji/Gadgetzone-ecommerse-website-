@@ -1,9 +1,10 @@
 <div class="card-container">
 
   <div class="card">
-
+<div class="drop-display">
 <ng-container *ngFor="let item of this.order">
 
+  
 
   <div class="product-container">
     <img src="{{item.image}}" alt="">
@@ -21,10 +22,26 @@
 <div class="product-price">
   {{item.price}}
 </div>
+
+<div class="order-status">
+
+  {{item.Orderstatus}}
+
+</div>
+</div>
+
+<div class="details-drop">
+
+  <Strong>Shipping Adress</Strong>
+ <li>{{item.Name}},</li> 
+ <li>{{item.Address}}</li> 
 </div>
 
 </ng-container>
+
+</div>
   </div>
+
 
 
 </div>

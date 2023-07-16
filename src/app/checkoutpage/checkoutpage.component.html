@@ -113,6 +113,39 @@
 
     
       </div>
+
+      <div>
+        
+      </div>
+    </div>
+
+
+
+    <div *ngFor="let address of Address" class="adress-select">
+      <label>
+        <input type="radio" name="address" [value]="address" [(ngModel)]="selectedAddress"> {{ address.username }} <br>
+        {{ address.address }} <br>
+        {{ address.city }} <br>
+        {{ address.state }} <br>
+        {{ address.zip }}
+      </label>
+    </div>
+    
+    <div *ngIf="selectedAddress">
+      <h3>Selected Address: {{ selectedAddress.username }}</h3>
+      <p>{{ selectedAddress.address }}</p>
+      <p>{{ selectedAddress.city }}, {{ selectedAddress.state }}, {{ selectedAddress.zip }}</p>
+
+      <div class="select button">
+
+        <input type="submit" value="Confirm" (click)="selectAddress(selectedAddress)" >
+        </div>
+    </div>
+    
+
+
+
+
     </div>
     
       
