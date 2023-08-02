@@ -72,3 +72,11 @@
     position:sticky;
     top:0;
  }
+
+ .removebutton{
+    cursor:pointer;
+ }
+
+ .removebutton:hover{
+    color:#007185;
+ }

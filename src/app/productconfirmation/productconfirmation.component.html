@@ -1,8 +1,5 @@
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
-<ng-container *ngIf="product.length!=0">
 
 
   <div class="card-table">
@@ -11,123 +8,169 @@
 
       <table class="table table-responsive">
          
-        <thead>
-          <tr>
-            <th>SN.O</th>
-            <th>Product Name</th>
-            <th>productImage</th>
-            <th>Description</th>
-            <th>price</th>
-            <th>quantity</th>
-            <th>Total</th>
-          
-          </tr>
-        </thead>
+        
         <tbody>
-          <tr *ngFor="let item of product;let i =index">
-         <td>{{i+1}}</td>
-         <td>{{item.model}}</td>
-         <td style="width:200px;"><img src="{{item.image}}" alt=""></td>
-         <td>{{item.description}}</td>
-         <td>₹{{item.price}}</td>
+          <tr *ngFor="let item of  this.buyproduct">
+  
+      
+         <td style="width:200px;"><img src="{{item.image}}" alt=""> <br> 
+      <strong>    {{item.model}}
+           {{item.detailmodel}}
 
-        
-        
-        
+          </strong> 
+          </td>
+
       
 
-         <td>{{item.quantity }}</td>
+        
 
-         <td>
+         <!-- <td>{{item.description}}</td>
+         <td>₹{{item.price}}</td>
 
-          {{item.price*item.quantity}}
-                </td>
-        </tr>
+
+         <td>{{item.quantity * item.price}}</td>
+
+        </tr> -->
 
 
         </tbody>
 
+      </table>
+    
+
+    </div>
+
+
+
+
+
+
+
+
+<table>
+
+<!--   
         <tr *ngFor="let item of grandtotal" >
           <td  colspan="4"></td>
           <td> <strong>GrandTotal:{{item.total}}</strong> </td>
 
         
-        </tr>
+        </tr> -->
 
-        <button (click)="confirmproduct()">submit</button>
-
-      </table>
-  
-
-    </div>
-  </div>
-
-</ng-container>
-
-
-<ng-container *ngIf="product.length ==0">
-
-  
-  <div class="card-table">
-
-    <div class="cart-products">
-
-      <table class="table table-responsive">
-         
-        <thead>
-          <tr>
-            <th>SN.O</th>
-            <th>Product Name</th>
-            <th>productImage</th>
-            <th>Description</th>
-            <th>price</th>
-            <th>quantity</th>
-            <th>Total</th>
-          
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let item of buyproduct;let i =index">
-         <td>{{i+1}}</td>
-         <td>{{item.model}}</td>
-         <td style="width:200px;"><img src="{{item.image}}" alt=""></td>
-         <td>{{item.description}}</td>
-         <td>₹{{item.price}}</td>
-
-        
-        
-        
       
+        
+      </table>
 
-         <td>{{item.quantity }}</td>
+      
+    <div class="totalproduct-page" >
 
-         <td>
+      <table class="totalproduct-pagetable">
 
-          {{item.price*item.quantity}}
-                </td>
+        <thead>
+          <th>Shipping Address</th>
+        </thead>
+<hr>
+        <tr *ngIf="selectedAddress">
+
+          <td>{{selectedAddress.username}} <br>
+          {{selectedAddress.address}}
+          {{selectedAddress.city}}
+          {{selectedAddress.state}}
+          {{selectedAddress.pincode}}
+        
+        </td>
         </tr>
 
 
-        </tbody>
-<div *ngIf="selectedAddress">
 
-  <p>{{selectedAddress.username}}</p>
-  <p>{{selectedAddress.address}}</p>
-  <p>{{selectedAddress.city}}</p>
 
+        <thead>
+          <th>Price details</th>
+        </thead>
+<hr>
+<div *ngIf="buynow==false">
+
+
+  <div *ngFor="let item of this.grandtotal">
+        <tr>
+          
+          <td> Price(₹({{this.productlength}})item)  <td>
+          <td>₹ {{item.itemprice}}</td>
+
+        </tr>
+
+        <tr>
+          <td> Discount <td>
+
+          <td> -₹{{item.discount}}</td>
+
+        </tr>
+
+        <tr>
+          <td>Delivery Charges  <td>
+
+          <td></td>
+
+        </tr>
+        <hr>
+
+        <tr >
+          <td > <strong>Total Payable </strong><td>
+
+          <td> ₹{{item.total}}</td>
+
+        </tr>
+        <strong>  You have saved₹{{item.discount}}on this Order</strong>
+
+        </div>
 
 </div>
-        <tr *ngFor="let item of grandtotal" >
-          <td  colspan="4"></td>
-          <td> <strong>GrandTotal:{{item.total}}</strong> </td>
+        <div *ngIf="buynow!==false" >
 
-        
-        </tr>
+          <div *ngFor="let item of  this.buyproduct">
+          <tr>
+            <td> Price(₹(1)item)  <td>
+  
+            <td>₹ {{item.discount}}</td>
+  
+          </tr>
+  
+          <tr>
+            <td> Discount <td>
+  
+            <td> -₹{{ item.discount - item.price}}</td>
+  
+          </tr>
+  
+          <tr>
+            <td>Delivery Charges  <td>
+  
+            <td></td>
+  
+          </tr>
+          <hr>
+  
+          <tr >
+            <td > <strong>Total Payable </strong><td>
+  
+            <td> ₹{{item.price}}</td>
+  
+          </tr>
+          <strong>  You have saved₹{{item.price-item.discount}}on this Order</strong>
+  
+          </div>
 
-        <button (click)="confirmproduct()">submit</button>
-        
+         
+          </div>
+         
       </table>
-    </div>
-  </div>
+      <br> 
+      <div class="btn-stick">
+        <button (click)="confirmproduct()" class="confirm-buttton">Confirm</button>
+      </div>
+      
+      <br>
 
-</ng-container>
+    </div>
+    </div>
+ 

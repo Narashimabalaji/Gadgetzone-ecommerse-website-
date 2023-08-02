@@ -15,39 +15,50 @@ export class AdminorderdetailsComponent implements OnInit {
   pro:any;
   sendemail:string|any;
 mergedata:any;
-buttontext = 'Approve';
+buttontext:any;
+orderstatus:any="Order in Transit";
+  orderstatus1:any="Approved";
+  orderstatus2:any="Ready to shipment";
+  orderstatus3:any="Order Delivered";
+
   constructor(private http:HttpClient) { }
 
   ngOnInit() {
 
-    this.http.get<any>('http://localhost:3000/directbuynowproducts/').subscribe(data => {
-
-    this.product = data;
-
-     
-    console.log("profbggfbgfb",this.products);
-    // for(var det in this.product) {
-    //   // var i=0;
-    //   this.pro=this.product[det];
-    //  this.len=this.pro.length
-    //   // console.log("pro",this.pro);
-    //   for(var i=0;i<this.len;i++){
-    //     // console.log("pro1",this.pro[i]);
-    //     this.products[i]=this.pro[i];
-    //     console.log("profbggfbgfb",this.products);
-
-        
-  
-    //   }
-     
-    // }
    
-    
-    })
-    
+    this.getorderitem();
     
 
     
+    }
+
+
+    getorderitem(){
+      this.http.get<any>('http://localhost:3000/directbuynowproducts/').subscribe(data => {
+
+      this.product = data;
+  
+       
+      console.log("profbggfbgfb",this.products);
+      // for(var det in this.product) {
+      //   // var i=0;
+      //   this.pro=this.product[det];
+      //  this.len=this.pro.length
+      //   // console.log("pro",this.pro);
+      //   for(var i=0;i<this.len;i++){
+      //     // console.log("pro1",this.pro[i]);
+      //     this.products[i]=this.pro[i];
+      //     console.log("profbggfbgfb",this.products);
+  
+          
+    
+      //   }
+       
+      // }
+      
+  
+    
+      })
     }
 
     sendEmail(item:string|any){
@@ -64,7 +75,7 @@ buttontext = 'Approve';
     
     }));
 
-    
+   
 
     let emailObject = {
       email:item.email,
@@ -83,11 +94,46 @@ buttontext = 'Approve';
       console.log(res);
     }));
 
-     this.http.patch<any>("http://localhost:3000/directbuynowproducts/"+item.emailid,{Orderstatus:"Ready For shipment"}).subscribe((update:any)=>{
-      console.log(update);
-     });
+     
 }
 
+status(item:any){
+  if(item.Orderstatus==this.orderstatus){
+    const data={Orderstatus:this.orderstatus1}
+    // console.log("da",orderstatus:this.orderstatus)
+    this.http.patch('http://localhost:3000/directbuynowproducts/'+item.emailid,data).subscribe(data=>{
+      this.getorderitem();
+    })
+  }
+  if(item.Orderstatus==this.orderstatus1){
+    const data={Orderstatus:this.orderstatus2}
+    // console.log("da",orderstatus:this.orderstatus)
+    this.http.patch('http://localhost:3000/directbuynowproducts/'+item.emailid,data).subscribe(data=>{
+      this.getorderitem();
+    })
+  }
 
+  if(item.Orderstatus==this.orderstatus1){
+    const data={Orderstatus:this.orderstatus2}
+    // console.log("da",orderstatus:this.orderstatus)
+    this.http.patch('http://localhost:3000/directbuynowproducts/'+item.emailid,data).subscribe(data=>{
+      this.getorderitem();
+    })
+  }
+         
+  if(item.Orderstatus==this.orderstatus2){
+    const data={Orderstatus:this.orderstatus3}
+    // console.log("da",orderstatus:this.orderstatus)
+    this.http.patch('http://localhost:3000/directbuynowproducts/'+item.emailid,data).subscribe(data=>{
+      this.getorderitem();
+    })
+  }
+  // this.buttontext="Approve"
+
+  //   if(this.product.Orderstatus="Ready For shipment"){
+  //     this.buttontext="shipped"
+  //   }
+
+}
 
 }

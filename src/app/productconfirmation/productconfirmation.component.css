@@ -1,5 +1,96 @@
+
+
 .table img{
-    width:200px;
+    width:400px;
     
 }
 
+.table input{
+    width:20px;
+}
+
+
+.container-cart{
+    width:200px;
+ margin-left:600px;
+ border:none;
+ display:flex;
+ 
+}
+
+
+
+
+ .totalproduct-page  td{
+    padding:10px;
+    gap:100px;
+ }
+ 
+
+
+
+    input{
+      padding:3px;
+      width:7px;
+    }
+ .totalproduct-page table th{
+    padding:10px;
+    color:black;
+ }
+ .totalproduct-page table{
+
+
+    width:400px;
+    height:200px;
+    font-family:  Roboto,Arial,sans-serif;
+   
+    box-shadow: 0 4px 6px rgba(0.368, 0.368, 0.368, 0.368);
+
+    position:sticky;
+    top:0;
+    
+ }
+.totalproduct-page{
+    padding-left: 10%;
+}
+ tbody{
+    width:300px;
+    height:400px;
+    
+    
+ }
+
+ .cart-products{
+    width:500px;
+    border:1px solid rgba(0, 0, 0, 0.269);
+  
+    
+ }
+
+ .card-table{
+    padding-left: 5%;
+    display:flex;
+ }
+
+ .confirm-buttton{
+
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500px;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background:linear-gradient(45deg,#485461, #c430d7);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-left:25%;
+    width:50%;
+    height:6%;
+    
+
+ }
+
+ .btn-stick{
+    position: sticky;
+    top:65%;
+ }

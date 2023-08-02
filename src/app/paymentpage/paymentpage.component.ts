@@ -11,22 +11,56 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PaymentpageComponent implements OnInit {
   
-
+  isclicked1=false;
+  isclicked2=false;
+  isclicked3=false;
+  cardNumber: string|any;
+  cardType: string|any;
+  Cardname: any;
+  pricedetail: any;
+ 
 
   constructor(private route:Router,private forms:FormBuilder,private dbservice:DbseviceService,private http:HttpClient) { }
 
   ngOnInit() {
+    this.pricedetails()
   }
 
-  paymentform = this.forms.group({
+  CardForm = this.forms.group({
     cardnumber:[,[Validators.required,Validators.minLength(16)]],
-   
+    cardmonth:[,[Validators.required,]],
+    cvv:[,[Validators.required,]],
 
   })
+  checkCard() {
+    const visaPattern = /^4[0-9]{12}(?:[0-9]{3})?$/;
+    const mastercardPattern = /^(?:5[1-5][0-9]{14})$/;
+
+    if (this.cardNumber.match(visaPattern)) {
+      this.cardType = 'assets/images/visalogo.png';
+      this.Cardname ='Visa Card'
+    } else if (this.cardNumber.match(mastercardPattern)) {
+      this.cardType = 'assets/images/mastercardlogo.png';
+      this.Cardname='Mastercard'
+    } else {
+      this.cardType = null;
+    }
+  }
+
+  pricedetails(){
+    const loggedemailid = localStorage.getItem('loggedemailid');
+
+    this.http.get<any>("http://localhost:3000/carttotal/"+loggedemailid).subscribe((res: any) => {
+
+    this.pricedetail =res;
+
+    console.log(res);
+    })
+  }
 
 
 submit(){
-  if(this.paymentform.valid){
+  if(this.CardForm.valid){
     this.route.navigate(['orderplaced']).then(()=>{
       window.location.reload();
        });
@@ -36,21 +70,79 @@ submit(){
 
 
 
+const addressid = localStorage.getItem('address');
+
+
+       
+this.http.get<any>("http://localhost:3000/billingdetail/").subscribe((k)=>{
+         
+const l =k.filter((address:any)=>{
+  
+        return address.emailid === addressid;
+})
+if(l){
+this.http.patch<any>("http://localhost:3000/billingdetail/"+addressid,{Payment:this.Cardname}).subscribe((res:any)=>{
+ console.log(res,"data");
+})
+}
+
+else{
+  this.http.post<any>("http://localhost:3000/billingdetail/"+addressid,{Payment:this.Cardname}).subscribe((res:any)=>{
+ console.log(res,"data");
+})
+}
+});
+
 }
 
 }
 
   orderplace(){
 
-    if(this.paymentform.valid){
     this.route.navigate(['orderplaced']).then(()=>{
       window.location.reload();
        });
-      }
+       this.dbservice.buynowpaymentverified();
+
+       const addressid = localStorage.getItem('address');
+
+
+       
+      this.http.get<any>("http://localhost:3000/billingdetail/").subscribe((k)=>{
+               
+      const l =k.filter((address:any)=>{
+        
+              return address.emailid === addressid;
+      })
+this.Cardname="Cash on delivery"
+
+if(l){
+
+
+      this.http.patch<any>("http://localhost:3000/billingdetail/"+addressid,{Payment:this.Cardname}).subscribe((res:any)=>{
+       console.log(res,"data");
+     })
+    }
+
+    else{
+      this.http.post<any>("http://localhost:3000/billingdetail/"+addressid,{Payment:this.Cardname}).subscribe((res:any)=>{
+        console.log(res,"data");
+      })
+    }
+});
+     
+      
+  }
+  toggledown1(){
+    this.isclicked1 =!this.isclicked1;
+  }
+  toggledown2(){
+    this.isclicked2 =!this.isclicked2;
+  }
+  toggledown3(){
+    this.isclicked3 =!this.isclicked3;
   }
 
-directbuynow(){
-    
-}
+  
 
 }

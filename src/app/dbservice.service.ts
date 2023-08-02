@@ -39,6 +39,7 @@ export class DbseviceService {
   pudhuadress: any|string;
   add3: any;
   orderstatus:any;
+  paymentway: any|string;
 
    
 constructor(private http:HttpClient,private route:Router, private routerguard:ActivatedRoute,
@@ -49,15 +50,6 @@ ngOnInit(){
  
   
  
-  this.http.get<any>("http://localhost:3000/billingdetail/"+this.addressid).subscribe((res:any)=>{
-    
- 
-  this.pudhuadress =res;
-
-alert("Pudhuadress"+this.pudhuadress.username);
-
-})
-
 }
 
 // getadmins():boolean{
@@ -203,6 +195,15 @@ gettelivision(){
   return this.http.get('http://localhost:3000/telivision')
 }
 
+getsmartwatch(){
+  return this.http.get('http://localhost:3000/smartwatch')
+}
+getcomputeraccesories(){
+  return this.http.get('http://localhost:3000/computeraccesories')
+}
+getHeadphones(){
+  return this.http.get('http://localhost:3000/Headphones')
+}
 adduserinformation(body:any){
          
   return this.http.post("http://localhost:3000/users",body)
@@ -229,6 +230,7 @@ addtocartdb(body:any) {
   let data1 ={
     image:body.image,
     model:body.model,
+    detailmodel:body.detailmodel,
     quantity:body.quantity,
     rating:body.rating,
     email:this.loggedemailid,
@@ -236,7 +238,9 @@ addtocartdb(body:any) {
     discount:body.discount,
     price:body.price,
     description1:body.description1,
-    description2:body.description2
+    description2:body.description2,
+    quantities:body.quantity,
+    total:body.total
 
 
   }
@@ -303,16 +307,6 @@ buynowservice(data:any){
 
 }
   
- 
-address1(){
-
-
-
-
- 
- 
- 
- }
 
 
 cartbuy(data:any){
@@ -332,14 +326,18 @@ buynowdatachange():Boolean{
 
 }
 
+paymentmethod(way:any){
 
+  this.paymentway = way;
+
+}
 
 buynowpaymentverified(){
   this.loggedemailid=localStorage.getItem('loggedemailid');
   this.buyside=localStorage.getItem('buy');
   this.cartside=localStorage.getItem('cartitems');
 
-
+  
 
   this.dt= new Date;
   
@@ -349,13 +347,15 @@ buynowpaymentverified(){
 
 if(this.buyside == 'buy'){
 
-const payment="debit";
-   const data ={...this.buynowproduct,email:this.loggedemailid,payment:payment,address:this.address,time:this.gettime}
 
-  const body =this.buynowproduct
+   const data ={...this.buynowproduct,email:this.loggedemailid,address:this.address,time:this.gettime}
+
+  const body =this.buynowproduct;
 
   
 
+  const payment=this.paymentway; 
+   
  
 
 const address4=this.add3;
@@ -364,6 +364,7 @@ const address4=this.add3;
   const data1={
     image:body.image,
     model:body.model,
+    detailmodel:body.detailmodel,
     quantity:body.quantity,
     rating:body.rating,
     email:this.loggedemailid,
@@ -373,7 +374,9 @@ const address4=this.add3;
     description1:body.description1,
     description2:body.description2,
     Time:this.gettime,
-    Payment:payment,
+    Total:body.total,
+    
+
 
   
    
@@ -382,19 +385,20 @@ const address4=this.add3;
 
   const data2 ={...data1,Name:address4.username,Address:address4.address,City:address4.city,
     State:address4.state,
-    Phonenumber:address4.phonenumber,
-    Orderstatus:"Order in Transit"}
+    Phonenumber:address4.phonenumber,Payment:address4.Payment,
+    Orderstatus:"Order in Transit",payment:payment}
 
    this.http.post<any>("http://localhost:3000/directbuynowproducts/",data2).subscribe((f=>{
     alert("Your order has been placed successfully");
    }))
 
+  
    
 }
 
 else if(this.cartside == 'cart'){
 
-  const payment="debit";
+  const payment=this.paymentway;
 
   const address4=this.add3;
   
@@ -412,6 +416,7 @@ else if(this.cartside == 'cart'){
     const data1={
       image:body.image,
       model:body.model,
+      detailmodel:body.detailmodel,
       quantity:body.quantity,
       rating:body.rating,
       email:this.loggedemailid,
@@ -422,6 +427,7 @@ else if(this.cartside == 'cart'){
       description2:body.description2,
       Time:this.gettime,
       Payment:payment,
+      total:body.total,
       
      
      
@@ -430,7 +436,7 @@ else if(this.cartside == 'cart'){
 
     const data2 ={...data1,Name:address4.username,Address:address4.address,City:address4.city,
       State:address4.state,
-      Phonenumber:address4.phonenumber,
+      Phonenumber:address4.phonenumber,Payment:address4.Payment,
       Orderstatus:"Order in Transit"}
 
     this.http.post<any>("http://localhost:3000/directbuynowproducts/",data2).subscribe((f=>{
@@ -442,7 +448,7 @@ alert("no directbuynow products")
   })
 
   
- 
+
 
   }
 

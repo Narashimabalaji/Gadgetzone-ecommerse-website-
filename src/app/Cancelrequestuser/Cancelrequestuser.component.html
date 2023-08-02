@@ -1,0 +1,141 @@
+
+
+<div class="card-container">
+
+  <div class="card">
+<div class="drop-display">
+ 
+    <ng-container *ngIf="this.product">
+
+      <div class="product-container-1">
+
+        <div>
+
+          <strong>Delivery Address</strong> <br>
+
+          {{this.product.Name}},<br>
+          {{this.product.Address}}, {{this.product.City}},{{this.product.pincode}}, {{this.product.State}}.
+          <br>
+
+       <strong> PhoneNumber:</strong>{{this.product.Phonenumber}}
+
+        
+        </div>
+        
+        <div class="payment-method">
+          <strong>Payment Details</strong> <br>
+
+          {{this.product.Payment}}
+        </div>
+
+        <div class="order-summary">
+            <strong>Order Summary</strong><br>
+
+            Item(S)Price:{{this.product.price}} <br>
+            Shipping:Free Delivery <br>
+            Total:{{this.product.price}} <br>
+            Grand Total:{{this.product.price}}
+        </div>
+
+        <div class="order-date">
+
+          <strong>Ordered on</strong> <br>
+
+          {{this.product.Time}}
+
+        </div>
+
+      </div>
+
+
+    </ng-container>
+
+ 
+<ng-container *ngIf=" this.product">
+
+  
+
+  <div class="product-container">
+
+   
+    <img src="{{this.product.image}}" alt=""><br>
+    
+
+
+
+  <div class="product-model">
+{{this.product.model}} 
+<div style="padding-top:20px;color:gray">
+{{this.product.description1}}
+
+
+</div>
+ <strong>₹{{this.product.price}}</strong>
+</div>
+
+
+
+<div class="order-status">
+
+ <li class="status-color"> <span>{{this.product.Orderstatus}}</span></li>
+
+</div>
+
+<div class="product-cancelrequest">
+
+  <span (click)="toggledown()" ><h6>Cancel Request</h6></span>
+
+  <ul *ngIf="isclicked">
+
+
+    
+<div class="card-container2">
+
+  <div class="card2">
+
+    <form  [formGroup]="cancelrequestform"  (submit)="submit()">
+      <h4>Cancel Request</h4>
+
+      <div class="form-group">
+        <label for="reason">Reason</label>
+        <input type="text"  formControlName="reason" id="Reason" >
+      </div>
+
+      <div class="error-container">
+<div *ngIf="(cancelrequestform.controls['reason'].touched ||cancelrequestform.controls['reason'].dirty)">
+      <div *ngIf="cancelrequestform.controls['reason'].errors?.['required']" class="error"> Please Enter your Reason </div>
+
+    </div>
+    </div>
+
+<div>
+  <label for="addirionalcomments">Additional Comments</label>
+  <textarea name="comments" id="Reason"  formControlName="additionalcomment" ></textarea>
+</div>
+
+
+<div class="form-group-button button">
+  <input type="submit" value="Request Cancel" >
+
+</div>
+
+    </form>
+
+  </div>
+</div>
+  </ul>
+
+</div>
+</div>
+
+
+</ng-container>
+
+</div>
+  </div>
+
+
+
+</div>
+
+

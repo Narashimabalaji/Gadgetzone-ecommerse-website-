@@ -40,7 +40,7 @@
          <td>{{item.quantity * item.price}}</td>
 
          <td>
-          <button  (click)="removeitem(item.emailid,item.index)"  class="btn btn-danger"><i class="fa fa-trash-o" ></i></button>
+          <h6  (click)="removeitem(item.emailid,item.index)" class="removebutton">REMOVE</h6>
          </td>
         </tr>
 
@@ -71,7 +71,7 @@
         <tr>
           <td> Price({{ this.productl}} item)  <td>
 
-          <td>₹ {{getCartTotal()}}</td>
+          <td >₹ {{getCartTotal()}}</td>
 
         </tr>
 
@@ -95,11 +95,14 @@
 
           <td> ₹{{ getCartTotal()}}</td>
 
+          
+
         </tr>
+        <strong>You have saved ₹{{this.dis}} on this Order</strong>
         
       </table>
       <br>
-<strong>You have saved ₹{{this.dis}} on this Order</strong>
+
 
     </div>
   </div>

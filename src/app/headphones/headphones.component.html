@@ -1,0 +1,42 @@
+<div class="card-table">
+  <div class="card-products">
+    <table class="table ">
+
+
+
+<tbody>
+
+  <tr *ngFor="let item of product;let i =index">
+
+
+ <td  ><img src="{{item.image}}"></td>
+
+ <td class="description-space">
+
+ <strong><tr>{{item.model}}</tr> </strong>
+  <tr (click)="productview(item)"  ><ul>
+ <li>{{item.description1}}</li>
+ <li>{{item.description2}}</li>   
+ <li>{{item.description3}}</li>  
+  </ul>
+</tr>
+
+</td>
+ <td> <strong>{{item.price |currency : 'INR'}}</strong>
+  <tr ><ul>
+    <li style="list-style: none;color: green;"><s>{{item.discount |currency:'INR'}}</s></li>
+    <li style="list-style: none;">{{item.delivery}}</li>
+ 
+     </ul>
+   </tr>
+
+
+
+</td>
+ 
+    </table>
+
+  </div>
+
+ </div>
+

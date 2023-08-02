@@ -1,0 +1,108 @@
+.error-container{
+    color:red;
+}
+.card-container{
+    background-color: whitesmoke;
+    border:white;
+    display:flex;
+   
+    
+}
+
+
+
+.card{
+    
+    
+
+    display:flex;
+    flex-direction: column;
+    padding:40px;
+
+    cursor: pointer;
+    
+}
+
+.product-container img{
+    width:15%;
+    height:20%;
+}
+.product-container-1{
+     display: flex;
+     border:2px solid rgba(0, 0, 0, 0.08);
+     box-shadow: 0 0 rgba(0.368, 0.368, 0.368, 0.368);
+    padding: 8px;
+    margin: 8px;
+    width:100%;
+    
+
+}
+.product-container{
+    display: flex;
+    border:2px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0px 0px rgba(0.368, 0.368, 0.368, 0.368);
+    padding: 10px;
+    margin: 8px;
+    width:100%;
+    
+
+}
+
+.payment-method{
+    padding-left: 15%;
+}
+
+.order-summary{
+    padding-left: 15%;  
+
+}
+.order-date{
+    padding-left: 15%;  
+}
+.product-model{
+    padding-left: 2%;
+}
+
+.product-cancelrequest{
+    padding-left:20%;
+
+}
+
+.product-cancelrequest:hover{
+    color:#007185;
+  
+}
+.order-status{
+    padding-left:10%;
+}
+
+.status-color span{
+    color:black;
+}
+.status-color {
+    color:yellow;
+    
+}
+   
+
+.card-container2{
+    width:200px;
+    height:200px;
+}
+
+.form-group-button button{
+    margin-left:600px;
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500px;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background:linear-gradient(45deg,#485461, #c430d7);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width:10%;
+  
+  padding:1%;
+  text-align: center;
+}

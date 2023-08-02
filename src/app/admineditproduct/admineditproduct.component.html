@@ -7,7 +7,7 @@
 
   <li> <button (click)="televisiondata()">Television</button> </li>
 
-  <li> <button >Computer Accessories</button> </li>
+  <li> <button (click)="computeraccesories()" >Computer Accessories</button> </li>
 
   <li> <button >Headphones</button> </li>
 
@@ -22,6 +22,8 @@
 <div class="admin-container">
 
 
+  
+<div class="form-continer">
   <div class="form">
   <h2>Add Product</h2>
   <form [formGroup]="Productaddform"  >
@@ -77,8 +79,128 @@
       <input type="number" id="rating" name="rating" formControlName="rating"  >
     </div>
 
+    <div class="form-group">
+      <label for="availoffer1">availoffer1</label>
+      <input type="text" id="availoffer1" name="availoffer1" formControlName="availoffer1">
+    </div>
+
+    <div class="form-group">
+      <label for="availoffer2">availoffer2</label>
+      <input type="text" id="availoffer2" name="availoffer2" formControlName="availoffer2">
+    </div>
+
+    <div class="form-group">
+      <label for="availoffer3">availoffer3</label>
+      <input type="text" id="availoffer3" name="availoffer3" formControlName="availoffer3">
+    </div>
+
+    <th>Specification</th>
+    <br>
+    <div class="form-group">
+      <label for="box">Box</label>
+      <input type="text" id="box" name="box" formControlName="box">
+    </div>
+
+    <div class="form-group">
+      <label for="OTGCompaitable">OTGCompaitable</label>
+      <input type="text" id="OTGCompaitable" name="OTGCompaitable" formControlName="OTGCompaitable">
+    </div>
+
+    <div class="form-group">
+      <label for="Touchscreen">Touchscreen</label>
+      <input type="text" id="Touchscreen" name="Touchscreen" formControlName="Touchscreen">
+    </div>
+
+    <div class="form-group">
+      <label for="SimType">SimType</label>
+      <input type="text" id="SimType" name="SimType" formControlName="SimType">
+    </div>
+
+    <div class="form-group">
+      <label for="ModelNumber">ModelNumber</label>
+      <input type="text" id="ModelNumber" name="ModelNumber" formControlName="ModelNumber">
+    </div>
+
+    <div class="form-group">
+      <label for="ModelName">ModelName</label>
+      <input type="text" id="ModelName" name="ModelName" formControlName="ModelName">
+    </div>
+    
+    <div class="form-group">
+      <label for="Resolution">Resolution</label>
+      <input type="text" id="Resolution" name="Resolution" formControlName="Resolution">
+    </div>
+
+     
+    <div class="form-group">
+      <label for="InternalStorage">InternalStorage</label>
+      <input type="text" id="InternalStorage" name="InternalStorage" formControlName="InternalStorage">
+    </div>
+
+    <div class="form-group">
+      <label for="HybridSim">HybridSim</label>
+      <input type="text" id="HybridSim" name="HybridSim" formControlName="HybridSim">
+    </div>
+
+    <div class="form-group">
+      <label for="HybridSim">PrimaryCamera</label>
+      <input type="text" id="PrimaryCamera" name="PrimaryCamera" formControlName="PrimaryCamera">
+    </div>
+
+    <div class="form-group">
+      <label for="MemoryCardSlotType">MemoryCardSlotType</label>
+      <input type="text" id="MemoryCardSlotType" name="MemoryCardSlotType" formControlName="MemoryCardSlotType">
+    </div>
+
+    <div class="form-group">
+      <label for="BatteryCapacity">BatteryCapacity</label>
+      <input type="text" id="BatteryCapacity" name="BatteryCapacity" formControlName="BatteryCapacity">
+    </div>
+
+    
+    <div class="form-group">
+      <label for="NetworkType">NetworkType</label>
+      <input type="text" id="NetworkType" name="NetworkType" formControlName="NetworkType">
+    </div>
+
+    <div class="form-group">
+      <label for="BrowseType">BrowseType</label>
+      <input type="text" id="BrowseType" name="BrowseType" formControlName="BrowseType">
+    </div>
+
+    <div class="form-group">
+      <label for="HybridSim">HybridSim</label>
+      <input type="text" id="HybridSim" name="HybridSim" formControlName="HybridSim">
+    </div>
+
+    
+    <div class="form-group">
+      <label for="colour">colour</label>
+      <input type="text" id="colour" name="colour" formControlName="colour">
+    </div>
+
+    
+    <div class="form-group">
+      <label for="RAM">RAM</label>
+      <input type="text" id="RAM" name="RAM" formControlName="RAM">
+    </div>
 
 
+  <div class="form-group">
+      <label for="SupportedNetworks">SupportedNetworks</label>
+      <input type="text" id="SupportedNetworks" name="SupportedNetworks" formControlName="SupportedNetworks">
+    </div>
+    
+    <div class="form-group">
+      <label for="BatteryCapacity">BatteryCapacity</label>
+      <input type="text" id="BatteryCapacity" name="BatteryCapacity" formControlName="BatteryCapacity">
+    </div>
+
+   
+    <div class="form-group">
+      <label for="WarrantySummary">WarrantySummary</label>
+      <input type="text" id="WarrantySummary" name="WarrantySummary" formControlName="WarrantySummary">
+    </div>
     <button type="submit" [disabled]="!this.Productaddform.valid" *ngIf="Edit!==false" (click)="addProduct()">{{this.buttontext}}</button>
    
     <button type="submit" [disabled]="!this.Productaddform.valid" *ngIf="Edit==false" (click)="update()">{{this.buttontext}}</button>
@@ -89,7 +211,7 @@
 
   </div>
 
-  
+</div>
 
 
 

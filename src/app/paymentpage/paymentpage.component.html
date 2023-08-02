@@ -1,4 +1,4 @@
-<div class="payment-container">
+<!-- <div class="payment-container">
   <h2>Payment Information</h2>
   <form [formGroup]="paymentform" (submit)="submit()">
     <div class="form-group">
@@ -24,6 +24,168 @@
     </div>
     <button class="btn btn-primary" type="submit">Pay Now</button>
   </form>
+</div> -->
+
+
+<div class="paymentpage-contianer">
+  <div class="paymentpage-card">
+
+    <header>Payment Options</header>
+
+     <div class="payment-conents">
+
+      <div class="upi">
+
+     <input type="radio" (click)="toggledown1()" name="radio"> <img src="assets/images/UPIlogo.gif" alt=""  >
+
+    <div *ngIf="isclicked1">
+
+      <form  action="#">
+      <label for="upiid">Enter your UPI ID</label>
+   
+      <input type="text" name="upiid" id="Upiid" required> 
+
+      <input type="submit" value="Submit">
+    </form>
+    </div>
+
+      </div>
+<br>
+      <div class="Cardpayment">
+
+        <input type="radio" (click)="toggledown2()" name="radio" > Credit/Debit Card Payment
+   
+       <div *ngIf="isclicked2"> 
+
+
+
+  <img src="assets/images/mastercardlogo.png" alt="">
+  <img src="assets/images/visalogo.png" alt="">
+
+
+
+       
+<form  [formGroup]="CardForm"  >
+   
+  <div class="form-group">
+         <label for="Atmcard">Enter Card number</label>
+         <input type="text" name="Atmcard" id="Cardnumber" required [(ngModel)]="cardNumber" (input)="checkCard()"  maxlength="16" formControlName="cardnumber"> 
+
+         <div class="error-container">
+
+          <div *ngIf="CardForm.controls['cardnumber'].invalid && (CardForm.controls['cardnumber'].touched || CardForm.controls['cardnumber'].dirty)" class="error">
+
+          <div *ngIf="CardForm.controls['cardnumber'].errors?.['required']" class="error"> Enter your cardnumber </div>
+
+</div>
+
+         </div>
+        </div>
+         <div *ngIf="cardType" class="image-container">
+          <img src="{{ cardType }}" alt="">
+              </div>
+       <div class="validandcvv">
+        <div>
+          <label for="month">Valid thru</label>
+          <input type="month"  id="Cardmonth" required formControlName="cardmonth">
+        </div>
+
+        <div class="error-container">
+
+          <div *ngIf="CardForm.controls['cardmonth'].invalid && (CardForm.controls['cardmonth'].touched || CardForm.controls['cardmonth'].dirty)" class="error">
+
+          <div *ngIf="CardForm.controls['cardmonth'].errors?.['required']" class="error"> Enter your Vlaid thru </div>
+
+</div>
+
+         </div>
+      
+        <div>
+          <label for="cvv">CVV</label>
+          <input type="text"  id="cvv" required formControlName="cvv"  maxlength="3" formControlName="cvv"> 
+          <div class="error-container">
+
+            <div *ngIf="CardForm.controls['cvv'].invalid && (CardForm.controls['cvv'].touched || CardForm.controls['cvv'].dirty)" class="error">
+  
+            <div *ngIf="CardForm.controls['cvv'].errors?.['required']" class="error"> Enter your cvv number </div>
+  
+  </div>
+  
+           </div>
+
+        </div>
+             
+
+       </div>
+  <br>  
+  <div  *ngIf="this.pricedetail">
+    <input type="submit" class="submitbutton" value="Pay ₹{{this.pricedetail.total}}" (click)="submit()"> 
+
+  </div>
+        </form>
+       </div>
+         </div>
+
+         <br>
+
+         
+     </div>
+     <div class="COD">
+
+      <input type="radio" (click)="toggledown3()" name="radio">Cash On Delivery  <button *ngIf="isclicked3" class="COD-submit"  (click)="orderplace()">Confirm </button>
+
+ 
+    
+ 
+       </div>
+  </div>
+
+
+
+<div class="totalproduct-pagetable">
+  <div class="totalproduct-content">
+  <table >
+  <thead>
+    <th>Price details</th>
+  </thead>
+<hr>
+<div *ngIf="this.pricedetail">
+  <tr >
+    <td> Price(₹({{this.pricedetail.itemlength}})item)  <td>
+
+    <td>₹ {{this.pricedetail.itemprice}}</td>
+
+  </tr>
+
+  <tr>
+    <td> Discount <td>
+
+    <td> -₹{{ this.pricedetail.discount}}</td>
+
+  </tr>
+
+  <tr>
+    <td>Delivery Charges  <td>
+
+    <td></td>
+
+  </tr>
+  <hr>
+
+  <tr>
+    <td > <strong>Total Payable </strong><td>
+
+    <td> ₹{{this.pricedetail.total}}</td>
+
+  </tr>
+  <strong class=saved-discount>  You have saved₹{{this.pricedetail.discount}}on this Order</strong>
+
+  </div>
+</table>
+</div>
+
+
+</div>
 </div>
 
 <router-outlet></router-outlet>

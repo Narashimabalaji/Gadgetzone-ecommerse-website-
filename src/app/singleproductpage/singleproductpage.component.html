@@ -72,8 +72,13 @@
 
    <li >{{item.price |currency : 'INR'}}</li> 
     <li style=" color: green; font-size: small;"><s>{{item.discount |currency:'INR'}}</s></li>
+
+    <li>  <strong>Only{{item.stock}} items left hurry up!</strong></li>
   </ul>
 
+
+
+  <strong>Deliver On {{ calculateDeliveryDate() }}</strong><img src="/assets/images/./truck3.png/" alt="Car" class="deliverycar" />
   <hr>
     <div  class="specification-detail">
 <div>

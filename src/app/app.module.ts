@@ -28,9 +28,13 @@ import { AdmineditproductComponent } from './admineditproduct/admineditproduct.c
 import { UserorderdetailsComponent } from './userorderdetails/userorderdetails.component';
 import { LoaderComponent } from './Loader/Loader.component';
 import { ImagechangeDirective } from './singleproductpage/imagechange.directive';
+import { CancelrequestuserComponent } from './Cancelrequestuser/Cancelrequestuser.component';
+import { ComputeraccesoriesComponent } from './computeraccesories/computeraccesories.component';
+import { HeadphonesComponent } from './headphones/headphones.component';
+import { AdminstockdetailsComponent } from './adminstockdetails/adminstockdetails.component';
 
 @NgModule({
-  declarations: [																					
+  declarations: [																									
     AppComponent,
     HomeComponent,
       RegisterComponent,
@@ -52,7 +56,11 @@ import { ImagechangeDirective } from './singleproductpage/imagechange.directive'
       AdmineditproductComponent,
       UserorderdetailsComponent,
       LoaderComponent,
-      ImagechangeDirective
+      ImagechangeDirective,
+      CancelrequestuserComponent,
+      ComputeraccesoriesComponent,
+      HeadphonesComponent,
+      AdminstockdetailsComponent
    ],
   imports: [
     BrowserModule,

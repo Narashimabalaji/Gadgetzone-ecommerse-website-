@@ -5,6 +5,7 @@ import { MessageService } from '../message.service';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { forkJoin } from 'rxjs';
 import { AddressService } from '../address.service';
+import { isTemplateMiddle } from 'typescript';
 
 @Component({
   selector: 'app-productconfirmation',
@@ -25,6 +26,14 @@ export class ProductconfirmationComponent implements OnInit {
   buy: string | any;
   selectedAddress: any;
   addressid:any|number; 
+  productlength: any;
+  discount: any;
+  productprice: number|any;
+  discountprice: number|any;
+
+  buynow=false;
+  dis: any;
+  
 
   
 
@@ -149,14 +158,46 @@ export class ProductconfirmationComponent implements OnInit {
             const finaldata =[...user,...user2,...user3];
             this.buyproduct =finaldata;
 
-            
+            const itemdata =finaldata;
+
+           
+           
             console.log("user",user);
         
             console.log("finaldata",finaldata);
-        
+
+        this.buynow=true;
+
           
+let p=0;
+let t=0;
+let total=0;
+    let w=0;    
+    for(let item of finaldata){
+      
+      p =item.discount-item.price;
+      t=p*item.quantity;
+
+      w=item.discount;
+
+      total=item.price;
+      
+    }
+
+    this.dis =t;
+          this.productprice=w;
+
+
+        
+        
+        this.http.patch<any>("http://localhost:3000/carttotal/"+loggedemailid,{itemprice:w,itemlength:"1",discount:t,total:total}).subscribe((res:any)=>{
+          console.log(res,"data");
+        })
+       
           })
 
+         
+            
     }
 
     else{
@@ -171,10 +212,24 @@ export class ProductconfirmationComponent implements OnInit {
         console.log("Email address in data:", data.email);
         return data.email === loggedemailid;
       });
-           
+           this.buyproduct =user;
       
-            this.buyproduct=user;
-            
+            this.productlength =user.length;
+
+            let Q =0;
+            for(let item of this.buyproduct){
+                
+              if (typeof item.discount === 'number') {
+                Q += item.discount;
+              } else if (typeof item.discount === 'string') {
+                Q += parseFloat(item.discount);
+              }
+            }
+          this.productprice = Q;
+
+          this.http.patch<any>("http://localhost:3000/carttotal/"+loggedemailid,{itemprice:this.productprice,itemlength:this.productlength}).subscribe((res:any)=>{
+            console.log(res,"data");
+          })
      
       console.log("User data:", user);
      
@@ -189,8 +244,21 @@ export class ProductconfirmationComponent implements OnInit {
                })
 
                this.grandtotal =l;
+               this.discount = l.discount;
+
+               let Q =0;
+               for(let item of this.grandtotal){
+                   
+                 if (typeof item.total === 'number') {
+                   Q += item.discount - item.total;
+                 } 
+               }
+             this.discountprice = Q;
 
                console.log("total",this.grandtotal);
+               this.http.patch<any>("http://localhost:3000/carttotal/"+loggedemailid,{itemdiscount:this.discountprice}).subscribe((res:any)=>{
+                console.log(res,"data");
+              })
 
       });
     });
@@ -212,28 +280,16 @@ export class ProductconfirmationComponent implements OnInit {
          
            this.email = loggedemailid;
 
-           this.route.navigate(['/payment']);
-
-           console.log(this.email)
-           console.log(this.name)
-       
-       this.messageservice.sendEmail(this.email).subscribe(
+          
         
-        (f)=>{
-             console.log(f);  
-          console.log('email sent successfully');
+          this.route.navigate(['/payment']);
+        }
+    
+ 
 
 
-       },
-         
-       error =>{
-        console.log('error sending email',error);
 
-       })
-
-this.datachanging();
-
-  }
+      
 
   getmultipledata(){
     
@@ -246,9 +302,6 @@ this.datachanging();
 
   }
 
-  datachanging(){
-   
-  }
-
+ 
 }
 

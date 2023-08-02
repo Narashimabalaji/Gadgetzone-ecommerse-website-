@@ -1,4 +1,4 @@
-<nav class="navbar">
+<!-- <nav class="navbar">
   <ul class="nav">
     <li class="nav-item active">
       <a class="nav-link" >
@@ -23,130 +23,150 @@
       </a>
     </li>
   </ul>
-</nav>
+</nav> -->
 
 
 <div class="container">
-<div class="checkout-page">
-  <div class="row">
-    <div class="col-md-5">
-      <form [formGroup]="BillingForm" (submit)="submitform()">
-        <h2>Billing Information</h2>
-        <div class="form-group">
-          <label for="name">Full Name*</label>
-          <input type="text" id="name" name="name" required  formControlName="username">
+
+   <div classs="container-2">
+    
+    <div *ngFor="let address of Address" class="adress-select">
+
+      <div class="edit-logo" (click)="onedit(address)">
+        <i class="fa fa-pencil-square-o" ></i>
+  
+      </div>
+
+      <label class="address-data">
+        <input type="radio" name="address" [value]="address" [(ngModel)]="selectedAddress"> {{ address.username }} <br>
+        {{ address.address }} 
+        {{ address.city }} 
+        -  {{ address.pincode }} <br>
+        {{ address.state }} 
+       
+      </label>
+
+      <div class="delete-button" (click)="deleteaddress(address)">
+
+        <h6>Remove Adress</h6>
+  
+      </div>
+    </div>
+
+   
+    
+  </div>
+
+
+    <div *ngIf="selectedAddress">
+      <h6>Shipping Address:</h6> 
+        <strong>{{ selectedAddress.username }}</strong> ,<br>
+      {{ selectedAddress.address }}
+      <p>{{ selectedAddress.city }}, {{ selectedAddress.state }}-{{ selectedAddress.pincode }}</p>
+
+      <div class="selectbutton">
+
+        <input type="submit" value="DELIVER HERE" (click)="selectAddress(selectedAddress)" >
         </div>
+    </div>
+    </div>
+
+
+  
+  
+    <div class="form-container">
+   
+    <form [formGroup]="BillingForm" >
+
+
+      <div class="form-group">
+        <label for="name">Full Name*</label>
+        <input type="text" id="name" name="name" required  formControlName="username">
         <div class="error-container">
           <div *ngIf="BillingForm.controls['username'].invalid && (BillingForm.controls['username'].touched || BillingForm.controls['username'].dirty)" class="error">
             <div *ngIf="BillingForm.controls['username'].errors?.['required']" class="error"> First Name is required </div>
             <div *ngIf="BillingForm.controls['username'].errors?.['minlength']" class="error">First Name Minimum Length is 4</div>
           </div>
         </div>
-       
-        <div class="form-group">
-          <label for="phone">Phone*</label>
-          <input type="text" id="phone" name="phone" required formControlName="phonenumber" minlength="10">
-        </div>
+      </div>
+
+   
+     
+      <div class="form-group">
+        <label for="phone">Phone*</label>
+        <input type="text" id="phone" name="phone" required formControlName="phonenumber" minlength="10">
         <div class="error-container">
           <div *ngIf="BillingForm.controls['phonenumber'].invalid && (BillingForm.controls['phonenumber'].touched || BillingForm.controls['phonenumber'].dirty)" class="error">
             <div *ngIf="BillingForm.controls['phonenumber'].errors?.['required']" class="error"> MobileNumber is required </div>
            <div *ngIf="BillingForm.controls['phonenumber'].errors?.['pattern']" class="error">Enter  correct Mobilenumber</div>
-
+  
           </div>
         </div>
-        <div class="form-group">
-          <label for="address">Address*</label>
-          <input type="text" id="address" name="address" required formControlName="address">
-        </div>
+      </div>
+     
+      <div class="form-group">
+        <label for="address">Address*</label>
+        <input type="text" id="address" name="address" required formControlName="address" >
         <div class="error-container">
           <div *ngIf="BillingForm.controls['address'].invalid && (BillingForm.controls['address'].touched || BillingForm.controls['address'].dirty)" class="error">
             <div *ngIf="BillingForm.controls['address'].errors?.['required']" class="error"> Please Enter your Adress for shipment </div>
-
-
+  
+  
           </div>
         </div>
-        <div class="form-group">
-          <label for="city">City*</label>
-          <input type="text" id="city" name="city" required formControlName="city">
-        </div>
+      </div>
+   
+      <div class="form-group">
+        <label for="city">City*</label>
+        <input type="text" id="city" name="city" required formControlName="city">
+
         <div class="error-container">
           <div *ngIf="BillingForm.controls['city'].invalid && (BillingForm.controls['city'].touched || BillingForm.controls['city'].dirty)" class="error">
             <div *ngIf="BillingForm.controls['city'].errors?.['required']" class="error"> Please Enter your city </div>
-
-
+  
+  
           </div>
         </div>
           
-        <div class="form-group">
-          <label for="state">State*</label>
-          <input type="text" id="state" name="state" required  formControlName="state">
-        </div>
+      </div>
+    
+      <div class="form-group">
+        <label for="state">State*</label>
+        <input type="text" id="state" name="state" required  formControlName="state">
+
         <div class="error-container">
           <div *ngIf="BillingForm.controls['state'].invalid && (BillingForm.controls['state'].touched || BillingForm.controls['state'].dirty)" class="error">
             <div *ngIf="BillingForm.controls['state'].errors?.['required']" class="error"> Please Enter your state </div>
-
-
+  
+  
           </div>
         </div>
+      </div>
+      
 
-        <div class="form-group">
-          <label for="zip">Pin Code*</label>
-          <input type="text" id="zip" name="zip" required   formControlName="pincode">
-        </div>
+      <div class="form-group">
+        <label for="zip">Pin Code*</label>
+        <input type="text" id="zip" name="zip" required   formControlName="pincode">
 
         <div class="error-container">
           <div *ngIf="BillingForm.controls['pincode'].invalid && (BillingForm.controls['state'].touched || BillingForm.controls['pincode'].dirty)" class="error">
             <div *ngIf="BillingForm.controls['pincode'].errors?.['required']" class="error"> Please Enter your pincode </div>
             <div *ngIf="BillingForm.controls['pincode'].errors?.['pattern']" class="error">Enter  correct pincode</div>
-
-
+  
+  
           </div>
         </div>
-
-        <div class="form-group-button button">
-          <input type="submit" value="Confirm" >
-
-        </div>
-
-      </form>
-    </div>
-
-    
       </div>
 
-      <div>
-        
+      
+
+      <div class="form-group-button button">
+        <input type="submit" value=" {{this.buttontext}}" [disabled]="!this.BillingForm.valid" *ngIf="Edit!==false" (click)="update()">
+        <input type="submit" value=" {{this.buttontext}}" [disabled]="!this.BillingForm.valid" *ngIf="Edit==false" (click) ="addaddress()" >
+
       </div>
-    </div>
 
-
-
-    <div *ngFor="let address of Address" class="adress-select">
-      <label>
-        <input type="radio" name="address" [value]="address" [(ngModel)]="selectedAddress"> {{ address.username }} <br>
-        {{ address.address }} <br>
-        {{ address.city }} <br>
-        {{ address.state }} <br>
-        {{ address.zip }}
-      </label>
-    </div>
-    
-    <div *ngIf="selectedAddress">
-      <h3>Selected Address: {{ selectedAddress.username }}</h3>
-      <p>{{ selectedAddress.address }}</p>
-      <p>{{ selectedAddress.city }}, {{ selectedAddress.state }}, {{ selectedAddress.zip }}</p>
-
-      <div class="select button">
-
-        <input type="submit" value="Confirm" (click)="selectAddress(selectedAddress)" >
-        </div>
-    </div>
-    
-
-
-
-
-    </div>
-    
+    </form>
+  </div>
       
 <router-outlet></router-outlet>

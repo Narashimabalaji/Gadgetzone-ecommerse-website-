@@ -88,8 +88,7 @@
     font-weight: bold;
   }
   
-  input[type="text"],
-  input[type="email"] {
+  input[type="text"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -97,29 +96,9 @@
     box-sizing: border-box;
   }
   
-  .container  .form-group-button{
-    position: relative;
-    height: 50px;
-    width: 100%;
-    margin-top: 30px;
-  }
-  .container  .form-group-button input{
-    position: absolute;
-    height: 100%;
-    width:100%;
-    padding: 0 35px;
-    font-size: 16px;
-    border: none;
-    outline: none;
-    border-bottom: 2px solid #ccc;
-    transition: all 0.2s ease;
-  
-  }
-  
-  .container  .button{
-    margin-top: 20px;
-  }
-  .container  .button input{
+
+ 
+  .form-container  .button input{
     border: none;
     color: #fff;
     font-size: 17px;
@@ -129,33 +108,90 @@
     background:linear-gradient(45deg,#485461, #c430d7);
     cursor: pointer;
     transition: all 0.2s ease;
+  
+    margin-left:60%;
   }
-  .container  .button input:hover{
+  .form-container .button input:hover{
     background:linear-gradient(45deg,#5B6467, #a729b8);
   }
   
   .container{
-    display:flex;
+     padding:20px;
+     display:flex;
+     gap:10%;
   }
+.adress-select{
+ 
+  width:800px;
+  padding:3%;
+  box-shadow: 0 4px 6px rgba(0.368, 0.368, 0.368, 0.368);
 
+}
+
+.edit-logo{
+  justify-content: right;
+  display: flex;
+  cursor:pointer;
+}
+
+.delete-button{
+  justify-content: right;
+  display: flex;
+  cursor:pointer;
+
+}
+
+.delete-button:hover{
+  color:#007185;
+}
   .checkout-page{
     width:600px;
   }
   .error{
   
-    background-color: rgb(228, 172, 172);
+    
     border-radius: 2px;
     color: red;
     padding: 0px 0px 0px 5px;
   }
-  .error-container{
-    margin-top: 5px;
-  }
-
+ 
   .optionadress{
     display:flex
   }
 
-  .address-select{
-  
+  .form-container input {
+    width:300px;
+    justify-content: center;
+    display: flex;
+   
   }
+
+  .form-container{
+    border:1px solid rgba(0, 0, 0, 0.192);
+    width:53%;
+    display:flex;
+margin-left: 8%;
+
+
+  }
+
+form {
+  display: flex;
+  flex-direction: row;  
+  flex-wrap: wrap;
+justify-content: center;
+justify-content: space-between;
+padding:60px;
+}
+
+.address-data{
+  font-family: sans-serif;
+  font-weight:300;
+}
+
+.selectbutton input{
+  background:linear-gradient(45deg,#485461, #c430d7);
+  color:white;
+  border:none;
+
+}

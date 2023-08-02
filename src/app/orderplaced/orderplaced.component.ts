@@ -22,15 +22,23 @@ export class OrderplacedComponent implements OnInit {
  gettime:any;
   getdate: any;
 
-  
+   redirectUrl ='/home';
+  private timeDelay = 5000;
   selectedAddress: any;
 
 
   constructor(private route:Router,private orderdataservice:DbseviceService,private http:HttpClient,
-    private addressservice:AddressService) { }
+    private addressservice:AddressService,private router: Router) { }
 
   ngOnInit() {
+
+    setTimeout(() => {
+      this.redirect();
+    },this.timeDelay);
+
     this.buy=localStorage.getItem('buy');
+
+    
 
       
     if(this.buy=="buy"){
@@ -152,6 +160,9 @@ export class OrderplacedComponent implements OnInit {
   
   }
 
+redirect(){
+  this.router.navigate([this.redirectUrl])
+}
     getCartTotal() {
     
   

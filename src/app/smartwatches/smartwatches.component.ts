@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DbseviceService } from '../dbservice.service';
+import { SingleproductviewService } from '../singleproductview.service';
 
 @Component({
   selector: 'app-smartwatches',
@@ -6,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./smartwatches.component.css']
 })
 export class SmartwatchesComponent implements OnInit {
-
-  constructor() { }
+  product:any;
+  constructor(private dbservice:DbseviceService,private showproduct:SingleproductviewService) { }
 
   ngOnInit() {
-  }
 
+    this.dbservice.getsmartwatch().subscribe(res=>{
+      this.product=res;
+    });
+
+}
+
+productview(item:any) {
+
+  this.showproduct.newtab(item);
+}
 }

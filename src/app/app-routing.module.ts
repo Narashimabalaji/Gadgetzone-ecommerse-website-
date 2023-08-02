@@ -19,6 +19,10 @@ import { AuthguardGuard } from './services/authguard.guard';
 import { SmartwatchesComponent } from './smartwatches/smartwatches.component';
 import { AdmineditproductComponent } from './admineditproduct/admineditproduct.component';
 import { UserorderdetailsComponent } from './userorderdetails/userorderdetails.component';
+import { CancelrequestuserComponent } from './Cancelrequestuser/Cancelrequestuser.component';
+import { ComputeraccesoriesComponent } from './computeraccesories/computeraccesories.component';
+import { HeadphonesComponent } from './headphones/headphones.component';
+import { AdminstockdetailsComponent } from './adminstockdetails/adminstockdetails.component';
 
 
 const routes: Routes =[
@@ -62,7 +66,17 @@ const routes: Routes =[
   component:SmartwatchesComponent
 
 },
+{
+  path:'computeraccesories',
+  component:ComputeraccesoriesComponent
+  
 
+},
+{
+  path:'headphones',
+  component:HeadphonesComponent
+
+},
 {
   path:'checkout',
   canActivate:[AuthguardGuard],
@@ -71,7 +85,6 @@ const routes: Routes =[
 },
 
 
-  
  
 {
   path:'payment',
@@ -108,9 +121,18 @@ const routes: Routes =[
 {
   path:'adminedit',
   component:AdmineditproductComponent
-},{
+},
+{
   path:'userorderview',
   component:UserorderdetailsComponent
+},
+{
+  path:':emailid/cancelrequest',
+  component:CancelrequestuserComponent
+},
+{
+  path:'stockdetails',
+  component:AdminstockdetailsComponent
 }
 
 

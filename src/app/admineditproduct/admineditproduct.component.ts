@@ -27,7 +27,9 @@ export class AdmineditproductComponent implements OnInit {
   idendity: any;
   itemid: any;
 
-  buttontext:any
+  buttontext:any;
+  Computeraccessories=false;
+  ComputerAccesories: any;
 
   constructor(private dbservice:DbseviceService,private http:HttpClient,private forms:FormBuilder) { }
 
@@ -57,6 +59,35 @@ export class AdmineditproductComponent implements OnInit {
     image:[,[Validators.required,]],
     rating:[,[Validators.required,]],
     quantity:[,[Validators.required,]],
+    availoffer1:[,[Validators.required,]],
+    availoffer2:[,[Validators.required,]],
+    availoffer3:[,[Validators.required,]],
+    box:[,[Validators.required,]],
+    OTGCompaitable:[,[Validators.required,]],
+    Touchscreen:[,[Validators.required,]],
+    ModelName:[,[Validators.required,]],
+    ModelNumber:[,[Validators.required,]],
+    Resolution:[,[Validators.required,]],
+    InternalStorage:[,[Validators.required,]],
+    HybridSim:[,[Validators.required,]],
+    MemoryCardSlotType:[,[Validators.required,]],
+    BatteryCapacity:[,[Validators.required,]],
+    NetworkType:[,[Validators.required,]],
+    BrowseType:[,[Validators.required,]],
+    SupportedNetworks:[,[Validators.required,]],
+    WarrantySummary:[,[Validators.required,]],
+    RAM:[,[Validators.required,]],
+    colour:[,[Validators.required]],
+    PrimaryCamera:[,[Validators.required]],
+    SimType:[,[Validators.required]]
+
+
+
+
+
+
+
+
     
 
 
@@ -67,7 +98,7 @@ export class AdmineditproductComponent implements OnInit {
 
     if(this.Mobiledata == true) {
 
-    this.http.post<any>("http://localhost:3000/mobiles",this.Productaddform.value).subscribe((data=>{
+    this.http.post<any>("http://localhost:3000/mobiles/",this.Productaddform.value).subscribe((data=>{
       console.log("product details",data);
       alert("Form submitted");
           this.Productaddform.reset();
@@ -78,7 +109,7 @@ export class AdmineditproductComponent implements OnInit {
 
   if(this.Television == true){
 
-    this.http.post<any>("http://localhost:3000/telivision",this.Productaddform.value).subscribe((data=>{
+    this.http.post<any>("http://localhost:3000/telivision/",this.Productaddform.value).subscribe((data=>{
       console.log("product details",data);
       alert("Product Added to Televison");
           this.Productaddform.reset();
@@ -104,6 +135,13 @@ export class AdmineditproductComponent implements OnInit {
 
   }
     
+  if(this.ComputerAccesories == true){
+    this.http.post<any>("http://localhost:3000/computeraccesories/",this.Productaddform.value).subscribe((data=>{
+      alert("product added to computer accesories");
+      this.Productaddform.reset();
+      window.location.reload();
+    }))
+  }
  
 
     }
@@ -116,9 +154,11 @@ export class AdmineditproductComponent implements OnInit {
     const laptops =this.http.get<any>("http://localhost:3000/laptops");
     const telivision =this.http.get<any>("http://localhost:3000/telivision");
     const mobiles =this.http.get<any>("http://localhost:3000/mobiles");
+    const computeraccesories =this.http.get<any>("http://localhost:3000/computeraccesories");
 
 
-    return forkJoin([telivision,laptops,mobiles]);
+
+    return forkJoin([telivision,laptops,mobiles,computeraccesories]);
 
   }
 
@@ -196,6 +236,16 @@ televisiondata(){
 
 }
 
+computeraccesories(){
+
+  this.dbservice.getcomputeraccesories().subscribe((data=>{
+    this.mobileproduct=data;
+  }));
+
+  this.ComputerAccesories=true;
+
+}
+
 
 onEdit(item:any){
   this.itemid=item.emailid;
@@ -208,11 +258,63 @@ onEdit(item:any){
    this.Productaddform.controls['quantity'].setValue(item.quantity);
    this.Productaddform.controls['rating'].setValue(item.rating);
    this.Productaddform.controls['image'].setValue(item.image);
+   this.Productaddform.controls['availoffer1'].setValue(item.availoffer1);
+   this.Productaddform.controls['availoffer2'].setValue(item.availoffer2);
+   this.Productaddform.controls['availoffer3'].setValue(item.availoffer2);
+   this.Productaddform.controls['box'].setValue(item.box);
+   this.Productaddform.controls['Touchscreen'].setValue(item.Touchscreen);
+   this.Productaddform.controls['HybridSim'].setValue(item.HybridSim);
+   this.Productaddform.controls['BrowseType'].setValue(item.BrowseType);
+   this.Productaddform.controls['NetworkType'].setValue(item.NetworkType);
+   this.Productaddform.controls['WarrantySummary'].setValue(item.WarrantySummary);
+   this.Productaddform.controls['BatteryCapacity'].setValue(item.BatteryCapacity);
+   this.Productaddform.controls['SupportedNetworks'].setValue(item.SupportedNetworks);
+   this.Productaddform.controls['RAM'].setValue(item.RAM);
+   this.Productaddform.controls['OTGCompaitable'].setValue(item.OTGCompaitable);
+   this.Productaddform.controls['OTGCompaitable'].setValue(item.OTGCompaitable);
+   this.Productaddform.controls['SimType'].setValue(item.SimType);
+   this.Productaddform.controls['OTGCompaitable'].setValue(item.OTGCompaitable);
+   this.Productaddform.controls['MemoryCardSlotType'].setValue(item.OTGCompaitable);
+   this.Productaddform.controls['PrimaryCamera'].setValue(item.PrimaryCamera);
+   this.Productaddform.controls['InternalStorage'].setValue(item.InternalStorage);
+   this.Productaddform.controls['Resolution'].setValue(item.OTGCompaitable);
+   this.Productaddform.controls['ModelNumber'].setValue(item.OTGCompaitable);
+   this.Productaddform.controls['ModelName'].setValue(item.OTGCompaitable);
+   this.Productaddform.controls['colour'].setValue(item.color);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+   
+
+
 
 
     
 
-   this.Edit ==true;
+   this.Edit == true;
 
   
 
@@ -224,25 +326,28 @@ update(){
   
 
     if(this.Mobiledata == true)
-this.http.put<any>('http://localhost:3000/mobiles/'+this.itemid,this.Productaddform.value).subscribe(res=>{
+this.http.patch<any>('http://localhost:3000/mobiles/'+this.itemid,this.Productaddform.value).subscribe(res=>{
   alert("Updated successfully");
   this.Productaddform.reset();
 
 });
 
 if(this.Television == true){
-  this.http.put<any>("http://localhost:3000/telivision/" +this.itemid,this.Productaddform.value).subscribe((res=>{
+  this.http.patch<any>("http://localhost:3000/telivision/" +this.itemid,this.Productaddform.value).subscribe((res=>{
     alert("Updated successfully");
   }))
 
 }
 
-if(this.Mobiledata == true){
-  this.http.put<any>("http://localhost:3000/mobiles/" +this.itemid,this.Productaddform.value).subscribe((res=>{
+if(this.Laptopdata == true){
+  this.http.patch<any>("http://localhost:3000/laptops/" +this.itemid,this.Productaddform.value).subscribe((res=>{
     alert("Updated successfully");
   }))
   
-}}
+}
+
+
+}
 
 
 }

@@ -1,12 +1,18 @@
 .payment-container {
-    margin: 0 auto;
-    max-width: 500px;
     padding: 20px;
     background-color: #f5f5f5;
     border: 1px solid #ccc;
     border-radius: 4px;
   }
-  
+  .paymentpage-card{
+ 
+width:60%;
+height:50%;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
   .payment-container h2 {
     font-size: 24px;
     font-weight: 600;
@@ -59,8 +65,6 @@
   }
   
   .error{
-  
-    background-color: rgb(228, 172, 172);
     border-radius: 2px;
     color: red;
     padding: 0px 0px 0px 5px;
@@ -68,3 +72,153 @@
   .error-container{
     margin-top: 5px;
   }
+
+  .paymentpage-contianer{
+    box-sizing: border-box;
+    margin:30px;
+    padding:10px;
+    display: flex;
+
+  }
+
+  header{
+    border:1px solid black;
+    padding:20px;
+    font: Roboto,Arial,sans-serif;
+    font-size:larger;
+    font-weight: bold;
+    color:white;
+    background-color:  rgba(6, 5, 6, 0.913);
+  }
+.payment-conents{
+  padding-top:10px;
+  
+}
+
+
+  .upi{
+    border:2px solid black;
+    padding:10px;
+  }
+
+  .upi img{
+    width:5%;
+    height:5%;
+  }
+
+  #Upiid{
+    width:30%;
+  }
+
+  .Cardpayment img{
+    width:5%;
+    height:5%;
+
+  }
+
+  .Cardpayment{
+    border:1px solid black;
+    padding:10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font: Roboto,Arial,sans-serif;
+    font-size:medium;
+    font-weight:500;
+  }
+  #Cardnumber{
+    width:20%;
+    background:url( "/assets/images/mastercardlogo.png" )no-repeat top right;
+  }
+
+  #Cardmonth{
+    width:10%;
+  }
+
+  #cvv{
+    width:50%;
+  }
+
+  #Cardmonth{
+    width:70%;
+    height:59%;
+  }
+  .validandcvv{
+    display: flex;
+  }
+
+  .image-container{
+    width:10%;
+    height:10%;
+    display:flex;
+    margin-left: 15%;
+   margin-top: -70px;
+  }
+
+  .image-container img{
+    width:50%;
+    height:50%;
+  }
+
+  .submitbutton{
+    
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500px;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background:linear-gradient(45deg,#485461, #c430d7);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width:20%;
+
+  padding:1%;
+
+  }
+
+  .totalproduct-pagetable{
+    margin-left:100px;
+ 
+    padding: 40px;
+    box-shadow: 0 4px 6px rgba(0.368, 0.368, 0.368, 0.368);
+    width:400px;
+  height:400px;
+  
+
+    
+  
+   
+  }
+.totalproduct-content{
+  position:sticky;
+  top:0;  
+  
+}
+
+
+  .totalproduct-pagetable table td{
+    padding:10px;
+
+  }
+.saved-discount{
+  color:green;
+}
+
+.COD-submit {
+  margin-left:600px;
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500px;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  background:linear-gradient(45deg,#485461, #c430d7);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width:10%;
+
+padding:1%;
+text-align: center;
+
+ 
+}

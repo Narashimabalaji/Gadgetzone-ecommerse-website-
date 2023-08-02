@@ -27,6 +27,7 @@ gt:number=0;
   productl: any;
   dis: any;
   delivery:any;
+  d: number=0;
   
   
   constructor( private cartservice:CartService,private http:HttpClient,private dbservice:DbseviceService) {
@@ -77,9 +78,12 @@ for(let item of this.product){
 }
 
 let Q =0;
+let r=0;
   for(let item of this.product){
       
-    Q +=item.discount*item.quantity;
+    Q =item.discount-item.price;
+    r+=Q*item.quantity;
+    
   }
   
   const e =t.find((u:any)=>{
@@ -93,7 +97,7 @@ let Q =0;
   
 
 if(e){
-  this.http.patch<any>("http://localhost:3000/carttotal/"+loggedemailid ,{total:j,discount:Q}).subscribe((d)=>{
+  this.http.patch<any>("http://localhost:3000/carttotal/"+loggedemailid ,{total:j,discount:r}).subscribe((d)=>{
     // alert("patched successfully");
     
 
@@ -127,41 +131,7 @@ else{
 
 
     }
-  
-patchgt(){
-  this.http.get<any>("http://localhost:3000/cart/").subscribe((o)=>{
-      console.log("API response:", o);
-  
-      const loggedemailid = localStorage.getItem('loggedemailid');
-      console.log("Logged in user email:", loggedemailid);
-  
-      const user = o.filter((data:any)=>{
-        console.log("Email address in data:", data.email);
-        return data.email === loggedemailid;
-      });
-     
 
-      this.f=user;
-
-       
-    let gt=0;
-
-    for(let item of this.f){
-      gt +=item.price*item.quantity;
-    }
-      
-    this.gt =gt;
-
-
-  console.log("gt:",{gt});
-
-this.http.patch<any>("http://localhost:3000/carttotal/"+loggedemailid ,{total:gt}).subscribe((g)=>{
-  // alert("updated inc");
-})
-     
-
-  })
-};
 
  
   
@@ -203,27 +173,37 @@ this.http.patch<any>("http://localhost:3000/carttotal/"+loggedemailid ,{total:gt
    
    console.log(item.emailid);
 
-   const t =item.quantity *item.price;
-
   
-   this.http.patch<any>("http://localhost:3000/cart/"+item.emailid,{quantity:item.quantity,total:t}).subscribe((o)=>{
-    console.log(o);
-   });
+
 
    let h =0;
 
-   for (let item of this.product){
-
     h +=item.price*item.quantity;
-   }
+
+    let Q=0;
+    let r=0;
+    let t=0;
+   
+    for(let item of this.product){
+      
+      Q =item.discount-item.price;
+      r+=Q*item.quantity;
+      
+    }
+
+    const total=item.price*item.quantity
+    this.dis =r;
 
     this.k =h;
+   
     const loggedemailid = localStorage.getItem('loggedemailid');
-    this.http.patch<any>("http://localhost:3000/carttotal/"+loggedemailid,{total:this.k}).subscribe((j)=>{
 
-    alert("inc ok");
+    this.http.patch<any>("http://localhost:3000/cart/"+item.emailid,{quantity:item.quantity,total:total}).subscribe((j)=>{
+
+
 
     });
+  
     
 
   
@@ -250,12 +230,18 @@ this.http.patch<any>("http://localhost:3000/carttotal/"+loggedemailid ,{total:gt
  
      this.p =w;
      const loggedemailid = localStorage.getItem('loggedemailid');
-     this.http.patch<any>("http://localhost:3000/carttotal/"+loggedemailid,{total:this.p}).subscribe((j)=>{
- 
-     alert("dec ok");
- 
+     
+     let Q=0;
+     let r=0;
+    
+     for(let item of this.product){
+       
+       Q =item.discount-item.price;
+       r+=Q*item.quantity;
+       
      }
-     );
+ 
+     this.dis =r;
      
    
     
@@ -288,12 +274,52 @@ this.http.patch<any>("http://localhost:3000/carttotal/"+loggedemailid ,{total:gt
 
     localStorage.setItem('cartitems',"cart");
 
+    const loggedemailid = localStorage.getItem('loggedemailid');
+  
+this.http.get<any>("http://localhost:3000/carttotal/").subscribe((t:any)=>{
+  const m =this.product.price;
+let j =0;
+for(let item of this.product){
+    
+  j +=item.price*item.quantity;
+}
 
 
-
+  let Q =0;
+let r=0;
+  for(let item of this.product){
+      
+    Q =item.discount-item.price;
+    r+=Q*item.quantity;
+    
   }
+ 
+  const e =t.find((u:any)=>{
+      return u.emailid === loggedemailid;
+       
+  })
+
 
   
+  
+  
+
+if(e){
+  this.http.patch<any>("http://localhost:3000/carttotal/"+loggedemailid ,{total:j,discount:r}).subscribe((d)=>{
+    // alert("patched successfully");
+    
+
+        this.dis= d.discount;
+  })
+}
+
+
+
+
+});
+
+  
+}
 }
 
 

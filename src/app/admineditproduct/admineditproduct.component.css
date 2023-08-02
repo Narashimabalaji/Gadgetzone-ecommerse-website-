@@ -1,5 +1,7 @@
 .admin-container {
     display: flex;
+ 
+
   }
   
   .form-group{
@@ -11,22 +13,25 @@
     padding-left: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border: 1px solid whitesmoke;
+  
   }
  .product-image{
   width:200px;
   height:200px;
  }
   
+.form-continer{
 
+  position:sticky;
+
+}
 
   .productconatiner {
 display: flex;
 flex-direction:column-reverse;
 justify-content: center;
- 
-  
-
-  }
+margin-top:-120%;
+ }
 
   
  

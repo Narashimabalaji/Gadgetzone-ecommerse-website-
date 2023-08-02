@@ -20,7 +20,9 @@ export class CheckoutpageComponent implements OnInit {
 
   selectedAddress:any;
   router: any;
-
+  itemid: any;
+  buttontext: any;
+  Edit:boolean=false;
 
   constructor(private form:FormBuilder,private http:HttpClient,private dbservice:DbseviceService,
     private route:Router,
@@ -46,7 +48,7 @@ export class CheckoutpageComponent implements OnInit {
    
            
    
-    
+  this.buttontext='+ Add New Address'
   
   }
     
@@ -65,10 +67,10 @@ export class CheckoutpageComponent implements OnInit {
 
   })
 
-  submitform(){
-    if(this.BillingForm.valid){
+  addaddress(){
+
     
-          alert("Form submitted");
+          alert("Address Added");
 
         
           this.dbservice.addbillinginfo(this.BillingForm.value).subscribe((d) =>{
@@ -80,7 +82,7 @@ export class CheckoutpageComponent implements OnInit {
 
           });
      
-        }
+        
       }
 
       selectAddress(address: any) {
@@ -101,6 +103,41 @@ export class CheckoutpageComponent implements OnInit {
 
       }
 
+
+      deleteaddress(item:any){
+        this.http.delete<any>("http://localhost:3000/billingdetail/" +item.emailid).subscribe((res=>{
+      alert("deleted");
+      window.location.reload();
+    }));
+
+      }
+
+      onedit(item:any){
+
+        this.itemid =item.emailid;
+
+        this.BillingForm.controls['username'].setValue(item.username);
+        this.BillingForm.controls['phonenumber'].setValue(item.phonenumber);
+        this.BillingForm.controls['address'].setValue(item.address);
+        this.BillingForm.controls['city'].setValue(item.city);
+        this.BillingForm.controls['pincode'].setValue(item.pincode);  
+        this.BillingForm.controls['state'].setValue(item.state);
+
+        this.buttontext='Update Address';
+
+        this.Edit = true;
+
+      }
+
+      update(){
+        this.http.patch<any>("http://localhost:3000/billingdetail/" +this.itemid,this.BillingForm.value).subscribe(res=>{
+  alert("Updated successfully");
+  this.BillingForm.reset();
+  window.location.reload();
+
+});
+
+      }
 
   }
 
