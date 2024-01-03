@@ -130,7 +130,7 @@ export class ProductconfirmationComponent implements OnInit {
 
       
     if(this.buy=="buy"){
-      this.getmultipledata().subscribe(([o,k,l])=>{
+      this.getmultipledata().subscribe(([o,k,l,m,n,z])=>{
             console.log("API response:", o,k);
         
             const loggedemailid = localStorage.getItem('loggedemailid');
@@ -154,8 +154,19 @@ export class ProductconfirmationComponent implements OnInit {
               console.log("user3"+data3);
               return data3.model === itemmodel;
             })
-                 
-            const finaldata =[...user,...user2,...user3];
+            const user4 =m.filter((data4:any)=>{
+              console.log("user4"+data4);
+              return data4.model === itemmodel;
+            })
+            const user5 =n.filter((data5:any)=>{
+              console.log("user4"+data5);
+              return data5.model === itemmodel;
+            })
+            const user6 =z.filter((data6:any)=>{
+              console.log("user4"+data6);
+              return data6.model === itemmodel;
+            })
+            const finaldata =[...user,...user2,...user3,...user4,...user5,...user6];
             this.buyproduct =finaldata;
 
             const itemdata =finaldata;
@@ -296,9 +307,14 @@ let total=0;
     const laptops =this.http.get<any>("http://localhost:3000/laptops");
     const telivision =this.http.get<any>("http://localhost:3000/telivision");
     const mobiles =this.http.get<any>("http://localhost:3000/mobiles");
+    const Headphones =this.http.get<any>("http://localhost:3000/Headphones");
+    const computeraccesories=this.http.get<any>("http://localhost:3000/computeraccesories");
+    const smartwatch=this.http.get<any>("http://localhost:3000/smartwatch");
 
 
-    return forkJoin([telivision,laptops,mobiles]);
+
+
+    return forkJoin([telivision,laptops,mobiles,Headphones,computeraccesories,smartwatch]);
 
   }
 

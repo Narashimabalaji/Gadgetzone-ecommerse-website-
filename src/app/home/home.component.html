@@ -145,14 +145,14 @@
 
 
 <div class="banner-container2">
-    <h1 class="banner-heading2"> Amazing deals on telivisions</h1>
+    <h1 class="banner-heading2"> Amazing deals</h1>
   </div>
   
 <div class="container">
     <div class="row">
         <ng-container *ngFor="let item of product2">
          
-            <div class="card col-md-2" style="cursor:pointer;" (click)="productview(item)">
+            <div class="card col-md-3" style="cursor:pointer;" (click)="productview(item)">
              <img src="{{item.image}}" alt="">
              <!-- <div class="wishlist">
              <i class="fa fa-heart"></i>
@@ -186,7 +186,6 @@
     </div>
     <div class="car-banner">
         <h3 class="banner-heading2">Free delivery Eligible </h3>
-        <img src="/assets/images/./truck3.png/" alt="Car" class="car" />
       </div>
 
 </div>
@@ -196,7 +195,7 @@
     <div class="row">
         <ng-container *ngFor="let item of product3">
 
-            <div class="card col-md-2" (click)="productview(item)" style="cursor:pointer;">
+            <div class="card col-md-3" (click)="productview(item)" style="cursor:pointer;">
              <img src="{{item.image}}" alt="">
              
              <div class="rating-tag">

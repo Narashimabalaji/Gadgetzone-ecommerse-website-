@@ -3,6 +3,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { map } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AddressService } from './address.service';
+import { LoggerService } from './logger.service';
+import { environment } from 'src/environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
@@ -42,9 +44,12 @@ export class DbseviceService {
   paymentway: any|string;
 
    
-constructor(private http:HttpClient,private route:Router, private routerguard:ActivatedRoute,
+constructor(private http:HttpClient,
+  private route:Router, 
+  private routerguard:ActivatedRoute,
   private https:HttpClientModule,
-  private addressservice:AddressService) { }
+  private addressservice:AddressService,
+  private logger:LoggerService) { }
 
 ngOnInit(){
  
@@ -105,7 +110,7 @@ logindetails(log:any,log1:any){
     return a.emailid === log && a.password === log1;
   });
  
-  if(this.adminname=="admin@gmail.com"&& this.password=="Gadgetz!"){
+  if(this.adminname==environment.adminemail&& this.password==environment.adminpassword){
 
     alert("Welcome Admin!")
 
@@ -127,8 +132,6 @@ logindetails(log:any,log1:any){
 
   else if(user){
     alert('welcome again ' +user.username);
-
-      sessionStorage.setItem(this.isLoggedInkey, 'true');
   
     //for storing data in local storage 
   localStorage.setItem('loggedInUser',user.username);
@@ -153,26 +156,28 @@ logindetails(log:any,log1:any){
       
          
        })
+
+
         }
 
       
-      
     }
     else{
+      this.logger.warn('No details found');
       alert('user not found. please register first');
+
+     
     }
    
 
  
 }
 );
-
-
 }
 
-isLoggedIn(): boolean{
-  return sessionStorage.getItem(this.isLoggedInkey) === 'true';
-}
+// isLoggedIn(): boolean{
+//   return sessionStorage.getItem(this.isLoggedInkey) === 'true';
+// }
 
 
 getusersdetails(){
@@ -391,9 +396,7 @@ const address4=this.add3;
    this.http.post<any>("http://localhost:3000/directbuynowproducts/",data2).subscribe((f=>{
     alert("Your order has been placed successfully");
    }))
-
   
-   
 }
 
 else if(this.cartside == 'cart'){
@@ -455,8 +458,6 @@ alert("no directbuynow products")
   
 
 }
-
-
 
 Addressavail(){
        

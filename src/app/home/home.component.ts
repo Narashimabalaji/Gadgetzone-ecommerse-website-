@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { DbseviceService } from '../dbservice.service';
 import { CartService } from '../cart.service';
 import { SingleproductviewService } from '../singleproductview.service';
+import { LoggerService } from '../logger.service';
 
 @Component({
   selector: 'app-home',
@@ -22,7 +23,8 @@ export class HomeComponent {
   ];
 
   activeIndex = 0;
-  constructor(private service:DbseviceService,private cartservice:CartService,private showproduct:SingleproductviewService){
+  constructor(private service:DbseviceService,private cartservice:CartService,private showproduct:SingleproductviewService,
+    private logger:LoggerService){
     
     this.email=this.service.u;
  

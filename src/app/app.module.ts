@@ -32,9 +32,11 @@ import { CancelrequestuserComponent } from './Cancelrequestuser/Cancelrequestuse
 import { ComputeraccesoriesComponent } from './computeraccesories/computeraccesories.component';
 import { HeadphonesComponent } from './headphones/headphones.component';
 import { AdminstockdetailsComponent } from './adminstockdetails/adminstockdetails.component';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
+import { SearchedproductComponent } from './searchedproduct/searchedproduct.component';
 
 @NgModule({
-  declarations: [																									
+  declarations: [																										
     AppComponent,
     HomeComponent,
       RegisterComponent,
@@ -60,7 +62,9 @@ import { AdminstockdetailsComponent } from './adminstockdetails/adminstockdetail
       CancelrequestuserComponent,
       ComputeraccesoriesComponent,
       HeadphonesComponent,
-      AdminstockdetailsComponent
+      AdminstockdetailsComponent,
+      ForgotpasswordComponent,
+      SearchedproductComponent
    ],
   imports: [
     BrowserModule,

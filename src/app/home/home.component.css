@@ -16,12 +16,11 @@ padding:30px;
   padding-left: 20px;
   padding-right: 20px;
   
-  margin-top: 20px;
   
 }
 .carousel {
   padding: 0;
-  margin: 0;
+  margin: -20px;
   overflow-x: hidden;
  
 }
@@ -76,20 +75,9 @@ padding:30px;
   padding: 20px;
   background-color: #333333;
   position: relative;
-  animation: slideIn 10s infinite;
 }
 
-@keyframes slideIn {
-  0% {
-    transform: translateY(-100%);
-  }
-  50% {
-    transform: translateY(0%);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
-}
+
 
 .banner-container2 {
   position: relative;
@@ -100,78 +88,14 @@ padding:30px;
 }
 
 .banner-heading2 {
-  position: absolute;
-  top: 50%;
-  left: 30%;
-  transform: translate(-50%, -50%);
   color: #fff;
   font-size: 20px;
   font-weight: bold;
-  opacity: 0;
-  animation: fadeIn 10s ease-in-out forwards;
+  padding:2%;
 }
 
-@keyframes fadeIn {
-  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
-  100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-}
 
-/* .banner-container2 {
-  position: relative;
-  width: 500px;
-  height: 200px;
-  background-color: #333;
-  overflow: hidden;
-}
 
-.banner-text2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  font-size: 36px;
-  font-weight: bold;
-  animation: moveText 5s linear infinite;
-}
 
-@keyframes moveText {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
-} */
 
-.car-banner {
-  position: relative;
-  width: 30%;
-  height: 50px;
-  background-color: #333;
-  overflow: hidden;
-  position: relative;
-  overflow: hidden;
-  right:18%;
-  font-size: 20px;
-  font-weight: bold;
-  color: #fff;
-  
-}
 
-.car {
-  position: absolute;
-  top: 20%;
-  left: -100px; /* Initial position outside the banner */
-  animation: moveCar 10s linear infinite;
-}
-
-.car-banner img{
-  width:70px;
-  height:30px;
-}
-
-@keyframes moveCar {
-  0% {
-    left: -100px; /* Starting position outside the banner */
-  }
-  100% {
-    left: calc(100% + 400px); /* Move the car to the right edge of the banner */
-  }
-}

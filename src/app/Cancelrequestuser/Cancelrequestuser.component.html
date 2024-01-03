@@ -108,14 +108,21 @@
     </div>
     </div>
 
-<div>
+<div class="form-group">
   <label for="addirionalcomments">Additional Comments</label>
   <textarea name="comments" id="Reason"  formControlName="additionalcomment" ></textarea>
 </div>
 
+<div class="error-container">
+  <div *ngIf="(cancelrequestform.controls['additionalcomment'].touched ||cancelrequestform.controls['additionalcomment'].dirty)">
+        <div *ngIf="cancelrequestform.controls['additionalcomment'].errors?.['additionalcomment']" class="error"> say some additional Info </div>
+  
+      </div>
+      </div>
+
 
 <div class="form-group-button button">
-  <input type="submit" value="Request Cancel" >
+  <input type="submit" value="Request Cancel">
 
 </div>
 

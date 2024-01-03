@@ -34,6 +34,7 @@ export class CancelrequestuserComponent implements OnInit {
 
   cancelrequestform = this.form.group({
     reason:[,[Validators.required]],
+    additionalcomment:[,[Validators.required]],
 
   })
 

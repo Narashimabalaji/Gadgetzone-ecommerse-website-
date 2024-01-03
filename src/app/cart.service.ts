@@ -59,37 +59,47 @@ gt:number=0;
 
 addtocart(a:any) {
 
+  this.http.get<any>("http://localhost:3000/cart/").subscribe((cartitemsdata:any)=>{
+    this.cartproduct =cartitemsdata;
+
+    const checkcart = cartitemsdata.filter((sameproduct:any)=>{
+      return sameproduct.model === a.model && sameproduct.email === this.loggedemailid;
+      
+    })
+  
+    if (checkcart.length > 0){
+      alert("your item is already added to cart");
+    }
+
+    else{
+      this.dbservice.addtocartdb(a).subscribe((data)=>{
+        alert("product added to your cart" );
+        console.log(data);
+      })
  
+    }
 
+    })
 
+    
+
+  
+  this.loggedemailid=localStorage.getItem('loggedemailid');
 
 // for(var cartpro in this.cartproduct ){
 //   this.cartid=this.cartproduct[cartpro].model;
   
-
-//   if(a.model==this.cartid&&){
+//   if(a.model==this.cartid && this.loggedemailid==this.cartproduct.email){
 //     this.samecartitem=this.cartid;
-
-
 //   }
 // }
-// if(a.id==this.samecartitem ){
+// if(a.model==this.samecartitem ){
 //   alert("your item is already added to cart");
-// }else{
-
-  
+// }
 
 
-
-
-
-  this.dbservice.addtocartdb(a).subscribe((data)=>{
-         
-    console.log(data);
-  })
 
 }
-
 
 
  

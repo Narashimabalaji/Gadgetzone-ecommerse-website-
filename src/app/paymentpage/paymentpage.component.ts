@@ -31,15 +31,16 @@ export class PaymentpageComponent implements OnInit {
     cardmonth:[,[Validators.required,]],
     cvv:[,[Validators.required,]],
 
-  })
+  });
+
   checkCard() {
     const visaPattern = /^4[0-9]{12}(?:[0-9]{3})?$/;
     const mastercardPattern = /^(?:5[1-5][0-9]{14})$/;
 
     if (this.cardNumber.match(visaPattern)) {
       this.cardType = 'assets/images/visalogo.png';
-      this.Cardname ='Visa Card'
-    } else if (this.cardNumber.match(mastercardPattern)) {
+      this.Cardname ='Visacard'
+    }  else if (this.cardNumber.match(mastercardPattern)) {
       this.cardType = 'assets/images/mastercardlogo.png';
       this.Cardname='Mastercard'
     } else {
@@ -61,9 +62,7 @@ export class PaymentpageComponent implements OnInit {
 
 submit(){
   if(this.CardForm.valid){
-    this.route.navigate(['orderplaced']).then(()=>{
-      window.location.reload();
-       });
+    
 
 
        this.dbservice.buynowpaymentverified();
@@ -78,7 +77,7 @@ this.http.get<any>("http://localhost:3000/billingdetail/").subscribe((k)=>{
          
 const l =k.filter((address:any)=>{
   
-        return address.emailid === addressid;
+        return address.emailid == addressid;
 })
 if(l){
 this.http.patch<any>("http://localhost:3000/billingdetail/"+addressid,{Payment:this.Cardname}).subscribe((res:any)=>{
@@ -95,13 +94,15 @@ else{
 
 }
 
+this.route.navigate(['orderplaced']).then(()=>{
+  window.location.reload();
+   });
+
 }
 
   orderplace(){
 
-    this.route.navigate(['orderplaced']).then(()=>{
-      window.location.reload();
-       });
+    this.Cardname="Cash On Deilvery"
        this.dbservice.buynowpaymentverified();
 
        const addressid = localStorage.getItem('address');
@@ -114,23 +115,28 @@ else{
         
               return address.emailid === addressid;
       })
-this.Cardname="Cash on delivery"
 
 if(l){
 
 
-      this.http.patch<any>("http://localhost:3000/billingdetail/"+addressid,{Payment:this.Cardname}).subscribe((res:any)=>{
+      this.http.patch<any>("http://localhost:3000/billingdetail/"+addressid,{Payment:"Cash On Delivery"}).subscribe((res:any)=>{
        console.log(res,"data");
+
+       alert("posted Cash on delivery")
      })
     }
 
     else{
-      this.http.post<any>("http://localhost:3000/billingdetail/"+addressid,{Payment:this.Cardname}).subscribe((res:any)=>{
+      this.http.post<any>("http://localhost:3000/billingdetail/"+addressid,{Payment:"Cash On Delivery"}).subscribe((res:any)=>{
         console.log(res,"data");
+        alert("error data received")
       })
     }
 });
-     
+    
+this.route.navigate(['orderplaced']).then(()=>{
+  window.location.reload();
+   });
       
   }
   toggledown1(){

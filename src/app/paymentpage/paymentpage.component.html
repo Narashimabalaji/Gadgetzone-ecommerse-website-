@@ -132,11 +132,12 @@
      </div>
      <div class="COD">
 
-      <input type="radio" (click)="toggledown3()" name="radio">Cash On Delivery  <button *ngIf="isclicked3" class="COD-submit"  (click)="orderplace()">Confirm </button>
+      <input type="radio" (click)="toggledown3()" name="radio">Cash On Delivery
 
- 
-    
- 
+      <div>
+      
+      <button *ngIf="isclicked3" class="COD-submit"  (click)="orderplace()" >Confirm </button>
+    </div>
        </div>
   </div>
 

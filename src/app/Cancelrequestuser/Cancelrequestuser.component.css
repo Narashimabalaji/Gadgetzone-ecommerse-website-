@@ -4,21 +4,15 @@
 .card-container{
     background-color: whitesmoke;
     border:white;
-    display:flex;
-   
-    
+    display:flex; 
 }
 
 
 
 .card{
-    
-    
-
     display:flex;
     flex-direction: column;
     padding:40px;
-
     cursor: pointer;
     
 }

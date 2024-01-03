@@ -23,6 +23,8 @@ import { CancelrequestuserComponent } from './Cancelrequestuser/Cancelrequestuse
 import { ComputeraccesoriesComponent } from './computeraccesories/computeraccesories.component';
 import { HeadphonesComponent } from './headphones/headphones.component';
 import { AdminstockdetailsComponent } from './adminstockdetails/adminstockdetails.component';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
+import { SearchedproductComponent } from './searchedproduct/searchedproduct.component';
 
 
 const routes: Routes =[
@@ -133,8 +135,15 @@ const routes: Routes =[
 {
   path:'stockdetails',
   component:AdminstockdetailsComponent
+},
+{
+  path:'forgotpassword',
+  component:ForgotpasswordComponent
+},
+{
+  path:'searchedproduct',
+  component:SearchedproductComponent
 }
-
 
 ];
 

@@ -18,9 +18,10 @@
 </div></a>
 
 
-<div class="search-box"  *ngIf="adminlogin==false"  >
-  <span><input type="search" placeholder="search"></span>
+<div class="search-box"  *ngIf="adminlogin==false"   >
+  <span><input type="search" placeholder="search" [(ngModel)]="searchText" (keyup.enter)="search()"></span>
   <!-- <i class="fa fa-search search"></i> -->
+  
 </div>
 
 
@@ -32,7 +33,7 @@
  <li class="dropdownbtn" ><i class="fa fa-sort-desc" >My Account</i></li>
     <div class="dropdown-content" *ngIf="loggedInUser!==null" >
       <a routerLink="/userorderview"  *ngIf="adminlogin==false">Orders</a>
-      <a href="#"><i class="fa fa-heart"  *ngIf="adminlogin==false"> WishList</i></a>
+      <!-- <a href="#"><i class="fa fa-heart"  *ngIf="adminlogin==false"> WishList</i></a> -->
      <a (click)="logout()"  *ngIf="loggedInUser!==null "  style="cursor:pointer;">Logout</a>
       
     </div>

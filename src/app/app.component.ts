@@ -4,6 +4,8 @@ import { DbseviceService } from './dbservice.service';
 import { CartService } from './cart.service';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { LoggerService } from './logger.service';
+import { SearchService } from './search.service';
 
 @Component({
   selector: 'app-root',
@@ -18,8 +20,13 @@ export class AppComponent {
   loggedInUser:any|string;
   loggedemailid:any;
   adminlogin:boolean=false;
+  product: any=[];
+  searchText: string ='';
+  searchResult: any[]=[];
 
-constructor(private cartservice :CartService,private router:Router,private dbservice :DbseviceService,private http:HttpClient){}
+constructor(private cartservice :CartService,private router:Router,private dbservice :DbseviceService,private http:HttpClient,
+  private logger:LoggerService,
+  private searchservice:SearchService){}
 
 ngOnInit(): void {
 
@@ -34,13 +41,16 @@ ngOnInit(): void {
     console.log("length of total item",this.totalitem);
   })
  
-
+ 
   //for login logout 
   this.loggedInUser=localStorage.getItem('loggedInUser');
   
   if(this.loggedInUser =='')
   {
     this.loggedInUser =null;
+    
+   
+
   }
  this.getadmin();
  
@@ -72,16 +82,29 @@ logout(){
   localStorage.removeItem('loggedemailid');
   localStorage.clear();
 
+
+
+
   this.router.navigate(['/home']).then(()=>{
     this.isLoading = true;
+    // this.logger.log('User logged out');
     window.location.reload();
+ 
 
   })
 
-  
 }
 
+search(){
 
+  this.dbservice.getmobiles().subscribe(res=>{
+    this.product=res;
+  });
+
+this.searchservice.search(this.searchText).subscribe((result: any) =>{
+  this.searchResult = result;
+})
+}
 
 
 

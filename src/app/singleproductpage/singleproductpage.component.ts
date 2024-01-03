@@ -69,8 +69,6 @@ export class SingleproductpageComponent implements OnInit {
 
     console.log("finaldata",finaldata);
 
- 
-  
   })
 
   this. calculateDeliveryDate();
@@ -98,14 +96,11 @@ export class SingleproductpageComponent implements OnInit {
   }
 
   addingtocart(item:any){
-    alert("added to your cart" );
+  
     const loggedemailid = localStorage.getItem('loggedemailid');
 
     this.cartservice.addtocart(item);
-  
 
-    
-    
   }
   calculateDeliveryDate() {
     const currentDate = new Date();
